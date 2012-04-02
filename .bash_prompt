@@ -1,0 +1,2 @@
+# Command line design with German timestamp
+PS1="\e[0;32m\u, \A Uhr:\e[m \e[0;33m\w \$\e[m "

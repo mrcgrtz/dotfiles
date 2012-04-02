@@ -1,0 +1,67 @@
+##############################################################################
+# Drupal
+# @see https://github.com/github/gitignore/blob/master/Drupal.gitignore
+##############################################################################
+
+# Core files
+htdocs/.htaccess
+htdocs/robots.txt
+htdocs/cron.php
+htdocs/index.php
+htdocs/install.php
+htdocs/update.php
+htdocs/xmlrpc.php
+htdocs/CHANGELOG.txt
+htdocs/COPYRIGHT.txt
+htdocs/INSTALL*.txt
+htdocs/LICENSE.txt
+htdocs/MAINTAINERS.txt
+htdocs/README.txt
+htdocs/UPGRADE.txt
+htdocs/includes
+htdocs/misc
+htdocs/modules     
+htdocs/profiles
+htdocs/scripts
+htdocs/themes
+htdocs/cache
+htdocs/files
+htdocs/sites/all/README.txt
+htdocs/sites/all/modules/README.txt
+htdocs/sites/all/themes/README.txt
+htdocs/sites/default/files
+htdocs/sites/default/private
+htdocs/sites/default/settings.php
+
+
+##############################################################################
+# Mac OS X and Windows system files
+# @see https://github.com/github/gitignore/blob/master/Global/
+##############################################################################
+
+# Directory settings
+.DS_Store
+Desktop.ini
+
+# Thumbnails
+._*
+Thumbs.db
+
+# Drive-specific directories
+.Spotlight-V100
+.Trashes
+
+
+##############################################################################
+# Editor project files
+# @see https://github.com/github/gitignore/blob/master/Global/
+##############################################################################
+
+# TextMate
+*.tmproj
+
+# Espresso
+*.esproj
+
+# SublimeText
+*.sublime-project
