@@ -75,6 +75,10 @@ When setting up a new Mac, you may want to install some common Homebrew formulae
 ./.brew
 ```
 
+## How does it look
+
+<a href="http://cl.ly/I1Dk"><img src="http://cl.ly/I1Dk/Bash.png" alt="Just like this." title="Colorful bash prompt and stuff."></a>
+
 ## Feedback
 
 Suggestions/improvements [welcome](https://github.com/dreamseer/dotfiles/issues)!
