@@ -55,8 +55,6 @@ GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 GITHUB_USER_NAME="Dreamseer"
 git config --global github.user "$GITHUB_USER_NAME"
-GITHUB_USER_TOKEN="mytoken1234567890abcdefghijklmnopqrstuvwxyz"
-git config --global github.token "$GITHUB_USER_TOKEN"
 ```
 
 ### Sensible OS X defaults
