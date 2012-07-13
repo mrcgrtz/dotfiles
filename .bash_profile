@@ -5,6 +5,9 @@ for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
+# Init z (https://github.com/rupa/z)
+. `brew --prefix`/etc/profile.d/z.sh
+
 # Prefer German and use UTF-8
 export LANG="de_DE"
 export LC_MESSAGES="de_DE"
