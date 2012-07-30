@@ -28,7 +28,25 @@ alias modified="svn st | grep -v '/._' | grep -v '^?' | grep -v '^X' | grep -v '
 alias no-svn='grep -v \.svn'
 
 # Git
-alias undopush="git push -f origin HEAD^:master"
+alias g="git"
+alias gd="g diff"
+alias ga="g add"
+alias gbd="g branch -D"
+alias gst="g status"
+alias gca="g commit -a -m"
+alias gm="g merge --no-ff"
+alias gpt="g push --tags"
+alias gp="g push"
+alias grh="g reset --hard"
+alias gb="g branch"
+alias gcob="g checkout -b"
+alias gco="g checkout"
+alias gba="g branch -a"
+alias gcp="g cherry-pick"
+alias gl="g log --pretty='format:%Cgreen%h%Creset %an - %s' --graph"
+alias gpom="g pull origin master"
+alias gcd='cd "`g rev-parse --show-toplevel`"'
+alias undopush="g push -f origin HEAD^:master"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
@@ -51,7 +69,6 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 # Shortcuts
 alias d="cd ~/Dropbox"
 alias p="cd ~/Sites"
-alias g="git"
 alias v="vim"
 alias s="subl ."
 
