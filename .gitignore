@@ -4,34 +4,34 @@
 ##############################################################################
 
 # Core files
-.htaccess
-robots.txt
-cron.php
-index.php
-install.php
-update.php
-xmlrpc.php
-CHANGELOG.txt
-COPYRIGHT.txt
-INSTALL*.txt
-LICENSE.txt
-MAINTAINERS.txt
-README.txt
-UPGRADE.txt
-includes
-misc
-modules     
-profiles
-scripts
-themes
-cache
-files
-sites/all/README.txt
-sites/all/modules/README.txt
-sites/all/themes/README.txt
-sites/default/files
-sites/default/private
-sites/default/settings.php
+#.htaccess
+#robots.txt
+#cron.php
+#index.php
+#install.php
+#update.php
+#xmlrpc.php
+#CHANGELOG.txt
+#COPYRIGHT.txt
+#INSTALL*.txt
+#LICENSE.txt
+#MAINTAINERS.txt
+#README.txt
+#UPGRADE.txt
+#includes
+#misc
+#modules
+#profiles
+#scripts
+#themes
+#cache
+#files
+#sites/all/README.txt
+#sites/all/modules/README.txt
+#sites/all/themes/README.txt
+#sites/default/files
+#sites/default/private
+#sites/default/settings.php
 
 
 ##############################################################################
@@ -40,23 +40,23 @@ sites/default/settings.php
 ##############################################################################
 
 # Core files
-.htaccess
-wp-*.php
-xmlrpc.php
-wp-admin/
-wp-includes/
-wp-content/uploads/
-wp-content/blogs.dir/
-wp-content/upgrade/*
-wp-content/backup-db/*
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-wp-content/cache/*
-wp-content/cache/supercache/*
-sitemap.xml
-sitemap.xml.gz
-readme.html
-license.txt
+#.htaccess
+#wp-*.php
+#xmlrpc.php
+#wp-admin/
+#wp-includes/
+#wp-content/uploads/
+#wp-content/blogs.dir/
+#wp-content/upgrade/*
+#wp-content/backup-db/*
+#wp-content/advanced-cache.php
+#wp-content/wp-cache-config.php
+#wp-content/cache/*
+#wp-content/cache/supercache/*
+#sitemap.xml
+#sitemap.xml.gz
+#readme.html
+#license.txt
 
 
 ##############################################################################
