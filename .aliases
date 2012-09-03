@@ -41,6 +41,11 @@ alias sudo='sudo '
 # Get OS X software updates, and update Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; gem update; npm update npm -g; npm update -g'
 
+# Install and update Gems without documentation, remove documentation
+alias ginstall='gem install --no-rdoc --no-ri '
+alias gupdate='gem update --no-rdoc --no-ri '
+alias gremove='rm -r `gem env gemdir`/doc'
+
 # Git
 alias g="git"
 alias gd="g diff"
