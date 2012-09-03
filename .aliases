@@ -39,7 +39,7 @@ alias please="sudo"
 alias sudo='sudo '
 
 # Get OS X software updates, and update Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; npm update npm -g; npm update -g'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; gem update; npm update npm -g; npm update -g'
 
 # Git
 alias g="git"
