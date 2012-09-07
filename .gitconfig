@@ -21,6 +21,12 @@
 	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
+	# Show files ignored by git:
+	ign = ls-files -o -i --exclude-standard
+	# SVN-style
+	st = status
+	ci = commit
+	co = checkout
 
 [apply]
 	# Detect whitespace errors when applying a patch
@@ -30,8 +36,8 @@
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
-	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
-	whitespace = space-before-tab,indent-with-non-tab,trailing-space
+	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error, treat carriage return as line-ending
+	whitespace = space-before-tab,indent-with-non-tab,trailing-space,cr-at-eol
 
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
@@ -45,6 +51,7 @@
 	frag = magenta bold
 	old = red bold
 	new = green bold
+	whitespace = red reverse
 [color "status"]
 	added = yellow
 	changed = green
