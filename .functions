@@ -8,12 +8,25 @@ function f() {
 	find . -name "$1"
 }
 
+# Determine size of a file or total size of a directory
+function fs() {
+	if du -b /dev/null > /dev/null 2>&1; then
+		local arg=-sbh
+	else
+		local arg=-sh
+	fi
+	if [[ -n "$@" ]]; then
+		du $arg -- "$@"
+	else
+		du $arg .[^.]* *
+	fi
+}
+
 # Take this repository and copy it to somewhere else minus the .git stuff
 function gitexport(){
 	mkdir -p "$1"
 	git archive master | tar -x -C "$1"
 }
-
 # Use Git’s colored diff when available
 hash git &>/dev/null
 if [ $? -eq 0 ]; then
