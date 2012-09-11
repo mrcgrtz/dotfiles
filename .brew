@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Install Homebrew (you need the code CLI tools!)
+ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
+
 # Make sure we’re using the latest Homebrew
 brew update
 
@@ -22,11 +25,11 @@ brew install php54
 # Install everything else
 brew install git
 brew install git-extras
+brew install z
 brew install lynx
 brew install node
 brew install drush
 brew install md5sha1sum
-brew install z
 
 # Remove outdated versions from the cellar
 brew cleanup
