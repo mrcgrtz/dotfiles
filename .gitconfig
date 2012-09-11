@@ -78,3 +78,8 @@
 	pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
+
+# My life is awesome now that I use git-achievements
+# https://github.com/icefox/git-achievements
+[achievement]
+	upload = false
