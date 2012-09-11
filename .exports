@@ -1,5 +1,5 @@
 # Make Sublime Text 2 the default editor, nobody needs vim or emacs
-export EDITOR="/usr/local/bin/subl"
+export EDITOR="/usr/local/bin/subl -w"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
