@@ -67,9 +67,6 @@ alias gpom="g pull origin master"
 alias gcd='cd "`g rev-parse --show-toplevel`"'
 alias undopush="g push -f origin HEAD^:master"
 
-# Recursively delete `.DS_Store` files
-alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
-
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
