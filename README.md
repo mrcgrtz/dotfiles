@@ -105,8 +105,7 @@ Suggestions/improvements [welcome](https://github.com/dreamseer/dotfiles/issues)
 
 ## Similar projects
 
-I recommend getting a
-[`.jshintrc`](https://github.com/jshint/node-jshint/blob/master/.jshintrc)
+I recommend getting a [`.jshintrc`](https://github.com/jshint/node-jshint/blob/master/.jshintrc)
 and [`.editorconfig`](http://editorconfig.org/) defined for all your
 projects.
 
@@ -117,6 +116,8 @@ projects.
   [amazing collection of dotfiles](https://github.com/mathiasbynens/dotfiles)
 * [Paul Irish](http://paulirish.com/) and his
   [dotfiles fork](https://github.com/paulirish/dotfiles)
+* [Lauri ‘Lri’ Ranta](http://lri.me/) for sharing
+  [loads of hidden preferences](http://lri.me/hiddenpreferences.txt)
 
 ## License
 
