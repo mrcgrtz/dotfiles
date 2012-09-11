@@ -30,6 +30,9 @@ brew install lynx
 brew install node
 brew install drush
 brew install md5sha1sum
+brew install ack
+brew install rename
+brew install tree
 
 # Remove outdated versions from the cellar
 brew cleanup
