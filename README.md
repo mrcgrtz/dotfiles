@@ -61,7 +61,6 @@ My `~/.extra` looks something like this:
 
 ```bash
 # PATH additions
-export PATH="~/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
 # Git/GitHub credentials
