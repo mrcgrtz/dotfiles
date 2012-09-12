@@ -36,7 +36,7 @@ alias cls="clear"
 alias please="sudo"
 
 # Enable aliases to be sudo’ed
-alias sudo="sudo ""
+alias sudo="sudo "
 
 # Gzip-enabled `curl`
 alias gurl="curl --compressed"
