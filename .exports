@@ -14,3 +14,8 @@ export HISTCONTROL=ignoredups
 
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+
+# Prefer German and use UTF-8
+export LC_MESSAGES="de_DE"
+export LC_ALL="de_DE.UTF-8"
+export LANG="de_DE"
