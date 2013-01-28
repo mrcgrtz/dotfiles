@@ -43,6 +43,10 @@
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error, treat carriage return as line-ending
 	whitespace = space-before-tab,indent-with-non-tab,trailing-space,cr-at-eol
 
+[user]
+	name = Marc Görtz
+	email = mgoertz@es-enterprise-solutions.de
+
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
 	ui = auto
