@@ -91,7 +91,7 @@ formulae (after installing [Homebrew](http://mxcl.github.com/homebrew/),
 of course):
 
 ```bash
-./.brew
+brew bundle ~/Brewfile
 ```
 
 ## How does it look
