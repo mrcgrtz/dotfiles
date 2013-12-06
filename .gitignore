@@ -92,16 +92,33 @@ Thumbs.db
 
 ##############################################################################
 # Editor project files
-# @see https://github.com/github/gitignore/blob/master/Global/
+# @see https://github.com/github/gitignore/tree/master/Global
 ##############################################################################
+
+# Sublime Text 2
+*.sublime-project
+*.sublime-workspace
 
 # TextMate
 *.tmproj
 *.tmproject
 tmtags
 
-# SublimeText
-*.sublime-project
-*.sublime-workspace
-
-
+# Eclipse
+.settings/
+.metadata
+.buildpath
+.loadpath
+.gradle
+.cproject
+.texlipse
+.externalToolBuilders/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*.launch
+*~.nib
+*.pydevproject
+local.properties
