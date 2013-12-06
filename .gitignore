@@ -43,27 +43,21 @@
 
 ##############################################################################
 # WordPress
-# @see https://github.com/github/gitignore/blob/master/Wordpress.gitignore
+# @see https://github.com/github/gitignore/blob/master/WordPress.gitignore
 ##############################################################################
 
-# Core files
 #.htaccess
-#wp-*.php
-#xmlrpc.php
-#wp-admin/
-#wp-includes/
 #wp-content/uploads/
 #wp-content/blogs.dir/
-#wp-content/upgrade/*
-#wp-content/backup-db/*
+#wp-content/upgrade/
+#wp-content/backup-db/
 #wp-content/advanced-cache.php
 #wp-content/wp-cache-config.php
-#wp-content/cache/*
-#wp-content/cache/supercache/*
 #sitemap.xml
+#*.log
+#wp-content/cache/
+#wp-content/backups/
 #sitemap.xml.gz
-#readme.html
-#license.txt
 
 
 ##############################################################################
