@@ -52,6 +52,9 @@ alias gurl="curl --compressed"
 
 # Get OS X software updates, and update Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; gem update; npm update npm -g; npm update -g'
+# Get week number
+alias week="date +%V"
+
 
 # Install and update Gems without documentation, remove documentation
 alias ginstall='gem install --no-rdoc --no-ri '
