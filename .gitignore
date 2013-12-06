@@ -74,18 +74,18 @@
 
 ##############################################################################
 # Mac OS X and Windows system files
-# @see https://github.com/github/gitignore/blob/master/Global/
+# @see https://github.com/github/gitignore/tree/master/Global
 ##############################################################################
 
-# Directory settings
+# Folder view configuration files
 .DS_Store
 Desktop.ini
 
-# Thumbnails
+# Thumbnail cache files
 ._*
 Thumbs.db
 
-# Drive-specific directories
+# Files that might appear on external disks
 .Spotlight-V100
 .Trashes
 
