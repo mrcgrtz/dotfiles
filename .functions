@@ -265,6 +265,16 @@ function v() {
 	fi
 }
 
+# `o` with no arguments opens current directory, otherwise opens the given
+# location
+function o() {
+	if [ $# -eq 0 ]; then
+		open .
+	else
+		open "$@"
+	fi
+}
+
 # Count CSS selectors in a file
 function csscount() {
 	cnt=0
