@@ -61,6 +61,18 @@
 
 
 ##############################################################################
+# Maven
+# @see https://github.com/github/gitignore/blob/master/Maven.gitignore
+##############################################################################
+
+#target/
+#pom.xml.tag
+#pom.xml.releaseBackup
+#pom.xml.next
+#release.properties
+
+
+##############################################################################
 # Mac OS X and Windows system files
 # @see https://github.com/github/gitignore/blob/master/Global/
 ##############################################################################
