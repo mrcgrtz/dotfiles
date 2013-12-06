@@ -255,6 +255,16 @@ function s() {
 	fi
 }
 
+# `v` with no arguments opens the current directory in Vim, otherwise opens the
+# given location
+function v() {
+	if [ $# -eq 0 ]; then
+		vim .
+	else
+		vim "$@"
+	fi
+}
+
 # Count CSS selectors in a file
 function csscount() {
 	cnt=0
