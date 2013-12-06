@@ -55,6 +55,9 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; gem update; 
 # Get week number
 alias week="date +%V"
 
+# Stopwatch
+alias timer="echo 'Timer started. Stop with Ctrl-D.' && date && time cat && date"
+
 
 # Install and update Gems without documentation, remove documentation
 alias ginstall='gem install --no-rdoc --no-ri '
