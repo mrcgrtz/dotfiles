@@ -100,17 +100,8 @@ Thumbs.db
 *.tmproject
 tmtags
 
-# Espresso
-*.esproj
-
 # SublimeText
 *.sublime-project
 *.sublime-workspace
 
 
-##############################################################################
-# Subversion (you never know…)
-# @see https://github.com/github/gitignore/blob/master/Global/SVN.gitignore
-##############################################################################
-
-.svn/
