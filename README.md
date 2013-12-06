@@ -118,9 +118,10 @@ projects.
 * [Lauri ‘Lri’ Ranta](http://lri.me/) for sharing
   [loads of hidden preferences](http://lri.me/hiddenpreferences.txt)
 
+
 ## License
 
-Copyright (c) 2012 Marc Görtz, http://marcgoertz.de/
+Copyright (c) 2012-2013 Marc Görtz, http://marcgoertz.de/
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
