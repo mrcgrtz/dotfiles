@@ -15,19 +15,19 @@ You can clone the repository wherever you want. (I like to keep it in
 will pull in the latest version and copy the files to your home folder.
 
 ```bash
-git clone https://github.com/dreamseer/dotfiles.git && cd dotfiles && ./sync.sh
+git clone https://github.com/dreamseer/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
 
 ```bash
-./sync.sh
+source bootstrap.sh
 ```
 
 Alternatively, to update while avoiding the confirmation prompt:
 
 ```bash
-./sync.sh -f
+set -- -f; source bootstrap.sh
 ```
 
 ### Git-free install
@@ -35,7 +35,7 @@ Alternatively, to update while avoiding the confirmation prompt:
 To install these dotfiles without Git:
 
 ```bash
-cd; curl -#L https://github.com/dreamseer/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,sync.sh}
+cd; curl -#L https://github.com/dreamseer/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE-MIT.txt}
 ```
 
 To update later on, just run that command again.
