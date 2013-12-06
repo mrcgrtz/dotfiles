@@ -102,12 +102,6 @@ brew bundle ~/Brewfile
 
 Suggestions/improvements [welcome](https://github.com/dreamseer/dotfiles/issues)!
 
-## Similar projects
-
-I recommend getting a [`.jshintrc`](https://github.com/jshint/node-jshint/blob/master/.jshintrc)
-and [`.editorconfig`](http://editorconfig.org/) defined for all your
-projects.
-
 
 ## Thanks to…
 
