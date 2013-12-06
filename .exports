@@ -1,21 +1,27 @@
 # Make Sublime Text 2 the default editor, nobody needs vim or emacs
 export EDITOR="/usr/local/bin/subl -w"
 
-# Don’t clear the screen after quitting a manual page
-export MANPAGER="less -X"
-
-# Highlight section titles in manual pages
-export LESS_TERMCAP_md="$ORANGE"
-
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 
 # Make some commands not show up in history
-export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
 # Prefer German and use UTF-8
 export LC_MESSAGES="de_DE"
 export LC_ALL="de_DE.UTF-8"
 export LANG="de_DE"
+
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="$ORANGE"
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Always enable colored `grep` output
+export GREP_OPTIONS="--color=auto"
+
+# Link Homebrew casks in `/Applications` rather than `~/Applications`
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
