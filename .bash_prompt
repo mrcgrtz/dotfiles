@@ -58,5 +58,8 @@ function usernamehost() {
 	if [ $USER != $default_username ]; then echo "${MAGENTA}$USER ${WHITE}auf ${ORANGE}$HOSTNAME ${WHITE}in "; fi
 }
 
-export PS1="\[${BOLD}\]$(usernamehost)\[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
+# Sweet symbol (http://en.wikipedia.org/wiki/Unicode_symbols)
+symbol="⚡ "
+
+export PS1="\[${BOLD}\]$(usernamehost)\[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n$symbol\[$RESET\]"
 export PS2="\[$ORANGE\]→ \[$RESET\]"
