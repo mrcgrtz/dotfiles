@@ -61,5 +61,5 @@ function usernamehost() {
 # Sweet symbol (http://en.wikipedia.org/wiki/Unicode_symbols)
 symbol="⚡ "
 
-export PS1="\[${BOLD}\]$(usernamehost)\[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n$symbol\[$RESET\]"
+export PS1="\[${BOLD}\]$(usernamehost)\[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" unter \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n$symbol\[$RESET\]"
 export PS2="\[$ORANGE\]→ \[$RESET\]"
