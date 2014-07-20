@@ -179,3 +179,6 @@ alias reload="exec $SHELL -l"
 
 # Faster npm for europeans
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
+
+# List global npm modules without their dependencies
+alias npmls="npm ls -g --depth=0 '$@' 2>/dev/null"
