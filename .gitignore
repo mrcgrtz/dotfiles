@@ -95,7 +95,7 @@ Thumbs.db
 # @see https://github.com/github/gitignore/tree/master/Global
 ##############################################################################
 
-# Sublime Text 2
+# Sublime Text
 *.sublime-project
 *.sublime-workspace
 
