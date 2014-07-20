@@ -1,4 +1,4 @@
-# Make Sublime Text 2 the default editor, nobody needs vim or emacs
+# Make Sublime Text the default editor, nobody needs vim or emacs
 export EDITOR="/usr/local/bin/subl -w"
 
 # Larger bash history (allow 32³ entries; default is 500)
