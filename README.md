@@ -104,7 +104,7 @@ Suggestions/improvements [welcome](https://github.com/dreamseer/dotfiles/issues)
 
 ## License
 
-Copyright (c) 2012-2013 Marc Görtz, http://marcgoertz.de/
+Copyright (c) 2012-2015 Marc Görtz, http://marcgoertz.de/
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
