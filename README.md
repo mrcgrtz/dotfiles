@@ -53,9 +53,9 @@ export PATH="$HOME/utils:$PATH"
 ### Add custom commands without creating a new fork
 
 If `~/.extra` exists, it will be sourced along with the other files. You
- can use this to add a few custom commands without the need to fork this
-  entire repository, or to add commands you don’t want to commit to a
-  public repository.
+can use this to add a few custom commands without the need to fork this
+entire repository, or to add commands you don’t want to commit to a
+public repository.
 
 My `~/.extra` looks something like this:
 
@@ -73,15 +73,6 @@ GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 GITHUB_USER_NAME="Dreamseer"
 git config --global github.user "$GITHUB_USER_NAME"
-```
-
-### Sensible OS X defaults
-
-When setting up a new Mac, you may want to set some sensible OS X
-defaults:
-
-```bash
-./.osx
 ```
 
 ### Install Homebrew formulae
@@ -109,8 +100,6 @@ Suggestions/improvements [welcome](https://github.com/dreamseer/dotfiles/issues)
   [amazing collection of dotfiles](https://github.com/mathiasbynens/dotfiles)
 * [Paul Irish](http://paulirish.com/) and his
   [dotfiles fork](https://github.com/paulirish/dotfiles)
-* [Lauri ‘Lri’ Ranta](http://lri.me/) for sharing
-  [loads of hidden preferences](http://lri.me/hiddenpreferences.txt)
 
 
 ## License
