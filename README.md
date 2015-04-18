@@ -89,6 +89,8 @@ source brew.sh
 ## Feedback
 
 Suggestions/improvements [welcome](https://github.com/dreamseer/dotfiles/issues)!
+You’re quite welcome to make suggestions, however I may decline if it’s
+not of personal value to me.
 
 
 ## Thanks to…
