@@ -5,7 +5,8 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
-	rsync --exclude ".git/" --exclude "init/" --exclude "bin/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
+	rsync --exclude ".git/" --exclude "brew.sh" --exclude "init/" --exclude "bin/" \
+		--exclude ".DS_Store" --exclude "bootstrap.sh" \
 		--exclude "README.md" --exclude "MIT-LICENSE.txt" -avh --no-perms . ~;
 	source ~/.bash_profile;
 }
