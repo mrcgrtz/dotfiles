@@ -84,7 +84,7 @@ source brew.sh
 
 ## How does it look
 
-<a href="http://cl.ly/I1Dk"><img src="http://cl.ly/I1Dk/Bash.png" alt="Just like this." title="Colorful bash prompt and stuff."></a>
+<a href="http://cl.ly/ahSn"><img src="http://cl.ly/ahSn/Terminal.png" alt="Just like this." width="682" title="Colorful bash prompt and stuff."></a>
 
 ## Feedback
 
