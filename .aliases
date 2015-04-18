@@ -15,6 +15,11 @@ alias g="git"
 alias h="history"
 alias cask="brew cask"
 
+# Typos
+alias gut=git
+alias brwe=brew
+alias where=which
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
