@@ -60,9 +60,6 @@ public repository.
 My `~/.extra` looks something like this:
 
 ```bash
-# PATH additions
-export NODE_PATH="/usr/local/lib/node_modules"
-
 # Git/GitHub credentials
 # Not in the repository, to prevent people from accidentally committing under my name
 GIT_AUTHOR_NAME="Marc Görtz"
