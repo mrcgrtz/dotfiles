@@ -79,7 +79,7 @@ formulae (after installing [Homebrew](http://mxcl.github.com/homebrew/),
 of course):
 
 ```bash
-brew bundle ~/Brewfile
+source brew.sh
 ```
 
 ## How does it look
