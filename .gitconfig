@@ -73,6 +73,9 @@
 		fi \
 	}; f"
 
+	# fetch and rebase origin/master into the current branch
+	up = !git fetch origin && git rebase origin/master
+
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
 
