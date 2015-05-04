@@ -1,18 +1,12 @@
 # dotfiles
 
-My homegrown dotfiles repository which in the meantime is VERY much
-inspired by the work of [Mathias Bynens](http://mths.be/dotfiles) and
-Github’s [dotfiles page](http://dotfiles.github.com/). If you really
-want your own dotfiles repository, fork the one by Mathias.
-It’s awesome!
+My homegrown dotfiles repository which in the meantime is VERY much inspired by the work of [Mathias Bynens](https://mths.be/dotfiles) and [Paul Irish](https://github.com/paulirish/dotfiles/). If you really want your own dotfiles repository, fork one of these. They have awesome setups!
 
 ## Installation
 
 ### Using Git and the bootstrap script
 
-You can clone the repository wherever you want. (I like to keep it in
-`~/Sites/dotfiles`, with `~/dotfiles` as a symlink.) The sync script
-will pull in the latest version and copy the files to your home folder.
+You can clone the repository wherever you want. (I like to keep it in `~/Sites/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 ```bash
 git clone https://github.com/dreamseer/dotfiles.git && cd dotfiles && source bootstrap.sh
@@ -35,7 +29,7 @@ set -- -f; source bootstrap.sh
 To install these dotfiles without Git:
 
 ```bash
-cd; curl -#L https://github.com/dreamseer/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE-MIT.txt}
+cd; curl -#L https://github.com/dreamseer/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,brew.sh,bootstrap.sh,MIT-LICENSE.txt}
 ```
 
 To update later on, just run that command again.
@@ -44,18 +38,15 @@ To update later on, just run that command again.
 
 If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/mathiasbynens/dotfiles/blob/aff769fd75225d8f2e481185a71d5e05b76002dc/.aliases#L21-26)) takes place.
 
-Here’s an example `~/.path` file that adds `~/utils` to the `$PATH`:
+Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
 
 ```bash
-export PATH="$HOME/utils:$PATH"
+export PATH="/usr/local/bin:$PATH"
 ```
 
 ### Add custom commands without creating a new fork
 
-If `~/.extra` exists, it will be sourced along with the other files. You
-can use this to add a few custom commands without the need to fork this
-entire repository, or to add commands you don’t want to commit to a
-public repository.
+If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
 
 My `~/.extra` looks something like this:
 
@@ -72,54 +63,109 @@ GITHUB_USER_NAME="Dreamseer"
 git config --global github.user "$GITHUB_USER_NAME"
 ```
 
+You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/dreamseer/dotfiles/fork) instead, though.
+
 ### Install Homebrew formulae
 
-When setting up a new Mac, you may want to install some common Homebrew
-formulae (after installing [Homebrew](http://mxcl.github.com/homebrew/),
-of course):
+When setting up a new Mac, you may want to install some common Homebrew formulae (after installing [Homebrew](http://brew.sh/), of course):
 
 ```bash
 source brew.sh
 ```
 
-## How does it look
+### Installed software via Homebrew
 
-<a href="http://cl.ly/ahSn"><img src="http://cl.ly/ahSn/Terminal.png" alt="Just like this." width="682" title="Colorful bash prompt and stuff."></a>
+ * GNU core utilities
+ * bash (latest version)
+ * [bash-completion](http://bash-completion.alioth.debian.org/)
+ * [git](http://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/master/Commands.md)
+ * [ack](http://betterthangrep.com/)
+ * [iojs](https://iojs.org/)
+ * [tree](http://mama.indstate.edu/users/ice/tree/)
+ * [wget](http://www.gnu.org/software/wget/)
+ * [lynx](http://lynx.isc.org/) (because I <3 lynx)
+ * some more stuff, especially more recent versions of some OS X tools.
+
+## My favorite parts
+
+### [`.aliases`](https://github.com/dreamseer/dotfiles/blob/master/.aliases) and [`.functions`](https://github.com/dreamseer/dotfiles/blob/master/.functions)
+
+There are so many goodies!
+
+### The “readline config” (`.inputrc`)
+
+Basically it makes typing into the prompt amazing:
+
+ * Tab like crazy for autocompletion that does not suck. Tab all the things. Srsly.
+ * No more `<tab><tab>` that says ”Display all 1337 possibilities? (y or n)”. Yay!
+ * Type `cat <uparrow>` to see your previous `cat`s and use them. 
+ * Case insensitivity.
+ * Tab all the livelong day.
+
+### Moving around in folders (`z`, `…`, `cdf`)
+
+`z` helps you jump around to whatever folder. It uses actual real magic to determine where you should jump to. Separately there’s some `...` aliases to shorten `cd ../..` and `..`, `....` etc. Then, if you have a folder open in Finder, `cdf` will bring you to it.
+
+```sh
+z dotfiles
+z blog
+....      # drop back equivalent to cd ../../..
+z public
+cdf       # cd to whatever’s up in Finder
+```
+
+`z` learns only once its installed so you’ll have to `cd` around for a bit to get it taught.
+
+Lastly, I use `o` to open Finder from this path. (That's just available normally as `open .`.)
+
+## Custom bash prompt
+
+I use a custom bash prompt based on the Solarized color palette and influenced by @gf3’s and @cowboy’s custom prompts.
+
+When your current working directory is a Git repository, the prompt will display the checked-out branch’s name (and failing that, the commit SHA that HEAD is pointing to). The state of the working tree is reflected in the following way:
+
+<table>
+    <tr>
+        <td><code>+</code></td>
+        <td>Uncommitted changes in the index</td>
+    </tr>
+    <tr>
+        <td><code>!</code></td>
+        <td>Unstaged changes</td>
+    </tr>
+    <tr>
+        <td><code>?</code></td>
+        <td>Untracked files</td>
+    </tr>
+    <tr>
+        <td><code>$</code></td>
+        <td>Stashed files</td>
+    </tr>
+</table>
+
+Further details are in the `.bash_prompt` file.
+
+Screenshot:
+
+<a href="http://cl.ly/ahSn"><img src="http://cl.ly/ahSn/Terminal.png" alt="Screenshot of my Bash promt." width="682" title="Colorful bash prompt and stuff."></a>
 
 ## Feedback
 
-Suggestions/improvements [welcome](https://github.com/dreamseer/dotfiles/issues)!
-You’re quite welcome to make suggestions, however I may decline if it’s
-not of personal value to me.
+You’re quite [welcome](https://github.com/dreamseer/dotfiles/issues) to make suggestions or improvements, however I may decline if it’s not of personal value to me.
 
+## Acknowledgements
 
-## Thanks to…
+Inspiration and code was taken from many sources, including:
 
-* [Mathias Bynens](http://mathiasbynens.be/) for sharing his
-  [amazing collection of dotfiles](https://github.com/mathiasbynens/dotfiles)
-* [Paul Irish](http://paulirish.com/) and his
-  [dotfiles fork](https://github.com/paulirish/dotfiles)
-
-
-## License
-
-Copyright Marc Görtz <http://marcgoertz.de/>
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * [@mathiasbynens](https://github.com/mathiasbynens) (Mathias Bynens)
+   [https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
+ * [@paulirish](https://github.com/paulirish) (Paul Irish)
+   [https://github.com/paulirish/dotfiles](https://github.com/paulirish/dotfiles)
+ * [@necolas](https://github.com/necolas) (Nicolas Gallagher)
+   [https://github.com/necolas/dotfiles](https://github.com/necolas/dotfiles)
+ * [@gf3](https://github.com/gf3) (Gianni Chiappetta)
+   [https://github.com/gf3/dotfiles](https://github.com/gf3/dotfiles)
+ * [@cowboy](https://github.com/cowboy) (Ben Alman)
+   [https://github.com/cowboy/dotfiles](https://github.com/cowboy/dotfiles)
+ * [@alrra](https://github.com/alrra) (Cãtãlin Mariş)
+   [https://github.com/alrra/dotfiles](https://github.com/alrra/dotfiles)
