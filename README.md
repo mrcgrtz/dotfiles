@@ -83,7 +83,7 @@ source brew.sh
  * [iojs](https://iojs.org/)
  * [tree](http://mama.indstate.edu/users/ice/tree/)
  * [wget](http://www.gnu.org/software/wget/)
- * [lynx](http://lynx.isc.org/) (because I <3 lynx)
+ * [lynx](http://lynx.isc.org/) (because I ♥ lynx)
  * some more stuff, especially more recent versions of some OS X tools.
 
 ## My favorite parts
