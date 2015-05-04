@@ -13,7 +13,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew update
 
 # Upgrade any already-installed formulae.
-brew upgrade
+brew upgrade --all
 
 # Install GNU core utilities (those that come with OS X are outdated).
 brew install coreutils
