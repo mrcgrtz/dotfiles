@@ -73,7 +73,7 @@ When setting up a new Mac, you may want to install some common Homebrew formulae
 source brew.sh
 ```
 
-### Installed software via Homebrew
+#### Installed software via Homebrew
 
  * GNU core utilities
  * bash (latest version)
