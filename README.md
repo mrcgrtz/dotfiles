@@ -102,7 +102,7 @@ Basically it makes typing into the prompt amazing:
  * Case insensitivity.
  * Tab all the livelong day.
 
-### Moving around in folders (`z`, `…`, `cdf`)
+### Moving around in folders (`z`, `...`, `cdf`)
 
 `z` helps you jump around to whatever folder. It uses actual real magic to determine where you should jump to. Separately there’s some `...` aliases to shorten `cd ../..` and `..`, `....` etc. Then, if you have a folder open in Finder, `cdf` will bring you to it.
 
