@@ -45,7 +45,7 @@ brew install homebrew/php/php56 --with-gmp
 
 # Install everything else.
 brew install ruby21
-brew install iojs
+brew install nvm
 brew install git
 brew install git-extras
 brew install git-flow
