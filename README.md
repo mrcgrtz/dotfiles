@@ -80,7 +80,7 @@ source brew.sh
  * [bash-completion](http://bash-completion.alioth.debian.org/)
  * [git](http://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/master/Commands.md)
  * [ack](http://betterthangrep.com/)
- * [iojs](https://iojs.org/)
+ * [nvm](https://github.com/creationix/nvm)
  * [tree](http://mama.indstate.edu/users/ice/tree/)
  * [wget](http://www.gnu.org/software/wget/)
  * [lynx](http://lynx.isc.org/) (because I ♥ lynx)

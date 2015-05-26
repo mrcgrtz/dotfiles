@@ -24,3 +24,7 @@ export GREP_OPTIONS='--color=auto';
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Use Node Version Manager
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
