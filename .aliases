@@ -179,3 +179,7 @@ command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.e
 # List global npm modules without their dependencies
 # See http://ilee.co.uk/list-node-packages-wo-dependencies/
 alias npmls="npm list -g --depth=0"
+
+# Remove local Node modules and clear NPM cache for an upcoming fresh install,
+# thanks to @stefanpenner for this one
+alias nom="rm -rf node_modules && npm cache clear && npm install"
