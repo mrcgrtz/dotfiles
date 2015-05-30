@@ -4,3 +4,4 @@
 --ignore-dir=node_modules
 --ignore-dir=bower_components
 --type-set=coffee=.coffee
+--sort-files
