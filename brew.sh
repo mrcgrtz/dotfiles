@@ -59,6 +59,7 @@ brew install terminal-notifier
 brew install ack
 brew install rename
 brew install tree
+brew install thefuck
 
 # Remove outdated versions from the cellar.
 brew cleanup
