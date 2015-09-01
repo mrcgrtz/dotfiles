@@ -44,11 +44,11 @@ brew install homebrew/dupes/screen
 brew install homebrew/php/php56 --with-gmp
 
 # Install everything else.
-brew install ruby21
-brew install nvm
+brew install ruby
 brew install git
 brew install git-extras
 brew install git-flow
+brew install nvm
 brew install z
 brew install maven32
 brew install lynx
