@@ -51,10 +51,7 @@ brew install git-extras
 brew install git-flow
 brew install z
 brew install maven32
-brew install drush
 brew install lynx
-brew install memcached
-brew install mongodb
 brew install terminal-notifier
 brew install ack
 brew install rename
