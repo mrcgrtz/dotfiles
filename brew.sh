@@ -57,6 +57,7 @@ brew install ack
 brew install rename
 brew install tree
 brew install thefuck
+brew install httpie
 
 # Remove outdated versions from the cellar.
 brew cleanup
