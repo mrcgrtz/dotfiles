@@ -18,7 +18,7 @@ alias h="history"
 alias gut=git
 alias brwe=brew
 alias where=which
-alias fuck='eval "$(thefuck-alias)"'
+alias fuck='eval "$(thefuck --alias)"'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
