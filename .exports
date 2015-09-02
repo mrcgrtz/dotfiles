@@ -1,5 +1,5 @@
-# Make Sublime Text the default editor, nobody needs vim or emacs
-export EDITOR="/usr/local/bin/subl -w";
+# Make Atom the default editor, nobody needs vim or emacs
+export EDITOR="/usr/local/bin/atom -w";
 
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 export HISTSIZE='32768';
