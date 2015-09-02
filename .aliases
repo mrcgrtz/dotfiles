@@ -13,7 +13,6 @@ alias dt="cd ~/Desktop"
 alias p="cd ~/Sites"
 alias g="git"
 alias h="history"
-alias cask="brew cask"
 
 # Typos
 alias gut=git
