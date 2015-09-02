@@ -79,10 +79,10 @@
 	# fetch and rebase an origin branch into the current branch
 	up = "!f() { git fetch origin && git rebase origin/$1; }; f"
 
-	# Undo a `git push`
-	undopush = push -f origin HEAD^:master
+	# Undo a `git push` of current branch
+	undopush = "!f() { git push -f origin HEAD^:$1; }; f"
 
-	# Show files ignored by git:
+	# Show files ignored by Git
 	ign = ls-files -o -i --exclude-standard
 
 [apply]
