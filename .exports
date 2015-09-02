@@ -13,15 +13,25 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 export LANG="de_DE.UTF-8";
 export LC_ALL="de_DE.UTF-8";
 
-# Highlight section titles in manual pages.
-export LESS_TERMCAP_md="${yellow}";
+# Manuals
+export MANPATH="/opt/local/share/man:$MANPATH"
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
+
+# Highlight section titles in manual pages.
+export LESS_TERMCAP_md="${yellow}";
 
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
 
 # Use Node Version Manager
+export NODE_PATH="/usr/local/lib/node_modules"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+# Java home directory
+export JAVA_HOME="$(/usr/libexec/java_home)"
+
+# Increase Maven memory usage
+export MAVEN_OPTS="-Xms1024m -Xmx4096m -XX:PermSize=1024m"
