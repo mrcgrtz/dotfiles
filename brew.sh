@@ -47,10 +47,13 @@ brew install homebrew/php/php56 --with-gmp
 brew install ruby
 brew install git
 brew install git-extras
+brew install git-plus
 brew install git-flow
 brew install nvm
 brew install z
 brew install maven32
+brew unlink maven32 # mvn will be linked via maven-deluxe
+brew install maven-deluxe
 brew install lynx
 brew install terminal-notifier
 brew install ack
