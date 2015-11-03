@@ -4,6 +4,8 @@ My homegrown dotfiles repository which in the meantime is VERY much inspired by 
 
 ## Installation
 
+**Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you do not want or need. Do not blindly use my settings unless you know what that entails. Use at your own risk!
+
 ### Using Git and the bootstrap script
 
 You can clone the repository wherever you want. (I like to keep it in `~/Sites/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
@@ -78,9 +80,10 @@ source brew.sh
  * GNU core utilities
  * bash (latest version)
  * [bash-completion](http://bash-completion.alioth.debian.org/)
- * [git](http://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/master/Commands.md)
- * [ack](http://betterthangrep.com/)
+ * [git](http://git-scm.com/), [git-extras](https://github.com/tj/git-extras/blob/master/Commands.md), and [git-plus](https://github.com/tkrajina/git-plus)
+ * [ack](http://beyondgrep.com/)
  * [nvm](https://github.com/creationix/nvm)
+ * [maven-deluxe](https://github.com/jcgay/homebrew-jcgay) (for colored `mvn` output and desktop notifications)
  * [tree](http://mama.indstate.edu/users/ice/tree/)
  * [wget](http://www.gnu.org/software/wget/)
  * [lynx](http://lynx.isc.org/) (because I ♥ lynx)
@@ -98,7 +101,7 @@ Basically it makes typing into the prompt amazing:
 
  * Tab like crazy for autocompletion that does not suck. Tab all the things. Srsly.
  * No more `<tab><tab>` that says ”Display all 1337 possibilities? (y or n)”. Yay!
- * Type `cat <uparrow>` to see your previous `cat`s and use them. 
+ * Type `cat <uparrow>` to see your previous `cat`s and use them.
  * Case insensitivity.
  * Tab all the livelong day.
 
