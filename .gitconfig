@@ -85,6 +85,13 @@
 	# Show files ignored by Git
 	ign = ls-files -o -i --exclude-standard
 
+	# Create release branch for upcoming calendar week
+	start-release = "!sh -c 'git checkout -b release/`date -v+1w +'%Y'`/kw_`date -v+1w +'%V'`'"
+	# Merge current release branch into master
+	merge-release = "!sh -c 'git fetch && git merge --no-ff origin/release/`date +'%Y'`/kw_`date +'%V'`'"
+	# Tag current release
+	tag-release = "!sh -c 'git tag release_`date +'%Y'`_kw_`date +'%V'`'"
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
