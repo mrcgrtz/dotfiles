@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Make Atom the default editor, nobody needs vim or emacs
 export EDITOR="/usr/local/bin/atom -w";
 
