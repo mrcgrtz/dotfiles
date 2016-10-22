@@ -37,17 +37,15 @@ fi;
 brew install wget --with-iri
 
 # Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
+brew install vim --with-override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php56 --with-gmp
 
 # Install everything else.
 brew install ruby
 brew install git
 brew install git-extras
-brew install git-plus
 brew install git-flow
 brew install nvm
 brew install z
@@ -61,6 +59,8 @@ brew install rename
 brew install tree
 brew install thefuck
 brew install httpie
+brew install gnupg
+brew install keybase
 
 # Remove outdated versions from the cellar.
 brew cleanup
