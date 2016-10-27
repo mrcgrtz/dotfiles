@@ -165,7 +165,7 @@
 " Solarized will use the default (transparent) background of the terminal
 " emulator. *urxvt* required this in my testing; iTerm2 did not.
 "
-" Note that on Mac OS X Terminal.app, solarized_termtrans is set to 1 by 
+" Note that on macOS Terminal.app, solarized_termtrans is set to 1 by 
 " default as this is almost always the best option. The only exception to this 
 " is if the working terminfo file supports 256 colors (xterm-256color).
 "
