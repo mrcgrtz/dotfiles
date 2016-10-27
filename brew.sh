@@ -9,7 +9,7 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-# Install GNU core utilities (those that come with OS X are outdated).
+# Install GNU core utilities (those that come with macOS are outdated).
 brew install coreutils
 echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
 ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
@@ -36,7 +36,7 @@ fi;
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
-# Install more recent versions of some OS X tools.
+# Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
