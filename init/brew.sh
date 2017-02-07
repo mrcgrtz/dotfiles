@@ -49,9 +49,6 @@ brew install git-extras
 brew install git-flow
 brew install nvm
 brew install z
-brew install maven32
-brew unlink maven32 # mvn will be linked via maven-deluxe
-brew install maven-deluxe
 brew install lynx
 brew install terminal-notifier
 brew install ack
@@ -61,6 +58,12 @@ brew install thefuck
 brew install httpie
 brew install gnupg
 brew install keybase
+brew install diff-so-fancy
+brew install yarn --ignore-dependencies # Node will be installed via nvm
+brew install watchman
+brew install maven32
+brew unlink maven32 # mvn will be linked via maven-deluxe
+brew install maven-deluxe
 
 # Remove outdated versions from the cellar.
 brew cleanup
