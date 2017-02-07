@@ -76,6 +76,7 @@
 	],
 	"line_padding_bottom": 2,
 	"line_padding_top": 2,
+	"match_brackets": true,
 	"match_brackets_angle": true,
 	"material_theme_accent_lime": true,
 	"material_theme_appbar_lime": true,
