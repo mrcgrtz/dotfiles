@@ -91,7 +91,7 @@ else
 fi;
 
 # Prompt symbol.
-symbol="〉"
+symbol="$"
 
 # Highlight the user name when logged in as root.
 if [[ "${USER}" == "root" ]]; then
