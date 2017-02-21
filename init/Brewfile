@@ -1,0 +1,144 @@
+tap 'homebrew/core'
+tap 'homebrew/bundle'
+
+# Install GNU core utilities (those that come with macOS are outdated).
+brew 'coreutils'
+# Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to $PATH.
+
+# Install some other useful utilities like `sponge`.
+brew 'moreutils'
+
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew 'findutils'
+
+# Install GNU `sed`, overwriting the built-in `sed`.
+brew 'gnu-sed', args: ['with-default-names']
+
+# Install Bash 4.
+# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
+# running `chsh`.
+brew 'bash'
+tap 'homebrew/versions'
+brew 'homebrew/versions/bash-completion2'
+
+# Install `wget` with IRI support.
+brew 'wget', args: ['with-iri']
+
+# Install more recent versions of some macOS tools.
+brew 'vim', args: ['with-override-system-vi']
+tap 'homebrew/dupes'
+brew 'homebrew/dupes/grep'
+brew 'homebrew/dupes/openssh'
+brew 'homebrew/dupes/screen'
+
+# Install CLI magic.
+brew 'z'
+brew 'thefuck'
+
+# Install Git tools.
+brew 'git'
+brew 'git-extras'
+brew 'git-flow'
+brew 'diff-so-fancy'
+
+# Install Node tools.
+brew 'nvm'
+brew 'yarn', args: ['ignore-dependencies']
+brew 'watchman'
+
+# Install Maven and Maven Deluxe.
+brew 'maven32'
+brew 'terminal-notifier'
+tap 'jcgay/jcgay'
+brew 'jcgay/jcgay/maven-deluxe'
+
+# Install everything else.
+brew 'ack'
+brew 'httpie'
+brew 'lynx'
+brew 'rename'
+brew 'ruby'
+brew 'tree'
+
+# Install native apps from Cask and App Store
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+cask_args appdir: '/Applications'
+brew 'mas'
+
+# Install IDEs.
+cask 'sublime-text'
+cask 'visual-studio-code'
+cask 'atom'
+mas 'Xcode', id: 497799835
+cask 'android-studio'
+cask 'hyper'
+cask 'transmit'
+cask 'mamp'
+
+# Install design apps.
+cask 'sketch'
+mas 'Pixelmator', id: 407963104
+cask 'xscope'
+cask 'invisionsync'
+cask 'zeplin'
+cask 'imageoptim'
+cask 'imagealpha'
+cask 'paintbrush'
+
+# Install Git tools.
+cask 'github-desktop'
+cask 'sourcetree'
+
+# Install browsers.
+cask 'google-chrome'
+cask 'google-chrome-canary'
+cask 'firefoxdeveloperedition'
+cask 'safari-technology-preview'
+cask 'webkit-nightly'
+cask 'opera-beta'
+
+# Install chat apps.
+cask 'franz'
+mas 'Slack', id: 803453959
+cask 'zoomus'
+cask 'skype'
+
+# Install media players.
+cask 'spotify'
+cask 'vlc'
+cask 'lastfm'
+
+# Install security apps.
+mas '1Password', id: 443987910
+cask 'keybase'
+cask 'tunnelblick'
+cask 'little-snitch'
+cask 'micro-snitch'
+
+# Install Quicklook plugins.
+cask 'qlcolorcode'
+cask 'qlmarkdown'
+cask 'qlstephen'
+cask 'quicklook-json'
+
+# Install misc. apps.
+cask 'alfred'
+mas 'Tweetbot', id: 557168941
+mas 'Reeder', id: 880001334
+mas 'Things', id: 407951449
+mas 'Moom', id: 419330170
+mas 'PopClip', id: 445189367
+cask 'flux'
+cask 'kap'
+cask 'ubersicht'
+mas 'The Unarchiver', id: 425424353
+mas 'Keynote', id: 409183694
+mas 'Mousepose', id: 405904955
+mas 'DaisyDisk', id: 411643860
+cask 'virtualbox'
+cask 'dropbox'
+cask 'google-drive'
+cask 'timemachineeditor'
+cask 'a-better-finder-rename'
+mas 'Monity', id: 915542151
