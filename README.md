@@ -140,7 +140,7 @@ When your current working directory is a Git repository, the prompt will display
         <td>Untracked files</td>
     </tr>
     <tr>
-        <td><code>$</code></td>
+        <td><code>⚑</code></td>
         <td>Stashed files</td>
     </tr>
 </table>
