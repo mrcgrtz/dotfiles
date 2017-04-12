@@ -72,7 +72,7 @@ You could also use `~/.extra` to override settings, functions and aliases from m
 When setting up a new Mac, you may want to install some common Homebrew formulae (after installing [Homebrew](http://brew.sh/), of course):
 
 ```bash
-source brew.sh
+source ./init/brew/brew.sh
 ```
 
 #### Installed software via Homebrew
@@ -80,14 +80,13 @@ source brew.sh
  * GNU core utilities
  * bash (latest version)
  * [bash-completion](http://bash-completion.alioth.debian.org/)
- * [git](http://git-scm.com/), [git-extras](https://github.com/tj/git-extras/blob/master/Commands.md), and [git-plus](https://github.com/tkrajina/git-plus)
+ * [git](http://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/master/Commands.md)
  * [ack](http://beyondgrep.com/)
- * [nvm](https://github.com/creationix/nvm)
  * [maven-deluxe](https://github.com/jcgay/homebrew-jcgay) (for colored `mvn` output and desktop notifications)
  * [tree](http://mama.indstate.edu/users/ice/tree/)
  * [wget](http://www.gnu.org/software/wget/)
  * [lynx](http://lynx.isc.org/) (because I ♥ lynx)
- * some more stuff, especially more recent versions of some macOS tools.
+ * Some more stuff, especially more recent versions of some macOS tools.
 
 ## My favorite parts
 
@@ -123,7 +122,7 @@ Lastly, I use `o` to open Finder from this path. (That's just available normally
 
 ## Custom bash prompt
 
-I use a custom bash prompt based on the Solarized color palette and influenced by @gf3’s and @cowboy’s custom prompts.
+I use a custom bash prompt based on the [Nord](https://github.com/arcticicestudio/nord) color palette and influenced by [@gf3](https://github.com/gf3/dotfiles)’s and [@cowboy](https://github.com/cowboy/dotfiles)’s custom prompts.
 
 When your current working directory is a Git repository, the prompt will display the checked-out branch’s name (and failing that, the commit SHA that HEAD is pointing to). The state of the working tree is reflected in the following way:
 
