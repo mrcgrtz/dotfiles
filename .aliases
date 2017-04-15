@@ -16,6 +16,7 @@ alias p="cd ~/Sites"
 alias g="git"
 alias h="history"
 alias hosts='sudo $EDITOR /etc/hosts'
+alias cask='brew cask' # I <3 Cask
 
 # Typos
 alias gut=git
