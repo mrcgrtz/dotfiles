@@ -15,6 +15,7 @@ alias dt="cd ~/Desktop"
 alias p="cd ~/Sites"
 alias g="git"
 alias h="history"
+alias hosts='sudo $EDITOR /etc/hosts'
 
 # Typos
 alias gut=git
