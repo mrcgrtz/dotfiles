@@ -13,6 +13,9 @@ elif infocmp xterm-256color >/dev/null 2>&1; then
   export TERM='xterm-256color';
 fi;
 
+# Automatically trim long paths in the prompt (requires Bash 4.x)
+PROMPT_DIRTRIM=2
+
 # Prompt symbol.
 PROMPT_SYMBOL="❯";
 GIT_UNCOMMITED="+";
