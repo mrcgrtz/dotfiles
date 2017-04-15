@@ -1,6 +1,3 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -20,8 +17,9 @@ shopt -s cdspell;
 
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
+# * Autocorrect on directory names to match a glob
 # * Recursive globbing, e.g. `echo **/*.txt`
-for option in autocd globstar; do
+for option in autocd dirspell globstar; do
   shopt -s "$option" 2> /dev/null;
 done;
 
