@@ -42,8 +42,8 @@ brew 'git-flow'
 brew 'diff-so-fancy'
 
 # Install Node tools.
-brew 'nvm'
-brew 'yarn', args: ['ignore-dependencies']
+brew 'node'
+brew 'yarn'
 brew 'watchman'
 
 # Install Maven and Maven Deluxe.
@@ -84,7 +84,6 @@ cask 'invisionsync'
 cask 'zeplin'
 cask 'imageoptim'
 cask 'imagealpha'
-cask 'paintbrush'
 
 # Install Git tools.
 cask 'github-desktop'
@@ -93,6 +92,7 @@ cask 'sourcetree'
 # Install browsers.
 cask 'google-chrome'
 cask 'google-chrome-canary'
+cask 'firefox'
 cask 'firefoxdeveloperedition'
 cask 'safari-technology-preview'
 cask 'webkit-nightly'
@@ -100,9 +100,8 @@ cask 'opera-beta'
 
 # Install chat apps.
 cask 'franz'
-mas 'Slack', id: 803453959
+cask 'slack'
 cask 'zoomus'
-cask 'skype'
 
 # Install media players.
 cask 'spotify'
@@ -131,6 +130,7 @@ mas 'Moom', id: 419330170
 mas 'PopClip', id: 445189367
 cask 'flux'
 cask 'kap'
+cask 'day-o'
 cask 'ubersicht'
 mas 'The Unarchiver', id: 425424353
 mas 'Keynote', id: 409183694
@@ -141,4 +141,5 @@ cask 'dropbox'
 cask 'google-drive'
 cask 'timemachineeditor'
 cask 'a-better-finder-rename'
+cask 'rowmote-helper'
 mas 'Monity', id: 915542151
