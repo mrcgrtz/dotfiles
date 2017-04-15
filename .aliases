@@ -70,23 +70,23 @@ alias update='sudo softwareupdate -i -a; brew_update; npm_update; gem_update'
 
 # Git
 alias g="git"
-alias gd="g d"
-alias ga="g add"
-alias gca="g commit -a -m"
-alias gb="g branch"
-alias gbd="g branch -D"
-alias gco="g checkout"
-alias gcob="g checkout -b"
-alias gst="g s"
-alias gl="g l"
-alias gm="g merge --no-ff"
-alias gp="g push"
-alias gpt="g push --tags"
-alias grh="g reset --hard"
-alias gcp="g cherry-pick"
-alias gpo="g pull origin"
-alias gpom="gpo master"
-alias gcd='cd "`g rev-parse --show-toplevel`"'
+alias gd="git d"
+alias ga="git add"
+alias gca="git commit -a -m"
+alias gb="git branch"
+alias gbd="git branch -D"
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias gst="git s"
+alias gl="git l"
+alias gm="git merge --no-ff"
+alias gp="git push"
+alias gpt="git push --tags"
+alias gpo="git push origin"
+alias gpom="git push origin master"
+alias grh="git reset --hard"
+alias gcp="git cherry-pick"
+alias gcd='cd "`git rev-parse --show-toplevel`"'
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 
 # IP addresses
