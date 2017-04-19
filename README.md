@@ -31,7 +31,7 @@ set -- -f; source bootstrap.sh
 To install these dotfiles without Git:
 
 ```bash
-cd; curl -#L https://github.com/dreamseer/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,brew.sh,bootstrap.sh,MIT-LICENSE.txt}
+cd; curl -#L https://github.com/dreamseer/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE.md,init}
 ```
 
 To update later on, just run that command again.
@@ -171,3 +171,7 @@ Inspiration and code was taken from many sources, including:
    [https://github.com/cowboy/dotfiles](https://github.com/cowboy/dotfiles)
  * [@alrra](https://github.com/alrra) (Cãtãlin Mariş)
    [https://github.com/alrra/dotfiles](https://github.com/alrra/dotfiles)
+
+## License
+
+MIT © [Marc Görtz](https://marcgoertz.de/)
