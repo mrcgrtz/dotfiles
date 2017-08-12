@@ -1,8 +1,3 @@
-##############################################################################
-# macOS and Windows system files
-# @see https://github.com/github/gitignore/tree/master/Global
-##############################################################################
-
 # Folder view configuration files
 .DS_Store
 Desktop.ini
@@ -14,13 +9,3 @@ Thumbs.db
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
-
-
-##############################################################################
-# Editor files
-# @see https://github.com/github/gitignore/tree/master/Global
-##############################################################################
-
-.idea
-.vscode
-*.sublime-workspace

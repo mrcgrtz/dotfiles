@@ -1,40 +1,40 @@
 {
-	"bootstrapped": true,
-	"in_process_packages":
-	[
-	],
-	"installed_packages":
-	[
-		"Alignment",
-		"Babel",
-		"BracketHighlighter",
-		"Color Highlighter",
-		"DocBlockr",
-		"Dotfiles Syntax Highlighting",
-		"EditorConfig",
-		"ESLintAutoFix",
-		"Git",
-		"Hayaku - tools for writing CSS faster",
-		"HTML Underscore Syntax",
-		"JavaScript Completions",
-		"jQuery",
-		"JsFormat",
-		"LESS",
-		"Material Theme",
-		"Material Theme - Appbar",
-		"Package Control",
-		"SideBarEnhancements",
-		"SublimeLinter",
-		"SublimeLinter-annotations",
-		"SublimeLinter-contrib-eslint",
-		"SublimeLinter-contrib-htmlhint",
-		"SublimeLinter-contrib-lessc",
-		"SublimeLinter-contrib-stylelint",
-		"SublimeLinter-json",
-		"SublimeLinter-php",
-		"Syntax Highlighting for PostCSS",
-		"Theme - Spacegray",
-		"TrailingSpaces",
-		"VCS Gutter"
-	]
+  "bootstrapped": true,
+  "in_process_packages":
+  [
+  ],
+  "installed_packages":
+  [
+    "Alignment",
+    "Babel",
+    "BracketHighlighter",
+    "Color Highlighter",
+    "DocBlockr",
+    "Dotfiles Syntax Highlighting",
+    "EditorConfig",
+    "ESLintAutoFix",
+    "Git",
+    "Hayaku - tools for writing CSS faster",
+    "HTML Underscore Syntax",
+    "JavaScript Completions",
+    "jQuery",
+    "JsFormat",
+    "LESS",
+    "Material Theme",
+    "Material Theme - Appbar",
+    "Package Control",
+    "SideBarEnhancements",
+    "SublimeLinter",
+    "SublimeLinter-annotations",
+    "SublimeLinter-contrib-eslint",
+    "SublimeLinter-contrib-htmlhint",
+    "SublimeLinter-contrib-lessc",
+    "SublimeLinter-contrib-stylelint",
+    "SublimeLinter-json",
+    "SublimeLinter-php",
+    "Syntax Highlighting for PostCSS",
+    "Theme - Spacegray",
+    "TrailingSpaces",
+    "VCS Gutter"
+  ]
 }

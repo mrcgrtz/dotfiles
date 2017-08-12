@@ -1,101 +1,101 @@
 {
-	"always_show_minimap_viewport": true,
-	"bold_folder_labels": false,
-	"caret_extra_bottom": 3,
-	"caret_extra_top": 3,
-	"caret_extra_width": 1,
-	"caret_style": "phase",
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
-	"create_window_at_startup": false,
-	"default_encoding": "UTF-8",
-	"default_line_ending": "unix",
-	"detect_slow_plugins": true,
-	"dictionary": "Packages/User/Language - German/de_DE_frami.dic",
-	"draw_white_space": "all",
-	"ensure_newline_at_eof_on_save": true,
-	"file_exclude_patterns":
-	[
-		".DS_Store",
-		"Desktop.ini",
-		"*.pyc",
-		"._*",
-		"Thumbs.db",
-		".Spotlight-V100",
-		".Trashes"
-	],
-	"folder_exclude_patterns":
-	[
-		".git",
-		"node_modules"
-	],
-	"font_face": "Fira Mono",
-	"font_options":
-	[
-		"subpixel_antialias"
-	],
-	"font_size": 14.0,
-	"hayaku_CSS_colors_case": "lowercase",
-	"highlight_line": true,
-	"highlight_modified_tabs": true,
-	"hot_exit": false,
-	"ignored_packages":
-	[
-		"ActionScript",
-		"ASP",
-		"Batch File",
-		"C#",
-		"C++",
-		"Clojure",
-		"D",
-		"Erlang",
-		"Go",
-		"Graphviz",
-		"Groovy",
-		"Haskell",
-		"LaTeX",
-		"Lisp",
-		"Lua",
-		"Matlab",
-		"Objective-C",
-		"OCaml",
-		"Pascal",
-		"R",
-		"Rails",
-		"RestructuredText",
-		"Rust",
-		"Scala",
-		"TCL",
-		"Textile",
-		"Vintage",
-		"YAML"
-	],
-	"indent_guide_options":
-	[
-		"draw_normal",
-		"draw_active"
-	],
-	"line_padding_bottom": 2,
-	"line_padding_top": 2,
-	"match_brackets": true,
-	"match_brackets_angle": true,
-	"material_theme_accent_lime": true,
-	"material_theme_appbar_lime": true,
-	"material_theme_bright_scrollbars": true,
-	"material_theme_panel_separator": true,
-	"material_theme_small_statusbar": true,
-	"material_theme_tree_headings": true,
-	"open_files_in_new_window": true,
-	"overlay_scroll_bars": "enabled",
-	"remember_open_files": false,
-	"rulers":
-	[
-		72,
-		79,
-		120
-	],
-	"scroll_past_end": true,
-	"show_encoding": true,
-	"show_line_endings": true,
-	"theme": "Material-Theme.sublime-theme",
-	"trim_trailing_white_space_on_save": true
+  "always_show_minimap_viewport": true,
+  "bold_folder_labels": false,
+  "caret_extra_bottom": 3,
+  "caret_extra_top": 3,
+  "caret_extra_width": 1,
+  "caret_style": "phase",
+  "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+  "create_window_at_startup": false,
+  "default_encoding": "UTF-8",
+  "default_line_ending": "unix",
+  "detect_slow_plugins": true,
+  "dictionary": "Packages/User/Language - German/de_DE_frami.dic",
+  "draw_white_space": "all",
+  "ensure_newline_at_eof_on_save": true,
+  "file_exclude_patterns":
+  [
+    ".DS_Store",
+    "Desktop.ini",
+    "*.pyc",
+    "._*",
+    "Thumbs.db",
+    ".Spotlight-V100",
+    ".Trashes"
+  ],
+  "folder_exclude_patterns":
+  [
+    ".git",
+    "node_modules"
+  ],
+  "font_face": "Fira Mono",
+  "font_options":
+  [
+    "subpixel_antialias"
+  ],
+  "font_size": 14.0,
+  "hayaku_CSS_colors_case": "lowercase",
+  "highlight_line": true,
+  "highlight_modified_tabs": true,
+  "hot_exit": false,
+  "ignored_packages":
+  [
+    "ActionScript",
+    "ASP",
+    "Batch File",
+    "C#",
+    "C++",
+    "Clojure",
+    "D",
+    "Erlang",
+    "Go",
+    "Graphviz",
+    "Groovy",
+    "Haskell",
+    "LaTeX",
+    "Lisp",
+    "Lua",
+    "Matlab",
+    "Objective-C",
+    "OCaml",
+    "Pascal",
+    "R",
+    "Rails",
+    "RestructuredText",
+    "Rust",
+    "Scala",
+    "TCL",
+    "Textile",
+    "Vintage",
+    "YAML"
+  ],
+  "indent_guide_options":
+  [
+    "draw_normal",
+    "draw_active"
+  ],
+  "line_padding_bottom": 2,
+  "line_padding_top": 2,
+  "match_brackets": true,
+  "match_brackets_angle": true,
+  "material_theme_accent_lime": true,
+  "material_theme_appbar_lime": true,
+  "material_theme_bright_scrollbars": true,
+  "material_theme_panel_separator": true,
+  "material_theme_small_statusbar": true,
+  "material_theme_tree_headings": true,
+  "open_files_in_new_window": true,
+  "overlay_scroll_bars": "enabled",
+  "remember_open_files": false,
+  "rulers":
+  [
+    72,
+    79,
+    120
+  ],
+  "scroll_past_end": true,
+  "show_encoding": true,
+  "show_line_endings": true,
+  "theme": "Material-Theme.sublime-theme",
+  "trim_trailing_white_space_on_save": true
 }
