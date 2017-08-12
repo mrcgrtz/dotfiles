@@ -8,10 +8,10 @@ export EDITOR="/usr/local/bin/subl -w";
 # %T equivalent to %H:%M:%S (24-hours format)
 export HISTTIMEFORMAT="%F %T ";
 # Increase Bash history size. Allow 32³ entries; the default is 500.
-export HISTSIZE='32768';
-export HISTFILESIZE="${HISTSIZE}";
+export HISTSIZE="32768";
+export HISTFILESIZE="${HISTSIZE}"
 # Omit duplicates and commands that begin with a space from history.
-export HISTCONTROL='ignoreboth';
+export HISTCONTROL="erasedups:ignoreboth";
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:bg:fg:history:clear:exit:date:* --help";
 
@@ -20,32 +20,32 @@ export LANG="de_DE.UTF-8";
 export LC_ALL="de_DE.UTF-8";
 
 # Manuals
-export MANPATH="/opt/local/share/man:$MANPATH"
+export MANPATH="/opt/local/share/man:${MANPATH}";
 
 # Don’t clear the screen after quitting a manual page.
-export MANPAGER='less -X';
+export MANPAGER="less -X";
 
 # Avoid issues with `gpg` as installed via Homebrew.
 # https://stackoverflow.com/a/42265848/96656
-export GPG_TTY=$(tty);
+export GPG_TTY="$(tty)";
 
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
 
 # Specify Node modules path
-export NODE_PATH="/usr/local/lib/node_modules"
+export NODE_PATH="/usr/local/lib/node_modules";
 # Enable persistent REPL history for `node`.
-export NODE_REPL_HISTORY=~/.node_history;
+export NODE_REPL_HISTORY="~/.node_history";
 # Allow 32³ entries; the default is 1000.
-export NODE_REPL_HISTORY_SIZE='32768';
+export NODE_REPL_HISTORY_SIZE="32768";
 # Use sloppy mode by default, matching web browsers.
-export NODE_REPL_MODE='sloppy';
+export NODE_REPL_MODE="sloppy";
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
-export PYTHONIOENCODING='UTF-8';
+export PYTHONIOENCODING="UTF-8";
 
 # Java home directory
-export JAVA_HOME="$(/usr/libexec/java_home)"
+export JAVA_HOME="$(/usr/libexec/java_home)";
 
 # Increase Maven memory usage
-export MAVEN_OPTS="-Xms1024m -Xmx4096m -XX:PermSize=1024m"
+export MAVEN_OPTS="-Xms1024m -Xmx4096m -XX:PermSize=1024m";
