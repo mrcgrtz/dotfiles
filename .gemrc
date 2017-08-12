@@ -1,1 +1,2 @@
-gem: --no-ri --no-rdoc
+# disable documentation generation, suggest alternates when Gems are not found
+gem: --no-document --suggestions
