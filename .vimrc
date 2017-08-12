@@ -1,8 +1,6 @@
-" Use the Solarized Dark theme
-set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-colorscheme solarized
+" Use the Nord theme
+let g:nord_italic_comments = 1
+colorscheme nord
 
 " Make Vim more useful
 set nocompatible
