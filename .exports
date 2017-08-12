@@ -3,6 +3,10 @@
 # Make Sublime Text the default editor, nobody needs vim or emacs
 export EDITOR="/usr/local/bin/subl -w";
 
+# Use standard ISO 8601 timestamp
+# %F equivalent to %Y-%m-%d
+# %T equivalent to %H:%M:%S (24-hours format)
+export HISTTIMEFORMAT="%F %T ";
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 export HISTSIZE='32768';
 export HISTFILESIZE="${HISTSIZE}";
