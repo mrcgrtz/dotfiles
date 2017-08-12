@@ -13,8 +13,6 @@ alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Sites"
-alias g="git"
-alias h="history"
 alias hosts='sudo $EDITOR /etc/hosts'
 alias cask='brew cask' # I <3 Cask
 
@@ -23,6 +21,30 @@ alias gut=git
 alias brwe=brew
 alias where=which
 alias fuck='eval "$(thefuck --alias)"'
+
+# Git
+alias g="git"
+alias gd="git d"
+alias gbd="git branch -D"
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias gst="git s"
+alias gl="git l"
+alias gm="git merge --no-ff"
+alias gp="git push"
+alias gpt="git push --tags"
+alias gpo="git push origin"
+alias gpom="git push origin master"
+alias grh="git reset --hard"
+alias gcp="git cherry-pick"
+alias gcd='cd "`git rev-parse --show-toplevel`"'
+alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
+
+# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor; npm-check -g -u"
+alias npm_update="npm install npm -g; npm update -g; npm doctor"
+alias gem_update="sudo gem update --system; sudo gem update --no-document; sudo gem cleanup"
+alias update='sudo softwareupdate -i -a; brew_update; npm_update; gem_update'
 
 # Use coreutils `ls` if possible…
 hash gls >/dev/null 2>&1 || alias gls="ls"
@@ -59,36 +81,6 @@ alias gurl="curl --compressed"
 # Get week number
 alias week="date +%V"
 
-# Stopwatch
-alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
-
-# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor; npm-check -g -u"
-alias npm_update="npm install npm -g; npm update -g"
-alias gem_update="sudo gem update --system; sudo gem update --no-document; sudo gem cleanup"
-alias update='sudo softwareupdate -i -a; brew_update; npm_update; gem_update'
-
-# Git
-alias g="git"
-alias gd="git d"
-alias ga="git add"
-alias gca="git commit -a -m"
-alias gb="git branch"
-alias gbd="git branch -D"
-alias gco="git checkout"
-alias gcob="git checkout -b"
-alias gst="git s"
-alias gl="git l"
-alias gm="git merge --no-ff"
-alias gp="git push"
-alias gpt="git push --tags"
-alias gpo="git push origin"
-alias gpom="git push origin master"
-alias grh="git reset --hard"
-alias gcp="git cherry-pick"
-alias gcd='cd "`git rev-parse --show-toplevel`"'
-alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
-
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
@@ -109,9 +101,6 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
-
-# Canonical hex dump; some systems have this symlinked
-command -v hd > /dev/null || alias hd="hexdump -C"
 
 # macOS has no `md5sum`, so use `md5` as a fallback
 command -v md5sum > /dev/null || alias md5sum="md5"
@@ -137,25 +126,20 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
-# Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+# Show/hide all desktop icons (useful when presenting)
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 
 # Merge PDF files
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
 alias mergepdf="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py"
 
-# Disable Spotlight
-alias spotoff="sudo mdutil -a -i off"
-# Enable Spotlight
+# Enable/disable Spotlight
 alias spoton="sudo mdutil -a -i on"
+alias spotoff="sudo mdutil -a -i off"
 
 # PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
 alias plistbuddy="/usr/libexec/PlistBuddy"
-
-# Ring the terminal bell, and put a badge on Terminal.app’s Dock icon
-# (useful when executing time-consuming commands)
-alias badge="tput bel"
 
 # Intuitive map function
 # For example, to list all directories that contain a certain file:
@@ -164,7 +148,7 @@ alias map="xargs -n1"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-  alias "$method"="lwp-request -m '$method'"
+  alias "${method}"="lwp-request -m '${method}'"
 done
 
 # Make Grunt print stack traces by default
@@ -182,7 +166,7 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # Reload the shell (i.e. invoke as a login shell)
-alias reload="exec $SHELL -l"
+alias reload="exec ${SHELL} -l"
 
 # Faster npm for Europeans
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
