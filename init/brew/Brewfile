@@ -64,10 +64,10 @@ tap 'caskroom/versions'
 cask_args appdir: '/Applications'
 brew 'mas'
 
-# Install IDEs.
+# Install IDEs and dev-related tools.
+cask 'atom'
 cask 'sublime-text'
 cask 'visual-studio-code'
-cask 'atom'
 mas 'Xcode', id: 497799835
 cask 'android-studio'
 cask 'hyper'
@@ -83,9 +83,8 @@ cask 'zeplin'
 cask 'imageoptim'
 cask 'imagealpha'
 
-# Install Git tools.
+# Install a visual Git tool.
 cask 'github-desktop'
-cask 'sourcetree'
 
 # Install browsers.
 cask 'google-chrome'
@@ -108,7 +107,7 @@ cask 'lastfm'
 
 # Install security apps.
 mas '1Password', id: 443987910
-cask 'keybase'
+brew 'gnupg'
 cask 'tunnelblick'
 cask 'little-snitch'
 cask 'micro-snitch'
