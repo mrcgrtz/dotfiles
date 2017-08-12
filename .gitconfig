@@ -7,6 +7,11 @@
   s = status -s
   st = status -s
 
+  # Show verbose output about tags, branches or remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+
   # Show the diff between the latest commit and the current state
   d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
@@ -22,25 +27,14 @@
   # Commit all changes
   ca = !git add -A && git commit -av
 
-  # Switch to a branch
-  co = checkout
-
   # Switch to a branch, creating it if necessary
-  go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
-
-  # Show verbose output about tags, branches or remotes
-  tags = tag -l
-  branches = branch -a
-  remotes = remote -v
+  co = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
   # Amend the currently staged files to the latest commit
   amend = commit --amend --reuse-message=HEAD
 
   # Credit an author on the latest commit
   credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
-
-  # Interactive rebase with the given number of latest commits
-  reb = "!r() { git rebase -i HEAD~$1; }; r"
 
   # Remove the old tag with this name and tag the latest commit with it.
   retag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
@@ -63,21 +57,6 @@
 
   # List contributors with number of commits
   contributors = shortlog --summary --numbered
-
-  # Merge GitHub pull request on top of the `master` branch
-  mpr = "!f() { \
-    if [ $(printf \"%s\" \"$1\" | grep '^[0-9]\\+$' > /dev/null; printf $?) -eq 0 ]; then \
-      git fetch origin refs/pull/$1/head:pr/$1 && \
-      git rebase master pr/$1 && \
-      git checkout master && \
-      git merge pr/$1 && \
-      git branch -D pr/$1 && \
-      git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
-    fi \
-  }; f"
-
-  # fetch and rebase an origin branch into the current branch
-  up = "!f() { git fetch origin && git rebase origin/$1; }; f"
 
   # Undo a `git push` of current branch
   undopush = "!f() { git push -f origin HEAD^:$1; }; f"
