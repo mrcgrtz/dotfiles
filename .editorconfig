@@ -1,14 +1,5 @@
-# This file is for unifying the coding style for different editors
-# and IDEs. EditorConfig is awesome: http://EditorConfig.org
-
-# ##############################################################################
-# # TOP-MOST .EDITORCONFIG FILE                                                #
-# ##############################################################################
 root = true
 
-# ##############################################################################
-# # ALL FILES                                                                  #
-# ##############################################################################
 [*]
 # indent using 2 spaces
 indent_style = space
@@ -21,17 +12,9 @@ insert_final_newline = true
 charset = utf-8
 # remove any trailing whitespace
 trim_trailing_whitespace = true
+# restrict line length to 80 characters
+max_line_length = 80
 
-# ##############################################################################
-# # MARKDOWN FILES                                                             #
-# ##############################################################################
 [*.md]
 # do not remove trailing spaces for line-breaks
 trim_trailing_whitespace = false
-
-# ##############################################################################
-# # .HTACCESS FILES                                                            #
-# ##############################################################################
-[.htaccess]
-# indent using 4 spaces
-indent_size = 4
