@@ -135,6 +135,11 @@
   # Detect copies as well as renames
   renames = copies
 
+[stash]
+
+  # `git stash show <x>` should show the patch
+  showPatch = true
+
 [help]
 
   # Automatically correct and execute mistyped commands
