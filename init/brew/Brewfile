@@ -18,18 +18,16 @@ brew 'gnu-sed', args: ['with-default-names']
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
 brew 'bash'
-tap 'homebrew/versions'
-brew 'homebrew/versions/bash-completion2'
+brew 'bash-completion@2'
 
 # Install `wget` with IRI support.
 brew 'wget', args: ['with-iri']
 
 # Install more recent versions of some macOS tools.
 brew 'vim', args: ['with-override-system-vi']
-tap 'homebrew/dupes'
-brew 'homebrew/dupes/grep'
-brew 'homebrew/dupes/openssh'
-brew 'homebrew/dupes/screen'
+brew 'grep'
+brew 'openssh'
+brew 'screen'
 
 # Install CLI magic.
 brew 'z'
