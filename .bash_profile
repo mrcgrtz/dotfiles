@@ -12,6 +12,9 @@ shopt -s nocaseglob;
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend;
 
+# Save multi-line commands as one command
+shopt -s cmdhist;
+
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
