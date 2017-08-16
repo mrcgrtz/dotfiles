@@ -98,6 +98,7 @@ module.exports = {
   plugins: [
     'hyperterm-1password',
     'hyperterm-paste',
+    'hypercwd',
     'hyperlinks',
     'hyper-blink',
     'hyper-statusline'
