@@ -90,7 +90,6 @@ cask 'opera-beta'
 
 # Install chat apps.
 cask 'franz'
-cask 'slack'
 cask 'zoomus'
 
 # Install media players.
