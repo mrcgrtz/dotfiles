@@ -63,7 +63,6 @@ cask 'atom'
 cask 'sublime-text'
 cask 'visual-studio-code'
 mas 'Xcode', id: 497799835
-cask 'android-studio'
 cask 'hyper'
 cask 'transmit'
 cask 'mamp'
