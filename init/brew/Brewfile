@@ -97,6 +97,11 @@ cask 'spotify'
 cask 'vlc'
 cask 'lastfm'
 
+# Install DVD ripping software.
+cask 'ripit'
+cask 'handbrake'
+mas 'iFlicks 2', id: 731062389
+
 # Install security apps.
 mas '1Password', id: 443987910
 brew 'gnupg'
