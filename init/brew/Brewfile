@@ -131,4 +131,3 @@ cask 'google-drive'
 cask 'timemachineeditor'
 cask 'a-better-finder-rename'
 cask 'rowmote-helper'
-mas 'Monity', id: 915542151
