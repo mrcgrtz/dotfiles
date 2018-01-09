@@ -121,6 +121,7 @@ cask 'flux'
 cask 'kap'
 cask 'day-o'
 cask 'ubersicht'
+mas 'Battery Indicator', id: 1206020918
 mas 'The Unarchiver', id: 425424353
 mas 'Keynote', id: 409183694
 mas 'Mousepose', id: 405904955
