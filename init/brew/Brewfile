@@ -44,12 +44,6 @@ brew 'node'
 brew 'yarn'
 brew 'watchman'
 
-# Install Maven and Maven Deluxe.
-brew 'maven32'
-brew 'terminal-notifier'
-tap 'jcgay/jcgay'
-brew 'jcgay/jcgay/maven-deluxe'
-
 # Install everything else.
 brew 'ack'
 brew 'httpie'
