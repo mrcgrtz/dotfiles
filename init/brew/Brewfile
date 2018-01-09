@@ -45,7 +45,7 @@ brew 'yarn'
 brew 'watchman'
 
 # Install everything else.
-brew 'ack'
+brew 'the_silver_searcher'
 brew 'httpie'
 brew 'lynx'
 brew 'rename'
