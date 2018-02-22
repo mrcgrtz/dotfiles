@@ -114,7 +114,7 @@ cask 'quicklook-json'
 cask 'alfred'
 mas 'Tweetbot', id: 557168941
 mas 'Reeder', id: 880001334
-mas 'Things', id: 407951449
+mas 'Things', id: 904280696
 mas 'Moom', id: 419330170
 mas 'PopClip', id: 445189367
 cask 'kap'
