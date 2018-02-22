@@ -87,11 +87,9 @@ cask 'choosy'
 
 # Install chat apps.
 cask 'franz'
-cask 'zoomus'
 
 # Install media players.
 cask 'spotify'
-cask 'vlc'
 cask 'lastfm'
 
 # Install DVD ripping software.
@@ -102,7 +100,6 @@ mas 'iFlicks 2', id: 731062389
 # Install security apps.
 mas '1Password', id: 443987910
 brew 'gnupg'
-cask 'tunnelblick'
 cask 'little-snitch'
 cask 'micro-snitch'
 
@@ -119,10 +116,8 @@ mas 'Reeder', id: 880001334
 mas 'Things', id: 407951449
 mas 'Moom', id: 419330170
 mas 'PopClip', id: 445189367
-cask 'flux'
 cask 'kap'
 cask 'day-o'
-cask 'ubersicht'
 mas 'Battery Indicator', id: 1206020918
 mas 'The Unarchiver', id: 425424353
 mas 'Keynote', id: 409183694
@@ -130,7 +125,5 @@ mas 'Mousepose', id: 405904955
 mas 'DaisyDisk', id: 411643860
 cask 'virtualbox'
 cask 'dropbox'
-cask 'google-drive'
 cask 'timemachineeditor'
-cask 'a-better-finder-rename'
 cask 'rowmote-helper'
