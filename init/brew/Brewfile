@@ -129,3 +129,9 @@ cask 'dropbox'
 cask 'timemachineeditor'
 cask 'appcleaner'
 cask 'rowmote-helper'
+
+# Install fonts
+tap 'caskroom/fonts'
+cask 'font-fira-code'
+cask 'font-hack'
+cask 'font-vollkorn'
