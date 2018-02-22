@@ -92,6 +92,11 @@ cask 'franz'
 cask 'spotify'
 cask 'lastfm'
 
+# Install office software.
+cask 'libreoffice'
+cask 'libreoffice-language-pack'
+mas 'Keynote', id: 409183694
+
 # Install DVD ripping software.
 cask 'ripit'
 cask 'handbrake'
@@ -121,7 +126,6 @@ cask 'kap'
 cask 'day-o'
 mas 'Battery Indicator', id: 1206020918
 mas 'The Unarchiver', id: 425424353
-mas 'Keynote', id: 409183694
 mas 'Mousepose', id: 405904955
 mas 'DaisyDisk', id: 411643860
 cask 'virtualbox'
