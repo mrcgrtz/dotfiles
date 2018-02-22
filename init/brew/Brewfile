@@ -66,15 +66,15 @@ cask 'hyper'
 cask 'transmit'
 cask 'mamp'
 
+# Install a visual Git tool.
+cask 'github'
+
 # Install design apps.
 mas 'Pixelmator', id: 407963104
 cask 'sketch'
 cask 'xscope'
 cask 'imageoptim'
 cask 'imagealpha'
-
-# Install a visual Git tool.
-cask 'github-desktop'
 
 # Install browsers.
 cask 'google-chrome'
