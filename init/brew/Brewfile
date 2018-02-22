@@ -59,10 +59,9 @@ cask_args appdir: '/Applications'
 brew 'mas'
 
 # Install IDEs and dev-related tools.
+cask 'visual-studio-code'
 cask 'atom'
 cask 'sublime-text'
-cask 'visual-studio-code'
-mas 'Xcode', id: 497799835
 cask 'hyper'
 cask 'transmit'
 cask 'mamp'
