@@ -85,8 +85,8 @@ cask 'google-chrome-canary'
 cask 'firefox'
 cask 'firefox-developer-edition'
 cask 'safari-technology-preview'
-cask 'webkit-nightly'
 cask 'opera-beta'
+cask 'choosy'
 
 # Install chat apps.
 cask 'franz'
