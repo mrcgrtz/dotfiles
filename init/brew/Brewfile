@@ -68,11 +68,9 @@ cask 'transmit'
 cask 'mamp'
 
 # Install design apps.
-cask 'sketch'
 mas 'Pixelmator', id: 407963104
+cask 'sketch'
 cask 'xscope'
-cask 'invisionsync'
-cask 'zeplin'
 cask 'imageoptim'
 cask 'imagealpha'
 
