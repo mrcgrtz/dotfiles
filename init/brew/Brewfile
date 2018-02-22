@@ -100,6 +100,7 @@ mas 'iFlicks 2', id: 731062389
 # Install security apps.
 mas '1Password', id: 443987910
 brew 'gnupg'
+cask 'gpg-suite'
 cask 'little-snitch'
 cask 'micro-snitch'
 
