@@ -1,13 +1,7 @@
 {
   "always_show_minimap_viewport": true,
-  "bold_folder_labels": false,
-  "caret_extra_bottom": 3,
-  "caret_extra_top": 3,
-  "caret_extra_width": 1,
-  "caret_style": "phase",
-  "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+  "color_scheme": "Packages/User/SublimeLinter/One Dark (SL).tmTheme",
   "create_window_at_startup": false,
-  "default_encoding": "UTF-8",
   "default_line_ending": "unix",
   "detect_slow_plugins": true,
   "dictionary": "Packages/User/Language - German/de_DE_frami.dic",
@@ -28,7 +22,7 @@
     ".git",
     "node_modules"
   ],
-  "font_face": "Fira Mono",
+  "font_face": "Fira Code",
   "font_options":
   [
     "subpixel_antialias"
@@ -76,17 +70,8 @@
   ],
   "line_padding_bottom": 2,
   "line_padding_top": 2,
-  "match_brackets": true,
   "match_brackets_angle": true,
-  "material_theme_accent_lime": true,
-  "material_theme_appbar_lime": true,
-  "material_theme_bright_scrollbars": true,
-  "material_theme_panel_separator": true,
-  "material_theme_small_statusbar": true,
-  "material_theme_tree_headings": true,
   "open_files_in_new_window": true,
-  "overlay_scroll_bars": "enabled",
-  "remember_open_files": false,
   "rulers":
   [
     72,
@@ -96,6 +81,6 @@
   "scroll_past_end": true,
   "show_encoding": true,
   "show_line_endings": true,
-  "theme": "Material-Theme.sublime-theme",
+  "theme": "One Dark.sublime-theme",
   "trim_trailing_white_space_on_save": true
 }
