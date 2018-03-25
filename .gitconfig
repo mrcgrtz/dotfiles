@@ -88,11 +88,11 @@
   whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
   # Make `git rebase` safer on macOS
-  # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+  # More info: <https://www.git-tower.com/blog/make-git-rebase-safe-on-osx>
   trustctime = false
 
   # Prevent showing files whose names contain non-ASCII symbols as unversioned.
-  # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+  # https://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
   precomposeunicode = false
 
   # diff-so-fancy builds on the good-lookin' output of git contrib's
@@ -154,7 +154,7 @@
 
   # Use the Git 1.x.x default to avoid errors on machines with old Git
   # installations. To use `simple` instead, add this to your `~/.extra` file:
-  # `git config --global push.default simple`. See http://git.io/mMah-w.
+  # `git config --global push.default simple`. See https://git.io/mMah-w.
   default = matching
 
   # Make `git push` push relevant annotated tags when pushing branches out.
