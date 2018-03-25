@@ -1,6 +1,6 @@
 # dotfiles
 
-My homegrown dotfiles repository which in the meantime is VERY much inspired by the work of [Mathias Bynens](https://mths.be/dotfiles) and [Paul Irish](https://github.com/paulirish/dotfiles/). If you really want your own dotfiles repository, fork one of these. They have awesome setups!
+My homegrown dotfiles repository which in the meantime is VERY much inspired by the work of [Mathias Bynens](https://mths.be/dotfiles) and [Paul Irish](https://github.com/paulirish/dotfiles). If you really want your own dotfiles repository, fork one of these. They have awesome setups!
 
 ## Installation
 
@@ -69,7 +69,7 @@ You could also use `~/.extra` to override settings, functions and aliases from m
 
 ### Install Homebrew formulae
 
-When setting up a new Mac, you may want to install some common Homebrew formulae (after installing [Homebrew](http://brew.sh/), of course):
+When setting up a new Mac, you may want to install some common Homebrew formulae (after installing [Homebrew](https://brew.sh/), of course):
 
 ```bash
 source ./init/brew/brew.sh
@@ -79,13 +79,13 @@ source ./init/brew/brew.sh
 
  * GNU core utilities
  * bash (latest version)
- * [bash-completion](http://bash-completion.alioth.debian.org/)
- * [git](http://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/master/Commands.md)
- * [ack](http://beyondgrep.com/)
- * [maven-deluxe](https://github.com/jcgay/homebrew-jcgay) (for colored `mvn` output and desktop notifications)
+ * [bash-completion](https://github.com/scop/bash-completion/)
+ * [git](https://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/master/Commands.md)
+ * [The Silver Searcher](https://geoff.greer.fm/ag/)
+ * [httpie](https://httpie.org/) (the better cURL)
  * [tree](http://mama.indstate.edu/users/ice/tree/)
- * [wget](http://www.gnu.org/software/wget/)
- * [lynx](http://lynx.isc.org/) (because I ♥ lynx)
+ * [The Fuck](https://github.com/nvbn/thefuck)
+ * [lynx](http://lynx.invisible-island.net/) (because I ♥ lynx)
  * Some more stuff, especially more recent versions of some macOS tools.
 
 ## My favorite parts
