@@ -42,7 +42,6 @@ brew 'diff-so-fancy'
 # Install Node tools.
 brew 'node'
 brew 'yarn'
-brew 'watchman'
 
 # Install everything else.
 brew 'the_silver_searcher'

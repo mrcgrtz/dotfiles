@@ -154,7 +154,7 @@ done
 # Make Grunt print stack traces by default
 command -v grunt > /dev/null && alias grunt="grunt --stack"
 
-# Stuff I never really use but cannot delete either because of http://xkcd.com/530/
+# Stuff I never really use but cannot delete either because of https://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
 
@@ -172,7 +172,7 @@ alias reload="exec ${SHELL} -l"
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
 
 # List global npm modules without their dependencies
-# See http://ilee.co.uk/list-node-packages-wo-dependencies/
+# See https://ilee.co.uk/list-node-packages-wo-dependencies/
 alias npmls="npm list -g --depth=0"
 
 # Remove local Node modules and clear NPM cache for an upcoming fresh install,
