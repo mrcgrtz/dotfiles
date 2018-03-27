@@ -122,6 +122,7 @@ mas 'Things', id: 904280696
 mas 'Moom', id: 419330170
 mas 'PopClip', id: 445189367
 cask 'kap'
+cask 'vanilla'
 cask 'day-o'
 mas 'Battery Indicator', id: 1206020918
 mas 'The Unarchiver', id: 425424353
