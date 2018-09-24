@@ -41,7 +41,7 @@ alias gcd='cd "`git rev-parse --show-toplevel`"'
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor; npm-check -g -u"
+alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew prune; brew doctor; npm-check -g -u"
 alias npm_update="npm install npm -g; npm update -g; npm doctor"
 alias gem_update="sudo gem update --system; sudo gem update --no-document; sudo gem cleanup"
 alias update='sudo softwareupdate -i -a; brew_update; npm_update; gem_update'
