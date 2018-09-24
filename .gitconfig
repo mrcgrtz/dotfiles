@@ -7,10 +7,11 @@
   s = status -s
   st = status -s
 
-  # Show verbose output about tags, branches or remotes
+  # Show verbose output about tags, branches, remotes or aliases
   tags = tag -l
   branches = branch -a
   remotes = remote -v
+  aliases = !"git config -l | grep alias | cut -c 7-"
 
   # Show the diff between the latest commit and the current state
   d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
