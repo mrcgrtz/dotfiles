@@ -7,12 +7,6 @@
   s = status -s
   st = status -s
 
-  # Show verbose output about tags, branches, remotes or aliases
-  tags = tag -l
-  branches = branch -a
-  remotes = remote -v
-  aliases = !"git config -l | grep alias | cut -c 7-"
-
   # Show the diff between the latest commit and the current state
   d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
@@ -40,6 +34,9 @@
   # Remove the old tag with this name and tag the latest commit with it.
   retag = "!f() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; f"
 
+  # Undo a `git push` of current branch
+  undopush = "!f() { git push -f origin HEAD^:$1; }; f"
+
   # Find branches containing commit
   fb = "!f() { git branch -a --contains $1; }; f"
 
@@ -56,14 +53,17 @@
   # a.k.a. ‘delete merged’
   dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
-  # List contributors with number of commits
-  contributors = shortlog --summary --numbered
-
-  # Undo a `git push` of current branch
-  undopush = "!f() { git push -f origin HEAD^:$1; }; f"
+  # Show verbose output about tags, branches, remotes or aliases
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  aliases = !"git config -l | grep alias | cut -c 7-"
 
   # Show files ignored by Git
-  ign = ls-files -o -i --exclude-standard
+  ignores = ls-files -o -i --exclude-standard
+
+  # List contributors with number of commits
+  contributors = shortlog --summary --numbered
 
 [apply]
 
