@@ -55,8 +55,10 @@ export CLICOLOR_FORCE=1
 
 # ls options: A = include hidden (but not . or ..), F = put `/` after folders, h = byte unit suffixes
 alias ls="gls -AFh ${colorflag} --group-directories-first"
-alias lsd="gls -l | grep ^d" # List only directories
-alias la="gls -lAF ${colorflag}" # List all files colorized in long format, including dot files
+# List all files colorized in long format, excluding . and ..
+alias la="gls -lAF ${colorflag}"
+# List only directories
+alias lsd="gls -l ${colorflag} | grep ^d"
 
 # here's LS_COLORS
 # github.com/trapd00r/LS_COLORS
