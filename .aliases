@@ -13,13 +13,13 @@ alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Sites"
-alias hosts='sudo $EDITOR /etc/hosts'
-alias cask='brew cask' # I <3 Cask
+alias hosts="sudo ${EDITOR} /etc/hosts"
+alias cask="brew cask" # I <3 Cask
 
 # Typos
-alias gut=git
-alias brwe=brew
-alias where=which
+alias gut="git"
+alias brwe="brew"
+alias where="which"
 alias fuck='eval "$(thefuck --alias)"'
 
 # Git
