@@ -14,7 +14,7 @@ brew 'findutils'
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew 'gnu-sed', args: ['with-default-names']
 
-# Install Bash 4.
+# Install latest Bash and Bash completions.
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
 brew 'bash'
@@ -50,92 +50,3 @@ brew 'lynx'
 brew 'rename'
 brew 'ruby'
 brew 'tree'
-
-# Install native apps from Cask and App Store
-tap 'caskroom/cask'
-tap 'caskroom/versions'
-cask_args appdir: '/Applications'
-brew 'mas'
-
-# Install IDEs and dev-related tools.
-cask 'visual-studio-code'
-cask 'atom'
-cask 'sublime-text'
-cask 'hyper'
-cask 'transmit'
-cask 'mamp'
-
-# Install a visual Git tool.
-cask 'github'
-
-# Install design apps.
-mas 'Pixelmator', id: 407963104
-cask 'sketch'
-cask 'xscope'
-cask 'imageoptim'
-cask 'imagealpha'
-
-# Install browsers.
-cask 'google-chrome'
-cask 'google-chrome-canary'
-cask 'firefox'
-cask 'firefox-developer-edition'
-cask 'safari-technology-preview'
-cask 'opera-beta'
-cask 'choosy'
-
-# Install chat apps.
-cask 'franz'
-
-# Install media players.
-cask 'spotify'
-cask 'lastfm'
-
-# Install office software.
-cask 'libreoffice'
-cask 'libreoffice-language-pack'
-mas 'Keynote', id: 409183694
-
-# Install DVD ripping software.
-cask 'ripit'
-cask 'handbrake'
-mas 'iFlicks 2', id: 731062389
-
-# Install security apps.
-mas '1Password', id: 443987910
-brew 'gnupg'
-cask 'gpg-suite'
-cask 'little-snitch'
-cask 'micro-snitch'
-
-# Install Quicklook plugins.
-cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'qlstephen'
-cask 'quicklook-json'
-
-# Install misc. apps.
-cask 'alfred'
-mas 'Tweetbot', id: 557168941
-mas 'Reeder', id: 880001334
-mas 'Things', id: 904280696
-mas 'Moom', id: 419330170
-mas 'PopClip', id: 445189367
-cask 'kap'
-cask 'vanilla'
-cask 'day-o'
-mas 'Battery Indicator', id: 1206020918
-mas 'The Unarchiver', id: 425424353
-mas 'Mousepose', id: 405904955
-mas 'DaisyDisk', id: 411643860
-cask 'virtualbox'
-cask 'dropbox'
-cask 'timemachineeditor'
-cask 'appcleaner'
-cask 'rowmote-helper'
-
-# Install fonts
-tap 'caskroom/fonts'
-cask 'font-fira-code'
-cask 'font-hack'
-cask 'font-vollkorn'
