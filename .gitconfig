@@ -122,8 +122,8 @@
 
 [color "status"]
 
-  added = yellow
-  changed = green
+  added = green
+  changed = yellow
   untracked = cyan
 
 [commit]
