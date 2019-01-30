@@ -9,8 +9,10 @@
     "Babel",
     "BracketHighlighter",
     "Color Highlighter",
+    "Colorsublime",
     "DocBlockr",
     "Dotfiles Syntax Highlighting",
+    "Dracula Color Scheme",
     "EditorConfig",
     "ESLintAutoFix",
     "Git",
@@ -31,7 +33,6 @@
     "SublimeLinter-php",
     "Syntax Highlighting for PostCSS",
     "TerminalView",
-    "Theme - One Dark",
     "TrailingSpaces",
     "VCS Gutter"
   ]

@@ -1,14 +1,11 @@
 {
   "always_show_minimap_viewport": true,
-  "color_scheme": "Packages/User/SublimeLinter/One Dark (SL).tmTheme",
+  "color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
   "create_window_at_startup": false,
-  "default_line_ending": "unix",
-  "detect_slow_plugins": true,
   "dictionary": "Packages/User/Language - German/de_DE_frami.dic",
   "draw_white_space": "all",
   "ensure_newline_at_eof_on_save": true,
-  "file_exclude_patterns":
-  [
+  "file_exclude_patterns": [
     ".DS_Store",
     "Desktop.ini",
     "*.pyc",
@@ -17,23 +14,18 @@
     ".Spotlight-V100",
     ".Trashes"
   ],
-  "folder_exclude_patterns":
-  [
+  "folder_exclude_patterns": [
     ".git",
-    "node_modules"
+    "node_modules",
+    "bower-components"
   ],
-  "font_face": "Fira Code",
-  "font_options":
-  [
-    "subpixel_antialias"
-  ],
-  "font_size": 14.0,
+  "font_face": "Dank Mono",
+  "font_size": 16,
   "hayaku_CSS_colors_case": "lowercase",
   "highlight_line": true,
   "highlight_modified_tabs": true,
   "hot_exit": false,
-  "ignored_packages":
-  [
+  "ignored_packages": [
     "ActionScript",
     "ASP",
     "Batch File",
@@ -60,27 +52,22 @@
     "Scala",
     "TCL",
     "Textile",
-    "Vintage",
-    "YAML"
+    "Vintage"
   ],
-  "indent_guide_options":
-  [
+  "indent_guide_options": [
     "draw_normal",
     "draw_active"
   ],
   "line_padding_bottom": 2,
   "line_padding_top": 2,
   "match_brackets_angle": true,
-  "open_files_in_new_window": true,
-  "rulers":
-  [
+  "rulers": [
     72,
     79,
     120
   ],
-  "scroll_past_end": true,
   "show_encoding": true,
   "show_line_endings": true,
-  "theme": "One Dark.sublime-theme",
+  "theme": "Adaptive.sublime-theme",
   "trim_trailing_white_space_on_save": true
 }
