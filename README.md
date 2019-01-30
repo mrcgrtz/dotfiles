@@ -149,7 +149,7 @@ Further details are in the `.bash_prompt` file.
 
 Screenshot:
 
-<a href="https://cl.ly/jzRu"><img src="https://cl.ly/jzRu/Terminal.png" alt="Screenshot of my Bash promt." width="888" title="Colorful bash prompt and stuff."></a>
+<img src="https://raw.githubusercontent.com/Dreamseer/dotfiles/master/init/terminal/screenshot.png" alt="Screenshot of my Bash promt" width="888" title="Colorful bash prompt and stuff.">
 
 ## Feedback
 
