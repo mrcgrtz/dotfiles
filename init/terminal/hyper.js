@@ -4,13 +4,16 @@ module.exports = {
     fontSize: 15,
 
     // font family with optional fallbacks
-    fontFamily: '"Fira Code", Hack, "Ubuntu Mono", monospace',
+    fontFamily: '"Dank Mono", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: '#b48ead',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
     cursorShape: 'BEAM',
+
+    // blinking cursor
+    cursorBlink: true,
 
     // color of the text
     foregroundColor: '#d8dee9',
@@ -25,11 +28,7 @@ module.exports = {
     css: '',
 
     // custom css to embed in the terminal window
-    termCSS: `
-      x-screen x-row {
-        font-variant-ligatures: initial;
-      }
-    `,
+    termCSS: '',
 
     // set to `true` if you're using a Linux set up
     // that doesn't shows native menus
@@ -100,8 +99,8 @@ module.exports = {
     'hyperterm-paste',
     'hypercwd',
     'hyperlinks',
-    'hyper-blink',
-    'hyper-statusline'
+    'hyper-statusline',
+    'hyper-dracula'
   ],
 
   // in development, you can create a directory under
