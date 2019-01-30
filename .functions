@@ -77,7 +77,6 @@ function tre() {
   tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
 
-
 # Use Git’s colored diff when available.
 hash git &>/dev/null;
 if [ $? -eq 0 ]; then
@@ -130,6 +129,10 @@ function json() {
   else # pipe
     python -mjson.tool | pygmentize -l javascript;
   fi;
+}
+
+function loadjson() {
+  http --body "$1" accept:application/json
 }
 
 # Run `dig` and display the most useful DNS info.
