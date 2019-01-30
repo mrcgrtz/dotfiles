@@ -1,0 +1,97 @@
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+
+# Install Cask apps to the system wide Application directory.
+cask_args appdir: '/Applications'
+
+# Install apps from the Mac App Store using mas.
+brew 'mas'
+
+# Install IDEs and dev-related tools.
+cask 'visual-studio-code'
+cask 'atom'
+cask 'sublime-text'
+cask 'hyper'
+cask 'transmit'
+cask 'mamp'
+
+# Install a visual Git tool.
+cask 'github'
+
+# Install browsers.
+cask 'google-chrome'
+cask 'google-chrome-canary'
+cask 'firefox'
+cask 'firefox-developer-edition'
+cask 'safari-technology-preview'
+cask 'choosy'
+
+# Install chat apps.
+cask 'slack'
+cask 'whatsapp'
+cask 'telegram'
+
+# Install security apps.
+mas '1Password', id: 443987910
+brew 'gnupg'
+cask 'gpg-suite'
+cask 'little-snitch'
+cask 'micro-snitch'
+
+# Install office software.
+mas 'Pages', id: 409201541
+mas 'Numbers', id: 409203825
+mas 'Keynote', id: 409183694
+cask 'libreoffice'
+cask 'libreoffice-language-pack'
+
+# Install media players.
+cask 'spotify'
+cask 'lastfm'
+
+# Install design and image processing apps.
+cask 'sketch'
+cask 'xscope'
+cask 'imageoptim'
+cask 'imagealpha'
+mas 'Pixelmator', id: 407963104
+
+# Install misc. apps.
+cask 'alfred'
+cask 'kap'
+cask 'vanilla'
+cask 'muzzle'
+cask 'day-o'
+cask 'virtualbox'
+cask 'dropbox'
+cask 'timemachineeditor'
+cask 'appcleaner'
+cask 'rowmote-helper'
+mas 'Tweetbot', id: 557168941
+mas 'Reeder', id: 880001334
+mas 'Things', id: 904280696
+mas 'Moom', id: 419330170
+mas 'PopClip', id: 445189367
+mas 'Battery Indicator', id: 1206020915
+mas 'The Unarchiver', id: 425424350
+mas 'Mousepose', id: 405904952
+mas 'DaisyDisk', id: 411643857
+
+# Install Quicklook plugins.
+cask 'qlcolorcode' # Preview source code files with syntax highlighting
+cask 'qlmarkdown' # Preview Markdown files
+cask 'qlstephen' # Preview plain text files without or with unknown file extension. Example: CHANGELOG, index.styl, etc.
+cask 'quicklook-json' # Preview JSON files
+cask 'webpquicklook' # Preview WebP images
+cask 'quicklookase' # Preview Adobe ASE Color Swatches generated with Adobe Photoshop and many others
+
+# Install DVD ripping software (delete if not needed).
+cask 'ripit'
+cask 'handbrake'
+mas 'iFlicks 2', id: 731062389
+
+# Install fonts
+tap 'caskroom/fonts'
+cask 'font-fira-code'
+cask 'font-hack'
+cask 'font-vollkorn'
