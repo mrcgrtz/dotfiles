@@ -8,7 +8,7 @@ My homegrown dotfiles repository which in the meantime is VERY much inspired by 
 
 ### Using Git and the bootstrap script
 
-You can clone the repository wherever you want. (I like to keep it in `~/Sites/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+You can clone the repository wherever you want. (I like to keep it in `~/dotfiles`.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 ```bash
 git clone https://github.com/dreamseer/dotfiles.git && cd dotfiles && source bootstrap.sh
