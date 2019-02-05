@@ -21,6 +21,9 @@
   ],
   "font_face": "Dank Mono",
   "font_size": 16,
+  "font_options": [
+    "gray_antialias"
+  ],
   "hayaku_CSS_colors_case": "lowercase",
   "highlight_line": true,
   "highlight_modified_tabs": true,
