@@ -28,6 +28,11 @@ Plug 'gabrielelana/vim-markdown'
 
 call plug#end()
 
+" Theme adjustments: Enable italics for comments
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+highlight Comment cterm=italic
+
 " Optimize for fast terminal connections
 set ttyfast
 
@@ -70,9 +75,6 @@ let mapleader=","
 set modeline
 set modelines=4
 
-" Enable syntax highlighting
-syntax on
-
 " Make tabs as wide as four spaces
 set tabstop=4
 set softtabstop=4
@@ -80,7 +82,7 @@ set shiftwidth=4
 set expandtab
 
 " When opening a new line and no filetype-specific indenting is enabled, keep
-" the same indent as the line you're currently on. Useful for READMEs, etc.
+" the same indent as the line you are currently on. Useful for READMEs, etc.
 set autoindent
 
 " Show “invisible” characters
@@ -133,7 +135,7 @@ set noshowmode
 " Show the filename in the window titlebar
 set title
 
-" Show the (partial) command as it’s being typed
+" Show the (partial) command as it is being typed
 set showcmd
 
 " Start scrolling three lines before the horizontal window border
@@ -168,14 +170,15 @@ if executable('ag')
 endif
 let g:ackhighlight=1
 
+" Use JSX highlighting on JSX files only
+let g:jsx_ext_required = 1
+
 " Configure Airline
-let g:airline_powerline_fonts=1
 let g:airline_theme='hybridline' " dracula is currently broken
-let g:airline_detect_modified=0
+let g:airline_powerline_fonts=1
 let g:airline_statusline_ontop=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#hunks#non_zero_only=1
-let g:airline#extensions#branch#enabled=0
 function! AirlineInit()
   call airline#parts#define_raw('modified', '%{&modified ? " (modified)" : ""}')
   call airline#parts#define_accent('modified', 'red')
