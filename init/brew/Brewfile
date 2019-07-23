@@ -31,6 +31,7 @@ brew 'screen'
 
 # Install CLI magic.
 brew 'z'
+brew 'up'
 brew 'thefuck'
 
 # Install Git tools.
@@ -39,8 +40,7 @@ brew 'git-extras'
 brew 'git-flow'
 brew 'diff-so-fancy'
 
-# Install Node tools.
-brew 'node'
+# Install yarn (and node).
 brew 'yarn'
 
 # Install everything else.

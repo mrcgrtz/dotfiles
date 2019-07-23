@@ -84,10 +84,11 @@ This also installs Homebrew if it is not yet installed.
  * [bash-completion](https://github.com/scop/bash-completion/)
  * [git](https://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/master/Commands.md)
  * [The Silver Searcher](https://geoff.greer.fm/ag/)
- * [httpie](https://httpie.org/) (the better cURL)
+ * [httpie](https://httpie.org/) a.k.a. the better cURL
  * [tree](http://mama.indstate.edu/users/ice/tree/)
+ * [up](https://github.com/akavel/up) for instant live preview when piping stuff
  * [The Fuck](https://github.com/nvbn/thefuck)
- * [lynx](http://lynx.invisible-island.net/) (because I ♥ lynx)
+ * [lynx](http://lynx.invisible-island.net/) because I ♥ lynx
  * Some more stuff, especially more recent versions of some macOS tools.
 
 If you want to install some native macOS apps, the script will ask you
