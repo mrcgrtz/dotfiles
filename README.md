@@ -69,11 +69,13 @@ You could also use `~/.extra` to override settings, functions and aliases from m
 
 ### Install Homebrew formulae
 
-When setting up a new Mac, you may want to install some common Homebrew formulae (after installing [Homebrew](https://brew.sh/), of course):
+When setting up a new Mac, you may want to install some common [Homebrew](https://brew.sh/) formulae:
 
 ```bash
 source ./init/brew/brew.sh
 ```
+
+This also installs Homebrew if it is not yet installed.
 
 #### Installed software via Homebrew
 
@@ -87,6 +89,12 @@ source ./init/brew/brew.sh
  * [The Fuck](https://github.com/nvbn/thefuck)
  * [lynx](http://lynx.invisible-island.net/) (because I ♥ lynx)
  * Some more stuff, especially more recent versions of some macOS tools.
+
+If you want to install some native macOS apps, the script will ask you
+for permission to installs apps using
+[Cask](https://github.com/Homebrew/homebrew-cask) and
+[mas](https://github.com/mas-cli/mas). The app setup is tailored for
+myself, so just say no if you do not trust my guts.
 
 ## My favorite parts
 
@@ -122,7 +130,7 @@ Lastly, I use `o` to open Finder from this path. (That's just available normally
 
 ## Custom bash prompt
 
-I use a custom bash prompt based on the [Nord](https://github.com/arcticicestudio/nord) color palette and influenced by [@gf3](https://github.com/gf3/dotfiles)’s and [@cowboy](https://github.com/cowboy/dotfiles)’s custom prompts.
+I use a custom bash prompt based on the [Dracula](https://draculatheme.com/) color palette and influenced by [@gf3](https://github.com/gf3/dotfiles)’s and [@cowboy](https://github.com/cowboy/dotfiles)’s custom prompts.
 
 When your current working directory is a Git repository, the prompt will display the checked-out branch’s name (and failing that, the commit SHA that HEAD is pointing to). The state of the working tree is reflected in the following way:
 
