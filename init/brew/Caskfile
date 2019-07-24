@@ -50,6 +50,7 @@ cask 'lastfm'
 # Install design and image processing apps.
 mas 'Affinity Designer', id: 824171161
 mas 'Pixelmator', id: 407963104
+mas 'VectorDesigner', id: 402376701
 cask 'xscope'
 cask 'imageoptim'
 
@@ -57,12 +58,15 @@ cask 'imageoptim'
 cask 'alfred'
 cask 'bartender'
 cask 'keyboard-maestro'
+cask 'a-better-finder-rename'
 cask 'tripmode'
 cask 'kap'
+cask 'flux'
 cask 'muzzle'
 cask 'day-o'
 cask 'virtualbox'
 cask 'dropbox'
+cask 'transmission'
 cask 'timemachineeditor'
 cask 'appcleaner'
 cask 'rowmote-helper'
@@ -71,10 +75,12 @@ mas 'Reeder', id: 880001334
 mas 'Things', id: 904280696
 mas 'Moom', id: 419330170
 mas 'PopClip', id: 445189367
+mas 'Integrity', id: 513610341
 mas 'Battery Indicator', id: 1206020918
 mas 'The Unarchiver', id: 425424353
 mas 'Mouseposé', id: 405904955
 mas 'DaisyDisk', id: 411643860
+mas 'Gemini', id: 463541543
 
 # Install Quicklook plugins.
 cask 'qlcolorcode' # Preview source code files with syntax highlighting
@@ -87,7 +93,7 @@ cask 'quicklookase' # Preview Adobe ASE Color Swatches generated with Adobe Phot
 # Install DVD ripping software (delete if not needed).
 cask 'ripit'
 cask 'handbrake'
-mas 'iFlicks 2', id: 731062389
+mas 'MiroVideoConverter', 412699210
 
 # Install fonts
 tap 'homebrew/cask-fonts'
