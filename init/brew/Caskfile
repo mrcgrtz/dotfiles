@@ -93,6 +93,7 @@ cask 'quicklookase' # Preview Adobe ASE Color Swatches generated with Adobe Phot
 # Install DVD ripping software (delete if not needed).
 cask 'ripit'
 cask 'handbrake'
+mas 'iFlicks', id: 408937559
 mas 'MiroVideoConverter', 412699210
 
 # Install fonts
