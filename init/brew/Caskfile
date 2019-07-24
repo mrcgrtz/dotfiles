@@ -90,14 +90,19 @@ cask 'quicklook-json' # Preview JSON files
 cask 'webpquicklook' # Preview WebP images
 cask 'quicklookase' # Preview Adobe ASE Color Swatches generated with Adobe Photoshop and many others
 
+# Install screensavers.
+cask 'boinc'
+cask 'aerial'
+cask 'pongsaver'
+
+# Install fonts.
+tap 'homebrew/cask-fonts'
+cask 'font-fira-code'
+cask 'font-hack'
+cask 'font-vollkorn'
+
 # Install DVD ripping software (delete if not needed).
 cask 'ripit'
 cask 'handbrake'
 mas 'iFlicks', id: 408937559
 mas 'MiroVideoConverter', 412699210
-
-# Install fonts
-tap 'homebrew/cask-fonts'
-cask 'font-fira-code'
-cask 'font-hack'
-cask 'font-vollkorn'
