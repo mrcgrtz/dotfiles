@@ -14,6 +14,7 @@ cask 'textmate'
 cask 'hyper'
 cask 'transmit'
 cask 'mamp'
+mas 'Xcode', id: 497799835
 
 # Install a visual Git tool.
 cask 'github'
