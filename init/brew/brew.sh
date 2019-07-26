@@ -15,7 +15,7 @@ brew upgrade
 brew bundle install --file=Brewfile
 
 # Use GNU tools like sha256sum.
-echo "⚠️ Do not forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
+echo "⚠️  Do not forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
 ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 # Switch to using Brew-installed Bash as default shell.
@@ -25,7 +25,7 @@ if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
 fi;
 
 # Maybe install formulae from Caskfile, too.
-read -p "📡 Also install native apps using Homebrew Casks and the Mac App Store (y/N)?" docask
+read -p "📡  Also install native apps using Homebrew Casks and the Mac App Store? (y/N) " docask
 case "$docask" in
   y|yes ) brew bundle install --file=Caskfile;;
   * ) echo "Skipping Caskfile.";;
