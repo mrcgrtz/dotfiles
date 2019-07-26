@@ -66,6 +66,7 @@ cask 'muzzle'
 cask 'day-o'
 cask 'virtualbox'
 cask 'dropbox'
+cask 'integrity'
 cask 'transmission'
 cask 'timemachineeditor'
 cask 'appcleaner'
@@ -75,7 +76,6 @@ mas 'Reeder', id: 880001334
 mas 'Things', id: 904280696
 mas 'Moom', id: 419330170
 mas 'PopClip', id: 445189367
-mas 'Integrity', id: 513610341
 mas 'Battery Indicator', id: 1206020918
 mas 'The Unarchiver', id: 425424353
 mas 'Mouseposé', id: 405904955
