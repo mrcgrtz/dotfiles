@@ -2,9 +2,8 @@
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-git pull origin master;
-
 function doIt() {
+  git pull origin master;
   rsync --exclude ".git/" --exclude "init/" --exclude "bin/" \
     --exclude ".DS_Store" --exclude "bootstrap.sh" \
     --exclude "README.md" --exclude "LICENSE.md" -avh --no-perms . ~;
@@ -14,15 +13,15 @@ function doIt() {
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
   doIt;
 else
-  read -p "🍺 Install Homebrew and its formulae? (y/N) " -n 1;
-  echo "";
-  if [[ $REPLY =~ ^[Yy]$ ]]; then
-    source init/brew/brew.sh;
-  fi;
-  read -p "🚨 Installing dotfiles. This may overwrite existing files in your home directory. Are you sure? (y/N) " -n 1;
-  echo "";
-  if [[ $REPLY =~ ^[Yy]$ ]]; then
-    doIt;
-  fi;
+  read -p "🍺  Install Homebrew and its formulae? (y/N) " dobrew
+  case "$dobrew" in
+    y|yes ) source init/brew/brew.sh;;
+    * ) echo "Skipping Homebrew.";;
+  esac
+  read -p "🚨  Installing dotfiles. This will overwrite existing files in your home directory. Are you sure? (y/N) " dobrew
+  case "$dobrew" in
+    y|yes ) doIt;;
+    * ) echo "Skipping installation.";;
+  esac
 fi;
 unset doIt;
