@@ -43,9 +43,3 @@ export NODE_REPL_MODE="sloppy";
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING="UTF-8";
-
-# Java home directory
-export JAVA_HOME="$(/usr/libexec/java_home)";
-
-# Increase Maven memory usage
-export MAVEN_OPTS="-Xms1024m -Xmx4096m -XX:PermSize=1024m";
