@@ -55,6 +55,11 @@ mas 'VectorDesigner', id: 402376701
 cask 'xscope'
 cask 'imageoptim'
 
+# Install time management apps.
+mas 'Time Sink', id: 404363161
+mas 'Tadam', id: 531349534
+mas 'Aware', id: 1082170746
+
 # Install misc. apps.
 cask 'alfred'
 cask 'bartender'
