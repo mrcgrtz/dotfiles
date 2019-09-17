@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Install Homebrew (you need the Xcode CLI tools!)
-if ! which brew &> /dev/null; then
+if ! command -v brew &> /dev/null; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi;
 
@@ -19,13 +19,13 @@ echo "⚠️  Do not forget to add $(brew --prefix coreutils)/libexec/gnubin to 
 ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 # Switch to using Brew-installed Bash as default shell.
-if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
+if ! grep -F -q '/usr/local/bin/bash' /etc/shells; then
   echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
   chsh -s /usr/local/bin/bash;
 fi;
 
 # Maybe install formulae from Caskfile, too.
-read -p "📡  Also install native apps using Homebrew Casks and the Mac App Store? (y/N) " docask
+read -rp "📡  Also install native apps using Homebrew Casks and the Mac App Store? (y/N) " docask
 case "$docask" in
   y|yes ) brew bundle install --file=Caskfile;;
   * ) echo "Skipping Caskfile.";;
