@@ -8,11 +8,10 @@ brew 'coreutils'
 # Install some other useful utilities like `sponge`.
 brew 'moreutils'
 
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+# Install GNU `find`, `locate`, `updatedb`, `xargs`, and `sed`, but
+# `g`-prefixed.
 brew 'findutils'
-
-# Install GNU `sed`, overwriting the built-in `sed`.
-brew 'gnu-sed', args: ['with-default-names']
+brew 'gnu-sed'
 
 # Install latest Bash and Bash completions.
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
@@ -20,11 +19,7 @@ brew 'gnu-sed', args: ['with-default-names']
 brew 'bash'
 brew 'bash-completion@2'
 
-# Install `wget` with IRI support.
-brew 'wget', args: ['with-iri']
-
 # Install more recent versions of some macOS tools.
-brew 'vim', args: ['with-override-system-vi']
 brew 'grep'
 brew 'openssh'
 brew 'screen'
@@ -50,3 +45,4 @@ brew 'lynx'
 brew 'rename'
 brew 'ruby'
 brew 'tree'
+brew 'wget'

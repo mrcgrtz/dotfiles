@@ -33,7 +33,6 @@ cask 'telegram'
 # Install security apps.
 cask 1password
 mas 'Better', id: 1121192229
-brew 'gnupg'
 cask 'gpg-suite'
 cask 'little-snitch'
 cask 'micro-snitch'
@@ -51,7 +50,6 @@ cask 'lastfm'
 # Install design and image processing apps.
 mas 'Affinity Designer', id: 824171161
 mas 'Pixelmator', id: 407963104
-mas 'VectorDesigner', id: 402376701
 cask 'xscope'
 cask 'imageoptim'
 
@@ -67,7 +65,6 @@ cask 'keyboard-maestro'
 cask 'a-better-finder-rename'
 cask 'tripmode'
 cask 'kap'
-cask 'flux'
 cask 'muzzle'
 cask 'virtualbox'
 cask 'dropbox'
@@ -84,7 +81,6 @@ mas 'Dato', id: 1470584107
 mas 'PopClip', id: 445189367
 mas 'Battery Indicator', id: 1206020918
 mas 'The Unarchiver', id: 425424353
-mas 'Mouseposé', id: 405904955
 mas 'DaisyDisk', id: 411643860
 mas 'Gemini', id: 463541543
 
@@ -108,7 +104,5 @@ cask 'font-hack'
 cask 'font-vollkorn'
 
 # Install DVD ripping software (delete if not needed).
-cask 'ripit'
 cask 'handbrake'
 mas 'iFlicks', id: 408937559
-mas 'MiroVideoConverter', 412699210
