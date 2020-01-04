@@ -8,7 +8,6 @@ brew 'mas'
 
 # Install IDEs and dev-related tools.
 cask 'visual-studio-code'
-cask 'atom'
 cask 'sublime-text'
 cask 'textmate'
 cask 'hyper'
@@ -56,7 +55,6 @@ cask 'imageoptim'
 # Install time management apps.
 mas 'Time Sink', id: 404363161
 mas 'Tadam', id: 531349534
-mas 'Aware', id: 1082170746
 
 # Install misc. apps.
 cask 'alfred'
@@ -65,11 +63,10 @@ cask 'keyboard-maestro'
 cask 'a-better-finder-rename'
 cask 'tripmode'
 cask 'kap'
-cask 'muzzle'
 cask 'virtualbox'
 cask 'dropbox'
 cask 'integrity'
-cask 'transmission'
+cask 'the-unarchiver'
 cask 'timemachineeditor'
 cask 'appcleaner'
 cask 'rowmote-helper'
@@ -80,7 +77,6 @@ mas 'Moom', id: 419330170
 mas 'Dato', id: 1470584107
 mas 'PopClip', id: 445189367
 mas 'Battery Indicator', id: 1206020918
-mas 'The Unarchiver', id: 425424353
 mas 'DaisyDisk', id: 411643860
 mas 'Gemini', id: 463541543
 
