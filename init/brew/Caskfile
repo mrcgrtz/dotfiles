@@ -102,7 +102,3 @@ tap 'homebrew/cask-fonts'
 cask 'font-fira-code'
 cask 'font-hack'
 cask 'font-vollkorn'
-
-# Install DVD ripping software (delete if not needed).
-cask 'handbrake'
-mas 'iFlicks', id: 408937559
