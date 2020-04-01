@@ -9,7 +9,6 @@ brew 'mas'
 # Install IDEs and dev-related tools.
 cask 'visual-studio-code'
 cask 'sublime-text'
-cask 'textmate'
 cask 'hyper'
 cask 'transmit'
 cask 'mamp'
@@ -22,12 +21,14 @@ cask 'github'
 cask 'safari-technology-preview'
 cask 'firefox-developer-edition'
 cask 'google-chrome'
+cask 'microsoft-edge'
 cask 'choosy'
 
 # Install chat apps.
 cask 'slack'
 cask 'whatsapp'
 cask 'telegram'
+cask 'zoomus'
 
 # Install security apps.
 cask 1password
@@ -58,9 +59,12 @@ mas 'Tadam', id: 531349534
 
 # Install misc. apps.
 cask 'alfred'
+cask 'flux'
 cask 'bartender'
+cask 'istat-menus'
 cask 'keyboard-maestro'
 cask 'a-better-finder-rename'
+cask 'taskpaper'
 cask 'tripmode'
 cask 'kap'
 cask 'virtualbox'
@@ -75,6 +79,7 @@ mas 'Reeder', id: 880001334
 mas 'Things', id: 904280696
 mas 'Moom', id: 419330170
 mas 'Dato', id: 1470584107
+mas 'Lungo', id: 1263070803
 mas 'PopClip', id: 445189367
 mas 'Battery Indicator', id: 1206020918
 mas 'DaisyDisk', id: 411643860
