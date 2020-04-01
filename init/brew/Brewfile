@@ -35,8 +35,10 @@ brew 'git-extras'
 brew 'git-flow'
 brew 'diff-so-fancy'
 
-# Install yarn (and node).
+# Install Node tools.
+brew 'nvm'
 brew 'yarn'
+brew 'watchman'
 
 # Install everything else.
 brew 'the_silver_searcher'
@@ -46,3 +48,5 @@ brew 'rename'
 brew 'ruby'
 brew 'tree'
 brew 'wget'
+brew 'trash'
+brew 'mutt'
