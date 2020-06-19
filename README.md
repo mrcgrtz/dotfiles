@@ -40,7 +40,7 @@ To update later on, just run that command again.
 
 If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/mathiasbynens/dotfiles/blob/aff769fd75225d8f2e481185a71d5e05b76002dc/.aliases#L21-26)) takes place.
 
-Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
+Here is an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
 
 ```bash
 export PATH="/usr/local/bin:$PATH"
@@ -48,7 +48,7 @@ export PATH="/usr/local/bin:$PATH"
 
 ### Add custom commands without creating a new fork
 
-If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
+If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you do not want to commit to a public repository.
 
 My `~/.extra` looks something like this:
 
@@ -65,7 +65,7 @@ GITHUB_USER_NAME="Dreamseer"
 git config --global github.user "$GITHUB_USER_NAME"
 ```
 
-You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/dreamseer/dotfiles/fork) instead, though.
+You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It is probably better to [fork this repository](https://github.com/dreamseer/dotfiles/fork) instead, though.
 
 ### Install Homebrew formulae
 
@@ -82,7 +82,7 @@ This also installs Homebrew if it is not yet installed.
  * GNU core utilities
  * bash (latest version)
  * [bash-completion](https://github.com/scop/bash-completion/)
- * [git](https://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/master/Commands.md)
+ * [git](https://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/main/Commands.md)
  * [The Silver Searcher](https://geoff.greer.fm/ag/)
  * [httpie](https://httpie.org/) a.k.a. the better cURL
  * [tree](http://mama.indstate.edu/users/ice/tree/)
@@ -99,7 +99,7 @@ myself, so just say no if you do not trust my guts.
 
 ## My favorite parts
 
-### [`.aliases`](https://github.com/dreamseer/dotfiles/blob/master/.aliases) and [`.functions`](https://github.com/dreamseer/dotfiles/blob/master/.functions)
+### [`.aliases`](https://github.com/dreamseer/dotfiles/blob/main/.aliases) and [`.functions`](https://github.com/dreamseer/dotfiles/blob/main/.functions)
 
 There are so many goodies!
 
@@ -115,19 +115,19 @@ Basically it makes typing into the prompt amazing:
 
 ### Moving around in folders (`z`, `...`, `cdf`)
 
-`z` helps you jump around to whatever folder. It uses actual real magic to determine where you should jump to. Separately there’s some `...` aliases to shorten `cd ../..` and `..`, `....` etc. Then, if you have a folder open in Finder, `cdf` will bring you to it.
+`z` helps you jump around to whatever folder. It uses actual real magic to determine where you should jump to. Separately there is some `...` aliases to shorten `cd ../..` and `..`, `....` etc. Then, if you have a folder open in Finder, `cdf` will bring you to it.
 
 ```sh
 z dotfiles
 z blog
 ....      # drop back equivalent to cd ../../..
 z public
-cdf       # cd to whatever’s up in Finder
+cdf       # cd to whatever is up in Finder
 ```
 
-`z` learns only once its installed so you’ll have to `cd` around for a bit to get it taught.
+`z` learns only once its installed so you will have to `cd` around for a bit to get it taught.
 
-Lastly, I use `o` to open Finder from this path. (That's just available normally as `open .`.)
+Lastly, I use `o` to open Finder from this path. (That is just available normally as `open .`.)
 
 ## Custom bash prompt
 
@@ -158,11 +158,11 @@ Further details are in the `.bash_prompt` file.
 
 Screenshot:
 
-<img src="https://raw.githubusercontent.com/Dreamseer/dotfiles/master/init/terminal/screenshot.png" alt="Screenshot of my Bash promt" width="888" title="Colorful bash prompt and stuff.">
+<img src="https://raw.githubusercontent.com/Dreamseer/dotfiles/main/init/terminal/screenshot.png" alt="Screenshot of my Bash promt" width="888" title="Colorful bash prompt and stuff.">
 
 ## Feedback
 
-You’re quite [welcome](https://github.com/dreamseer/dotfiles/issues) to make suggestions or improvements, however I may decline if it’s not of personal value to me.
+You are quite [welcome](https://github.com/dreamseer/dotfiles/issues) to make suggestions or improvements, however I may decline if it is not of personal value to me.
 
 ## Acknowledgements
 
