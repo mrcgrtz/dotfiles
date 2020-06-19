@@ -41,9 +41,9 @@ alias gcd='cd "`git rev-parse --show-toplevel`"'
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew prune; brew doctor; npm-check -g -u"
+alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew doctor"
 alias npm_update="npm install npm -g; npm update -g; npm doctor"
-alias gem_update="sudo gem update --system; sudo gem update --no-document; sudo gem cleanup"
+alias gem_update="sudo gem update --system; sudo gem update; sudo gem cleanup"
 alias update='sudo softwareupdate -i -a; brew_update; npm_update; gem_update'
 
 # Use coreutils `ls` if possible…
@@ -173,7 +173,7 @@ alias reload="exec ${SHELL} -l"
 # Faster npm for Europeans
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
 
-# List global npm modules without their dependencies
+# List global Node modules without their dependencies
 # See https://ilee.co.uk/list-node-packages-wo-dependencies/
 alias npmls="npm list -g --depth=0"
 
