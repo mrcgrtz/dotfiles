@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # Inpsiration:
-# - Extravagant Zsh Prompt: http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
+# - Extravagant Zsh Prompt: https://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
 # - Sexy Bash Prompt: https://github.com/gf3/dotfiles
 # - Pure: https://github.com/sindresorhus/pure
 # Screenshot:
-# - https://cl.ly/jzRu/Terminal.png
+# - https://github.com/Dreamseer/dotfiles/blob/main/init/terminal/screenshot.png
 
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
   export TERM='gnome-256color';
