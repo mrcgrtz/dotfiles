@@ -48,6 +48,9 @@ module.exports = {
       white: "#f8f8f2",
       lightWhite: "#f8f8f2"
     },
+
+    // set zsh as Hyper’s default shell
+    shell: "/bin/zsh"
   },
 
   // a list of plugins to fetch and install from npm
@@ -61,7 +64,6 @@ module.exports = {
     "hyperterm-paste",
     "hypercwd",
     "hyperlinks",
-    "hyper-statusline",
     "hyper-dracula",
     "hyper-ligatures"
   ],
