@@ -173,8 +173,8 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec ${SHELL} -l"
 
-# Faster npm for Europeans
-command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
+# Print each PATH entry on a separate line
+alias path="echo -e ${PATH//:/\\n}"
 
 # List global Node modules without their dependencies
 # See https://ilee.co.uk/list-node-packages-wo-dependencies/
