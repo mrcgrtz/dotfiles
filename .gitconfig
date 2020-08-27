@@ -131,33 +131,54 @@
   # https://help.github.com/articles/signing-commits-using-gpg/
   gpgsign = true
 
+[credential]
+
+  # Use the macOS Keychain for credentials.
+  helper = osxkeychain
+
 [diff]
 
   # Detect copies as well as renames
   renames = copies
 
-[stash]
+[diff "bin"]
 
-  # `git stash show <x>` should show the patch
-  showPatch = true
+  # Use `hexdump` to diff binary files.
+  textconv = hexdump -v -C
 
 [help]
 
   # Automatically correct and execute mistyped commands
   autocorrect = 1
 
+[init]
+
+  # Use `main`, not `master` as default branch. (Requires Git ≥ 2.28.)
+  defaultBranch = main
+
 [merge]
 
   # Include summaries of merged commits in newly created merge commit messages
   log = true
 
+[pull]
+
+  # Merge by default
+  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-pullrebase
+  rebase = false
+
 [push]
 
-  # https://git-scm.com/docs/git-config#git-config-pushdefault
+  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault
   default = simple
 
   # Make `git push` push relevant annotated tags when pushing branches out.
   followTags = true
+
+[stash]
+
+  # `git stash show <x>` should show the patch
+  showPatch = true
 
 # Filters
 
