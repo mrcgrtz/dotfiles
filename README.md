@@ -84,7 +84,7 @@ This also installs Homebrew if it is not yet installed.
  * [bash-completion](https://github.com/scop/bash-completion/)
  * [git](https://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/main/Commands.md)
  * [The Silver Searcher](https://geoff.greer.fm/ag/)
- * [httpie](https://httpie.org/) a.k.a. the better cURL
+ * [curlie](https://curlie.io/), an awesome frontend for `curl`
  * [tree](http://mama.indstate.edu/users/ice/tree/)
  * [up](https://github.com/akavel/up) for instant live preview when piping stuff
  * [The Fuck](https://github.com/nvbn/thefuck)
@@ -129,9 +129,17 @@ cdf       # cd to whatever is up in Finder
 
 Lastly, I use `o` to open Finder from this path. (That is just available normally as `open .`.)
 
-## Custom bash prompt
+## The prompt
 
-I use a custom bash prompt based on the [Dracula](https://draculatheme.com/) color palette and influenced by [@gf3](https://github.com/gf3/dotfiles)’s and [@cowboy](https://github.com/cowboy/dotfiles)’s custom prompts.
+Depending on the current shell (either bash or zsh), my prompt looks slightly different.
+
+### Pure prompt on zsh
+
+I use [Pure](https://github.com/sindresorhus/pure) for my zsh prompt with a [Dracula](https://draculatheme.com/) color palette.
+
+### Custom bash prompt
+
+I use a custom bash prompt based on the [Dracula](https://draculatheme.com/) color palette and influenced by [@gf3](https://github.com/gf3/dotfiles)’s and [@cowboy](https://github.com/cowboy/dotfiles)’s custom prompts. It mimics Pure’s look.
 
 When your current working directory is a Git repository, the prompt will display the checked-out branch’s name (and failing that, the commit SHA that HEAD is pointing to). The state of the working tree is reflected in the following way:
 
@@ -158,7 +166,7 @@ Further details are in the `.bash_prompt` file.
 
 Screenshot:
 
-<img src="https://raw.githubusercontent.com/Dreamseer/dotfiles/main/init/terminal/screenshot.png" alt="Screenshot of my Bash promt" width="888" title="Colorful bash prompt and stuff.">
+<img src="https://raw.githubusercontent.com/Dreamseer/dotfiles/main/init/terminal/screenshot.png" alt="Screenshot of my Bash prompt" width="888" title="Colorful bash prompt and stuff.">
 
 ## Feedback
 

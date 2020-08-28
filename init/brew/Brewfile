@@ -42,7 +42,7 @@ brew 'watchman'
 
 # Install everything else.
 brew 'the_silver_searcher'
-brew 'httpie'
+brew 'rs/tap/curlie'
 brew 'lynx'
 brew 'rename'
 brew 'ruby'
