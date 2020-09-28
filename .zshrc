@@ -71,4 +71,4 @@ unset file;
 fpath+="$HOME/.zsh/pure"
 autoload -U promptinit; promptinit
 prompt pure
-zstyle :prompt:pure:path color 'green'
+zstyle :prompt:pure:path color 'cyan'
