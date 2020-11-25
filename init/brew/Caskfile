@@ -11,14 +11,15 @@ cask 'visual-studio-code'
 cask 'sublime-text'
 cask 'hyper'
 cask 'transmit'
+cask 'sequel-ace'
 cask 'mamp'
 mas 'Xcode', id: 497799835
 
 # Install browsers.
 cask 'safari-technology-preview'
 cask 'firefox-developer-edition'
-cask 'google-chrome'
-cask 'microsoft-edge'
+cask 'google-chrome-canary'
+cask 'microsoft-edge-dev'
 cask 'choosy'
 
 # Install chat apps.
@@ -39,10 +40,6 @@ mas 'Pages', id: 409201541
 mas 'Numbers', id: 409203825
 mas 'Keynote', id: 409183694
 cask musescore
-
-# Install media players.
-cask 'spotify'
-cask 'lastfm'
 
 # Install design and image processing apps.
 mas 'Affinity Designer', id: 824171161
@@ -66,10 +63,10 @@ cask 'tripmode'
 cask 'kap'
 cask 'virtualbox'
 cask 'dropbox'
-cask 'integrity'
 cask 'the-unarchiver'
 cask 'timemachineeditor'
 cask 'appcleaner'
+cask 'lastfm'
 cask 'rowmote-helper'
 mas 'Tweetbot', id: 1384080005
 mas 'Reeder', id: 880001334
@@ -98,5 +95,9 @@ cask 'pongsaver'
 # Install fonts.
 tap 'homebrew/cask-fonts'
 cask 'font-fira-code'
+cask 'font-fira-sans'
 cask 'font-hack'
+cask 'font-inter'
+cask 'font-open-sans'
+cask 'font-opendyslexic'
 cask 'font-vollkorn'
