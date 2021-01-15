@@ -68,6 +68,9 @@
   # List contributors with number of commits
   contributors = shortlog --summary --numbered
 
+  # What the heck was I just doing? (see https://carolynvanslyck.com/blog/2020/12/git-wip/)
+  wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+
 [apply]
 
   # Detect whitespace errors when applying a patch
