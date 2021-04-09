@@ -1,71 +1,71 @@
 [alias]
 
-  # View abbreviated SHA, description, and history graph of the latest 20 commits
+  # View abbreviated SHA, description, and history graph of the latest 20 commits.
   l = log --pretty="format:%Cgreen%h%Creset\\ %an\\ -\\ %s" -n 20 --graph --abbrev-commit
 
   # List commits showing changed files
   ll = log --pretty="format:%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 
-  # View the current working tree status using the short format
+  # View the current working tree status using the short format.
   s = status -s
   st = status -s
 
-  # Show the diff between the latest commit and the current state
+  # Show the diff between the latest commit and the current state.
   d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
-  # `git di $number` shows the diff between the state `$number` revisions ago and the current state
+  # `git di $number` shows the diff between the state `$number` revisions ago and the current state.
   di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
-  # Pull in remote changes for the current repository and all its submodules
+  # Pull in remote changes for the current repository and all its submodules.
   p = !"git pull; git submodule foreach git pull"
 
-  # Clone a repository including all submodules
+  # Clone a repository including all submodules.
   c = clone --recursive
 
-  # Commit all changes
+  # Commit all changes.
   ca = !git add -A && git commit -av
 
-  # Switch to a branch, creating it if necessary
+  # Switch to a branch, creating it if necessary.
   co = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
-  # Amend the currently staged files to the latest commit
+  # Amend the currently staged files to the latest commit.
   amend = commit --amend --reuse-message=HEAD
 
-  # Credit an author on the latest commit
+  # Credit an author on the latest commit.
   credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
 
   # Remove the old tag with this name and tag the latest commit with it.
   retag = "!f() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; f"
 
-  # Undo a `git push` of current branch
+  # Undo a `git push` of current branch.
   undopush = "!f() { git push -f origin HEAD^:$1; }; f"
 
-  # Find branches containing commit
+  # Find branches containing commit.
   fb = "!f() { git branch -a --contains $1; }; f"
 
-  # Find tags containing commit
+  # Find tags containing commit.
   ft = "!f() { git describe --always --contains $1; }; f"
 
-  # Find commits by source code
+  # Find commits by source code.
   fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
 
-  # Find commits by commit message
+  # Find commits by commit message.
   fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
-  # Remove branches that have already been merged with the default branch
+  # Remove branches that have already been merged with the default branch.
   # a.k.a. ‘delete merged’
   dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
-  # Show verbose output about tags, branches, remotes or aliases
+  # Show verbose output about tags, branches, remotes or aliases.
   tags = tag -l
   branches = branch -a
   remotes = remote -v
   aliases = !"git config -l | grep alias | cut -c 7-"
 
-  # Show files ignored by Git
+  # Show files ignored by Git.
   ignores = ls-files -o -i --exclude-standard
 
-  # List contributors with number of commits
+  # List contributors with number of commits.
   contributors = shortlog --summary --numbered
 
   # What the heck was I just doing? (see https://carolynvanslyck.com/blog/2020/12/git-wip/)
@@ -73,12 +73,12 @@
 
 [apply]
 
-  # Detect whitespace errors when applying a patch
+  # Detect whitespace errors when applying a patch.
   whitespace = fix
 
 [core]
 
-  # Use custom `.gitignore` and `.gitattributes`
+  # Use custom `.gitignore` and `.gitattributes`.
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
 
@@ -87,7 +87,7 @@
   # [default] space-before-tab: looks for spaces before tabs at the beginning of a line
   whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
-  # Make `git rebase` safer on macOS
+  # Make `git rebase` safer on macOS.
   # More info: <https://www.git-tower.com/blog/make-git-rebase-safe-on-osx>
   trustctime = false
 
@@ -118,10 +118,20 @@
 
 [color "diff"]
 
-  meta = yellow bold
+  meta = 11
   frag = magenta bold # line info
-  old = red # deletions
-  new = green # additions
+  func = 146 bold
+  commit = yellow bold
+  old = red bold # deletions
+  new = green bold # additions
+  whitespace = red reverse
+
+[color "diff-highlight"]
+
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 
 [color "status"]
 
@@ -141,7 +151,7 @@
 
 [diff]
 
-  # Detect copies as well as renames
+  # Detect copies as well as renames.
   renames = copies
 
 [diff "bin"]
@@ -151,13 +161,18 @@
 
 [help]
 
-  # Automatically correct and execute mistyped commands
+  # Automatically correct and execute mistyped commands.
   autocorrect = 1
 
 [init]
 
   # Use `main`, not `master` as default branch. (Requires Git ≥ 2.28.)
   defaultBranch = main
+
+[interactive]
+
+  # Use `diff-so-fancy` for all diff output.
+  diffFilter = diff-so-fancy --patch
 
 [merge]
 
@@ -180,7 +195,7 @@
 
 [stash]
 
-  # `git stash show <x>` should show the patch
+  # `git stash show <x>` should show the patch.
   showPatch = true
 
 # Filters
