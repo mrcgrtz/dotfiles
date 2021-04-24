@@ -13,12 +13,6 @@ brew 'moreutils'
 brew 'findutils'
 brew 'gnu-sed'
 
-# Install latest Bash and Bash completions.
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# running `chsh`.
-brew 'bash'
-brew 'bash-completion@2'
-
 # Install more recent versions of some macOS tools.
 brew 'grep'
 brew 'openssh'
@@ -37,7 +31,6 @@ brew 'diff-so-fancy'
 
 # Install Node tools.
 brew 'nvm'
-brew 'yarn'
 brew 'watchman'
 
 # Install everything else.

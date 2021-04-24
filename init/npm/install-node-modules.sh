@@ -3,13 +3,16 @@
 # Update npm itself.
 npm update -g npm
 
+# Install yarn (for some older projects).
+npm install -g yarn
+
 # Install build tools.
 npm install -g gulp-cli
 npm install -g grunt-cli
 
 # Install bootstrappers.
 npm install -g create-react-app
-npm install -g gatsby-cli
+npm install -g @11ty/eleventy
 
 # Install linters.
 npm install -g eslint
@@ -23,7 +26,6 @@ npm install -g stylestats
 npm install -g psi
 npm install -g tmi
 npm install -g hint
-npm install -g plato
 
 # Install server development packages.
 npm install -g local-web-server
