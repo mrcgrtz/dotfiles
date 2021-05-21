@@ -7,7 +7,6 @@
   ll = log --pretty="format:%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 
   # View the current working tree status using the short format.
-  s = status -s
   st = status -s
 
   # Show the diff between the latest commit and the current state.

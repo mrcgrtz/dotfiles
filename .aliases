@@ -23,21 +23,13 @@ alias where="which"
 alias fuck='eval "$(thefuck --alias)"'
 
 # Git
-alias g="git"
-alias gd="git d"
-alias gbd="git branch -D"
-alias gco="git checkout"
+alias gd="git d" # see `.gitconfig` for `d`
+alias gcd='cd "`git rev-parse --show-toplevel`"'
 alias gcob="git checkout -b"
-alias gst="git s"
-alias gl="git l"
-alias gm="git merge --no-ff"
-alias gp="git push"
-alias gpt="git push --tags"
+alias gl="git l" # see `.gitconfig` for `d`
 alias gpo="git push origin"
 alias gpom='git push origin `git symbolic-ref --short HEAD`'
-alias grh="git reset --hard"
-alias gcp="git cherry-pick"
-alias gcd='cd "`git rev-parse --show-toplevel`"'
+alias gpt="git push --tags"
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
