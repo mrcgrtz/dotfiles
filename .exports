@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Make Sublime Text the default editor, nobody needs vim or emacs
-export EDITOR="/usr/local/bin/subl -w";
+# Make VS Code the default editor, nobody needs vim or emacs
+export EDITOR="/usr/local/bin/code -w";
 
 # Use standard ISO 8601 timestamp
 # %F equivalent to %Y-%m-%d
