@@ -143,10 +143,12 @@ I use a custom bash prompt based on the [Dracula](https://draculatheme.com/) col
 
 When your current working directory is a Git repository, the prompt will display the checked-out branch’s name (and failing that, the commit SHA that HEAD is pointing to). The state of the working tree is reflected in the following way:
 
-| `+` | Uncommitted changes in the index |
-| `!` | Unstaged changes                 |
-| `?` | Untracked files                  |
-| `⚑` | Stashed files                    |
+| Symbol | State                            |
+| ------ | -------------------------------- |
+| `+`    | Uncommitted changes in the index |
+| `!`    | Unstaged changes                 |
+| `?`    | Untracked files                  |
+| `⚑`    | Stashed files                    |
 
 Further details are in the `.bash_prompt` file.
 
