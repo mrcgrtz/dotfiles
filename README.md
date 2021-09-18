@@ -79,17 +79,17 @@ This also installs Homebrew if it is not yet installed.
 
 #### Installed software via Homebrew
 
- * GNU core utilities
- * bash (latest version)
- * [bash-completion](https://github.com/scop/bash-completion/)
- * [git](https://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/main/Commands.md)
- * [The Silver Searcher](https://geoff.greer.fm/ag/)
- * [curlie](https://curlie.io/), an awesome frontend for `curl`
- * [tree](http://mama.indstate.edu/users/ice/tree/)
- * [up](https://github.com/akavel/up) for instant live preview when piping stuff
- * [The Fuck](https://github.com/nvbn/thefuck)
- * [lynx](http://lynx.invisible-island.net/) because I ♥ lynx
- * Some more stuff, especially more recent versions of some macOS tools.
+* GNU core utilities
+* bash (latest version)
+* [bash-completion](https://github.com/scop/bash-completion/)
+* [git](https://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/main/Commands.md)
+* [The Silver Searcher](https://geoff.greer.fm/ag/)
+* [curlie](https://curlie.io/), an awesome frontend for `curl`
+* [tree](http://mama.indstate.edu/users/ice/tree/)
+* [up](https://github.com/akavel/up) for instant live preview when piping stuff
+* [The Fuck](https://github.com/nvbn/thefuck)
+* [lynx](http://lynx.invisible-island.net/) because I ♥ lynx
+* Some more stuff, especially more recent versions of some macOS tools.
 
 If you want to install some native macOS apps, the script will ask you
 for permission to installs apps using
@@ -107,11 +107,11 @@ There are so many goodies!
 
 Basically it makes typing into the prompt amazing:
 
- * Tab like crazy for autocompletion that does not suck. Tab all the things. Srsly.
- * No more `<tab><tab>` that says ”Display all 1337 possibilities? (y or n)”. Yay!
- * Type `cat <uparrow>` to see your previous `cat`s and use them.
- * Case insensitivity.
- * Tab all the livelong day.
+* Tab like crazy for autocompletion that does not suck. Tab all the things. Srsly.
+* No more `<tab><tab>` that says ”Display all 1337 possibilities? (y or n)”. Yay!
+* Type `cat <uparrow>` to see your previous `cat`s and use them.
+* Case insensitivity.
+* Tab all the livelong day.
 
 ### Moving around in folders (`z`, `...`, `cdf`)
 
@@ -143,30 +143,16 @@ I use a custom bash prompt based on the [Dracula](https://draculatheme.com/) col
 
 When your current working directory is a Git repository, the prompt will display the checked-out branch’s name (and failing that, the commit SHA that HEAD is pointing to). The state of the working tree is reflected in the following way:
 
-<table>
-    <tr>
-        <td><code>+</code></td>
-        <td>Uncommitted changes in the index</td>
-    </tr>
-    <tr>
-        <td><code>!</code></td>
-        <td>Unstaged changes</td>
-    </tr>
-    <tr>
-        <td><code>?</code></td>
-        <td>Untracked files</td>
-    </tr>
-    <tr>
-        <td><code>⚑</code></td>
-        <td>Stashed files</td>
-    </tr>
-</table>
+| `+` | Uncommitted changes in the index |
+| `!` | Unstaged changes                 |
+| `?` | Untracked files                  |
+| `⚑` | Stashed files                    |
 
 Further details are in the `.bash_prompt` file.
 
 Screenshot:
 
-<img src="https://raw.githubusercontent.com/Dreamseer/dotfiles/main/init/terminal/screenshot.png" alt="Screenshot of my Bash prompt" width="888" title="Colorful bash prompt and stuff.">
+![Screenshot of my Bash prompt](https://raw.githubusercontent.com/Dreamseer/dotfiles/main/init/terminal/screenshot.png "Colorful bash prompt and stuff.")
 
 ## Feedback
 
@@ -176,18 +162,18 @@ You are quite [welcome](https://github.com/dreamseer/dotfiles/issues) to make su
 
 Inspiration and code was taken from many sources, including:
 
- * [@mathiasbynens](https://github.com/mathiasbynens) (Mathias Bynens)
-   [https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
- * [@paulirish](https://github.com/paulirish) (Paul Irish)
-   [https://github.com/paulirish/dotfiles](https://github.com/paulirish/dotfiles)
- * [@necolas](https://github.com/necolas) (Nicolas Gallagher)
-   [https://github.com/necolas/dotfiles](https://github.com/necolas/dotfiles)
- * [@gf3](https://github.com/gf3) (Gianni Chiappetta)
-   [https://github.com/gf3/dotfiles](https://github.com/gf3/dotfiles)
- * [@cowboy](https://github.com/cowboy) (Ben Alman)
-   [https://github.com/cowboy/dotfiles](https://github.com/cowboy/dotfiles)
- * [@alrra](https://github.com/alrra) (Cãtãlin Mariş)
-   [https://github.com/alrra/dotfiles](https://github.com/alrra/dotfiles)
+* [@mathiasbynens](https://github.com/mathiasbynens) (Mathias Bynens)
+  [https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
+* [@paulirish](https://github.com/paulirish) (Paul Irish)
+  [https://github.com/paulirish/dotfiles](https://github.com/paulirish/dotfiles)
+* [@necolas](https://github.com/necolas) (Nicolas Gallagher)
+  [https://github.com/necolas/dotfiles](https://github.com/necolas/dotfiles)
+* [@gf3](https://github.com/gf3) (Gianni Chiappetta)
+  [https://github.com/gf3/dotfiles](https://github.com/gf3/dotfiles)
+* [@cowboy](https://github.com/cowboy) (Ben Alman)
+  [https://github.com/cowboy/dotfiles](https://github.com/cowboy/dotfiles)
+* [@alrra](https://github.com/alrra) (Cãtãlin Mariş)
+  [https://github.com/alrra/dotfiles](https://github.com/alrra/dotfiles)
 
 ## License
 
