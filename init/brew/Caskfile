@@ -9,7 +9,7 @@ brew 'mas'
 # Install IDEs and dev-related tools.
 cask 'visual-studio-code'
 cask 'sublime-text'
-cask 'hyper'
+cask 'iterm2'
 cask 'transmit'
 cask 'sequel-ace'
 cask 'mamp'
