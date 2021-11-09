@@ -43,7 +43,7 @@ cask musescore
 
 # Install design and image processing apps.
 mas 'Affinity Designer', id: 824171161
-mas 'Pixelmator', id: 407963104
+mas 'Pixelmator Pro', id: 1289583905
 cask 'xscope'
 cask 'imageoptim'
 
