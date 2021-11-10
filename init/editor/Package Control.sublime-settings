@@ -36,7 +36,6 @@
     "SublimeLinter-contrib-htmlhint",
     "SublimeLinter-contrib-stylelint",
     "SublimeLinter-contrib-xo",
-    "SublimeLinter-flow",
     "SublimeLinter-json",
     "SublimeLinter-php",
     "SublimeLinter-xmllint",
