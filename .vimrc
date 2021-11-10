@@ -22,7 +22,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'flowtype/vim-flow'
 Plug 'elzr/vim-json'
 Plug 'gabrielelana/vim-markdown'
 
