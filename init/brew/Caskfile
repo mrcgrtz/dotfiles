@@ -47,10 +47,6 @@ mas 'Pixelmator Pro', id: 1289583905
 cask 'xscope'
 cask 'imageoptim'
 
-# Install time management apps.
-mas 'Time Sink', id: 404363161
-mas 'Tadam', id: 531349534
-
 # Install misc. apps.
 cask 'alfred'
 cask 'flux'
@@ -58,15 +54,11 @@ cask 'bartender'
 cask 'istat-menus'
 cask 'keyboard-maestro'
 cask 'a-better-finder-rename'
-cask 'taskpaper'
-cask 'tripmode'
 cask 'kap'
-cask 'virtualbox'
 cask 'the-unarchiver'
 cask 'timemachineeditor'
 cask 'appcleaner'
 cask 'lastfm'
-cask 'rowmote-helper'
 mas 'Tweetbot', id: 1384080005
 mas 'Reeder', id: 880001334
 mas 'Things', id: 904280696
@@ -75,8 +67,6 @@ mas 'Dato', id: 1470584107
 mas 'Lungo', id: 1263070803
 mas 'PopClip', id: 445189367
 mas 'Battery Indicator', id: 1206020918
-mas 'DaisyDisk', id: 411643860
-mas 'Gemini', id: 463541543
 
 # Install Quicklook plugins.
 cask 'qlcolorcode' # Preview source code files with syntax highlighting
