@@ -5,12 +5,13 @@ cd "$(dirname "${BASH_SOURCE}")" || exit;
 function doIt() {
   git pull origin main;
   rsync --exclude ".git/" --exclude "init/" --exclude "bin/" \
-    --exclude ".DS_Store" --exclude "bootstrap.sh" \
+    --exclude ".DS_Store" --exclude ".editorconfig" \
+    --exclude ".gitignore" --exclude "bootstrap.sh" \
     --exclude "README.md" --exclude "LICENSE.md" -avh --no-perms . ~;
   source ~/.bash_profile;
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
+if [ "$1" == "--force" ] || [ "$1" == "-f" ]; then
   doIt;
 else
   # Homebrew
@@ -35,7 +36,7 @@ else
   esac
 
   # Node modules
-  read -r -p "❇️  Install Node modules? (y/N) " runswitch
+  read -r -p "🟨  Install Node modules? (y/N) " runswitch
   case "$runswitch" in
     y|yes ) source init/npm/install-node-modules.sh;;
     * ) echo "Skipping Node modules.";;
