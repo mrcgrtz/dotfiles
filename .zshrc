@@ -51,6 +51,7 @@ ZSH_THEME=""
 plugins=(
   ag
   alias-tips
+  autoupdate
   colored-man-pages
   git
   nvm
