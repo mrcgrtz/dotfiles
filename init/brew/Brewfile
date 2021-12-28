@@ -31,10 +31,6 @@ brew 'git-extras'
 brew 'git-flow'
 brew 'diff-so-fancy'
 
-# Install Node tools.
-brew 'nvm'
-brew 'watchman'
-
 # Install everything else.
 brew 'the_silver_searcher'
 brew 'rs/tap/curlie'

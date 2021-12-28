@@ -51,8 +51,10 @@ ZSH_THEME=""
 plugins=(
   alias-tips
   git
+  nvm
   z
   zsh-autosuggestions
+  zsh-nvm
   zsh-syntax-highlighting
 )
 
