@@ -55,6 +55,7 @@ plugins=(
   colored-man-pages
   git
   nvm
+  thefuck
   z
   zsh-autosuggestions
   zsh-nvm
