@@ -11,7 +11,7 @@ My homegrown dotfiles repository which in the meantime is VERY much inspired by 
 You can clone the repository wherever you want. (I like to keep it in `~/dotfiles`.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 ```bash
-git clone https://github.com/dreamseer/dotfiles.git && cd dotfiles && source bootstrap.sh
+git clone https://github.com/mrcgrtz/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
@@ -31,7 +31,7 @@ set -- -f; source bootstrap.sh
 To install these dotfiles without Git:
 
 ```bash
-cd; curl -#L https://github.com/dreamseer/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude={README.md,LICENSE.md,init}
+cd; curl -#L https://github.com/mrcgrtz/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude={README.md,LICENSE.md,init}
 ```
 
 To update later on, just run that command again.
@@ -61,11 +61,11 @@ git config --global user.name "$GIT_AUTHOR_NAME"
 GIT_AUTHOR_EMAIL="mail@marcgoertz.de"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
-GITHUB_USER_NAME="Dreamseer"
+GITHUB_USER_NAME="mrcgrtz"
 git config --global github.user "$GITHUB_USER_NAME"
 ```
 
-You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It is probably better to [fork this repository](https://github.com/dreamseer/dotfiles/fork) instead, though.
+You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It is probably better to [fork this repository](https://github.com/mrcgrtz/dotfiles/fork) instead, though.
 
 ### Install Homebrew formulae
 
@@ -97,7 +97,7 @@ myself, so just say no if you do not trust my guts.
 
 ## My favorite parts
 
-### [`.aliases`](https://github.com/dreamseer/dotfiles/blob/main/.aliases) and [`.functions`](https://github.com/dreamseer/dotfiles/blob/main/.functions)
+### [`.aliases`](https://github.com/mrcgrtz/dotfiles/blob/main/.aliases) and [`.functions`](https://github.com/mrcgrtz/dotfiles/blob/main/.functions)
 
 There are so many goodies!
 
@@ -133,11 +133,11 @@ I use [Pure](https://github.com/sindresorhus/pure) for my zsh prompt with a [Dra
 
 Screenshot:
 
-![Screenshot of my prompt](https://raw.githubusercontent.com/Dreamseer/dotfiles/main/init/terminal/screenshot.png "Colorful prompt.")
+![Screenshot of my prompt](https://raw.githubusercontent.com/mrcgrtz/dotfiles/main/init/terminal/screenshot.png "Colorful prompt.")
 
 ## Feedback
 
-You are quite [welcome](https://github.com/dreamseer/dotfiles/issues) to make suggestions or improvements, however I may decline if it is not of personal value to me.
+You are quite [welcome](https://github.com/mrcgrtz/dotfiles/issues) to make suggestions or improvements, however I may decline if it is not of personal value to me.
 
 ## Acknowledgements
 
