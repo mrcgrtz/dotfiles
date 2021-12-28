@@ -80,8 +80,6 @@ This also installs Homebrew if it is not yet installed.
 #### Installed software via Homebrew
 
 * GNU core utilities
-* bash (latest version)
-* [bash-completion](https://github.com/scop/bash-completion/)
 * [git](https://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/main/Commands.md)
 * [The Silver Searcher](https://geoff.greer.fm/ag/)
 * [curlie](https://curlie.io/), an awesome frontend for `curl`
@@ -131,30 +129,11 @@ Lastly, I use `o` to open Finder from this path. (That is just available normall
 
 ## The prompt
 
-Depending on the current shell (either bash or zsh), my prompt looks slightly different.
-
-### Pure prompt on zsh
-
 I use [Pure](https://github.com/sindresorhus/pure) for my zsh prompt with a [Dracula](https://draculatheme.com/) color palette.
-
-### Custom bash prompt
-
-I use a custom bash prompt based on the [Dracula](https://draculatheme.com/) color palette and influenced by [@gf3](https://github.com/gf3/dotfiles)’s and [@cowboy](https://github.com/cowboy/dotfiles)’s custom prompts. It mimics Pure’s look.
-
-When your current working directory is a Git repository, the prompt will display the checked-out branch’s name (and failing that, the commit SHA that HEAD is pointing to). The state of the working tree is reflected in the following way:
-
-| Symbol | State                            |
-| ------ | -------------------------------- |
-| `+`    | Uncommitted changes in the index |
-| `!`    | Unstaged changes                 |
-| `?`    | Untracked files                  |
-| `⚑`    | Stashed files                    |
-
-Further details are in the `.bash_prompt` file.
 
 Screenshot:
 
-![Screenshot of my Bash prompt](https://raw.githubusercontent.com/Dreamseer/dotfiles/main/init/terminal/screenshot.png "Colorful bash prompt and stuff.")
+![Screenshot of my prompt](https://raw.githubusercontent.com/Dreamseer/dotfiles/main/init/terminal/screenshot.png "Colorful prompt.")
 
 ## Feedback
 
