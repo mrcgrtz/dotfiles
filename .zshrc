@@ -51,6 +51,7 @@ ZSH_THEME=""
 plugins=(
   alias-tips
   git
+  z
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -64,9 +65,6 @@ for file in ~/.{path,exports,aliases,functions,extra}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
-
-# Init z (https://github.com/rupa/z)
-. "$(brew --prefix)/etc/profile.d/z.sh"
 
 # Enable the Pure prompt.
 fpath+="$HOME/.zsh/pure"
