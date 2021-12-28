@@ -2,12 +2,12 @@
 
 # Create a new directory and enter it.
 function mkd() {
-  mkdir -p "$@" && cd "$_";
+  mkdir -p "$@" && cd "$_" || exit;
 }
 
 # Change working directory to the top-most Finder window location.
 function cdf() { # short for `cdfinder`
-  cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
+  cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')" || exit;
 }
 
 # Get an xterm compatible color from its hex value.
@@ -65,7 +65,7 @@ function fs() {
   if [[ -n "$@" ]]; then
     du $arg -- "$@";
   else
-    du $arg .[^.]* *;
+    du $arg .[^.]* -- *;
   fi;
 }
 
@@ -78,8 +78,7 @@ function tre() {
 }
 
 # Use Git’s colored diff when available.
-hash git &>/dev/null;
-if [ $? -eq 0 ]; then
+if ! command -v git &> /dev/null; then
   function diff() {
     git diff --no-index --color-words "$@";
   }
