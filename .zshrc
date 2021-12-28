@@ -73,3 +73,4 @@ fpath+="$HOME/.zsh/pure"
 autoload -U promptinit; promptinit
 prompt pure
 zstyle :prompt:pure:path color 'cyan'
+zstyle :prompt:pure:git:stash show yes
