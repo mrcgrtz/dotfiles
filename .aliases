@@ -25,8 +25,7 @@ alias fuck='eval "$(thefuck --alias)"'
 # Git
 alias gd="git d" # see `.gitconfig` for `d`
 alias gcd='cd "`git rev-parse --show-toplevel`"'
-alias gcob="git checkout -b"
-alias gl="git l" # see `.gitconfig` for `d`
+alias gl="git l" # see `.gitconfig` for `l`
 alias gpo="git push origin"
 alias gpom='git push origin `git symbolic-ref --short HEAD`'
 alias gpt="git push --tags"
@@ -68,9 +67,6 @@ alias cls="clear"
 
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
-
-# Gzip-enabled `curl`
-alias gurl="curl --compressed"
 
 # Get week number
 alias week="date +%V"
@@ -147,9 +143,6 @@ alias map="xargs -n1"
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
   alias "${method}"="lwp-request -m '${method}'"
 done
-
-# Make Grunt print stack traces by default
-command -v grunt > /dev/null && alias grunt="grunt --stack"
 
 # Stuff I never really use but cannot delete either because of https://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
