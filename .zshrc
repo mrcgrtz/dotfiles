@@ -58,6 +58,7 @@ plugins=(
   thefuck
   z
   zsh-autosuggestions
+  zsh-completions
   zsh-nvm
   zsh-syntax-highlighting
 )
