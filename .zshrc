@@ -54,6 +54,7 @@ plugins=(
   autoupdate
   colored-man-pages
   git
+  gpg-agent
   nvm
   thefuck
   z
