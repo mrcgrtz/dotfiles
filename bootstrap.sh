@@ -8,7 +8,7 @@ function doIt() {
     --exclude ".DS_Store" --exclude ".editorconfig" \
     --exclude ".gitignore" --exclude "bootstrap.sh" \
     --exclude "README.md" --exclude "LICENSE.md" -avh --no-perms . ~;
-  source "${HOME}/.zshrc";
+  #source "$HOME/.zshrc";
 }
 
 if [ "$1" == "--force" ] || [ "$1" == "-f" ]; then
