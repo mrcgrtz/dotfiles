@@ -18,6 +18,9 @@ brew 'grep'
 brew 'openssh'
 brew 'screen'
 
+# Install the Pure prompt (https://github.com/sindresorhus/pure).
+brew 'pure'
+
 # Install CLI magic.
 brew 'z'
 brew 'up'
