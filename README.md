@@ -131,9 +131,15 @@ Lastly, I use `o` to open Finder from this path. (That is just available normall
 
 I use [Pure](https://github.com/sindresorhus/pure) for my zsh prompt with a [Dracula](https://draculatheme.com/) color palette.
 
-Screenshot:
+### Screenshot
 
 ![Screenshot of my prompt](https://raw.githubusercontent.com/mrcgrtz/dotfiles/main/init/terminal/screenshot.png "Colorful prompt.")
+
+#### The nerdy details
+
+* Terminal emulator: [iTerm2](https://iterm2.com/) (its settings are [synced](https://github.com/mrcgrtz/dotfiles/blob/main/init/terminal/com.googlecode.iterm2.plist))
+* Font: [Dank Mono](https://dank.sh/)
+* Wallpaper: [Tre Cime di Lavaredo](https://unsplash.com/photos/iplwfXCe8a4)
 
 ## Feedback
 
