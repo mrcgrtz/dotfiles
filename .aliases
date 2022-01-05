@@ -20,7 +20,6 @@ alias cask="brew cask" # I <3 Cask
 alias gut="git"
 alias brwe="brew"
 alias where="which"
-alias fuck='eval "$(thefuck --alias)"'
 
 # Git
 alias gd="git d" # see `.gitconfig` for `d`
