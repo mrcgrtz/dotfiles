@@ -80,7 +80,7 @@ This also installs Homebrew if it is not yet installed.
 #### Installed software via Homebrew
 
 * GNU core utilities
-* [git](https://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/main/Commands.md)
+* [git](https://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/master/Commands.md)
 * [The Silver Searcher](https://geoff.greer.fm/ag/)
 * [curlie](https://curlie.io/), an awesome frontend for `curl`
 * [tree](http://mama.indstate.edu/users/ice/tree/)
