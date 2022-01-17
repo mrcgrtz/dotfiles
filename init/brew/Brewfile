@@ -29,7 +29,7 @@ brew 'thefuck'
 brew 'git'
 brew 'git-extras'
 brew 'git-flow'
-brew 'diff-so-fancy'
+brew 'git-delta'
 
 # Install everything else.
 brew 'the_silver_searcher'
