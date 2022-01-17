@@ -167,3 +167,7 @@ alias npmls="npm list -g --depth=0"
 # Remove local Node modules and clear NPM cache for an upcoming fresh install,
 # thanks to @stefanpenner for this one
 alias nom="rm -rf node_modules && npm cache clear && npm install"
+
+# Nuke all Docker volumes from orbit,
+# thanks to @ebarbeito for this one
+alias docker-nuke="docker system prune -f --all --volumes"
