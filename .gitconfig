@@ -94,10 +94,9 @@
   # https://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
   precomposeunicode = false
 
-  # diff-so-fancy builds on the good-lookin' output of git contrib's
-  # diff-highlight to upgrade your diffs' appearances.
-  # https://github.com/so-fancy/diff-so-fancy
-  pager = "diff-so-fancy | less --tabs=4 -RFX"
+  # `git-delta` upgrades your diffs' appearances.
+  # https://github.com/dandavison/delta
+  pager = "delta"
 
   # Speed up commands involving untracked files such as `git status`.
   # https://git-scm.com/docs/git-update-index#_untracked_cache
@@ -148,10 +147,21 @@
   # Use the macOS Keychain for credentials.
   helper = osxkeychain
 
+[delta]
+
+  # Use n and N to move between diff sections.
+  navigate = true
+
+  # Re-use ANSI colors from terminal theme.
+  syntax-theme = ansi
+
 [diff]
 
   # Detect copies as well as renames.
   renames = copies
+
+  # Handle moved code (requires Git >= v2.17).
+  colorMoved = default
 
 [diff "bin"]
 
@@ -170,13 +180,16 @@
 
 [interactive]
 
-  # Use `diff-so-fancy` for all diff output.
-  diffFilter = diff-so-fancy --patch
+  # Use `git-delta` for all diff output.
+  diffFilter = delta --color=only
 
 [merge]
 
   # Include summaries of merged commits in newly created merge commit messages
   log = true
+
+  # Improve conflict highlighting.
+  conflictstyle = diff3
 
 [pull]
 
