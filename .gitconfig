@@ -181,7 +181,7 @@
 [interactive]
 
   # Use `git-delta` for all diff output.
-  diffFilter = delta --color=only
+  diffFilter = delta --color-only
 
 [merge]
 
