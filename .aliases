@@ -14,7 +14,6 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Sites"
 alias hosts="sudo ${EDITOR} /etc/hosts"
-alias cask="brew cask" # I <3 Cask
 
 # Typos
 alias gut="git"
