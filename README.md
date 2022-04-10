@@ -43,7 +43,7 @@ If `~/.path` exists, it will be sourced along with the other files, before any f
 Here is an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
 
 ```bash
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:$PATH";
 ```
 
 ### Add custom commands without creating a new fork
@@ -55,14 +55,14 @@ My `~/.extra` looks something like this:
 ```bash
 # Git/GitHub credentials
 # Not in the repository, to prevent people from accidentally committing under my name
-GIT_AUTHOR_NAME="Marc Görtz"
-GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-git config --global user.name "$GIT_AUTHOR_NAME"
-GIT_AUTHOR_EMAIL="mail@marcgoertz.de"
-GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-git config --global user.email "$GIT_AUTHOR_EMAIL"
-GITHUB_USER_NAME="mrcgrtz"
-git config --global github.user "$GITHUB_USER_NAME"
+GIT_AUTHOR_NAME="Marc Görtz";
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME";
+GIT_AUTHOR_EMAIL="mail@marcgoertz.de";
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL";
+GITHUB_USER_NAME="mrcgrtz";
+git config --global user.name "$GIT_AUTHOR_NAME";
+git config --global user.email "$GIT_AUTHOR_EMAIL";
+git config --global github.user "$GITHUB_USER_NAME";
 ```
 
 You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It is probably better to [fork this repository](https://github.com/mrcgrtz/dotfiles/fork) instead, though.
