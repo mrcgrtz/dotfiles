@@ -1,12 +1,11 @@
 # copy to ~/.ssh/config
 
-Host github.com
-  ControlMaster auto
-  ControlPersist 120
-
 Host *
   # Always use SSH2.
   Protocol 2
+
+  # Disable SSH agent forwarding per default, enable it where needed.
+  ForwardAgent no
 
   # Use a shared channel for all sessions to the same host,
   # instead of always opening a new one. This leads to much
@@ -15,11 +14,18 @@ Host *
   ControlPath ~/.ssh/control/%r@%h:%p
   ControlPersist 1800
 
-  # Enable legacy DSA keys
-  # PubkeyAcceptedKeyTypes +ssh-dss
-
-  # also this stuff
-  Compression yes
+  # This prevent disconnects due to timeouts.
   TCPKeepAlive yes
   ServerAliveInterval 60
   ServerAliveCountMax 6
+
+  # Use a keychain management software.
+  UseKeychain yes
+  AddKeysToAgent yes
+
+  # Compress tranferred data and speed up things.
+  Compression yes
+
+Host github.com
+  ControlMaster auto
+  ControlPersist 120
