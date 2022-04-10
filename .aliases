@@ -1,45 +1,43 @@
 #!/usr/bin/env bash
 
-# Easier navigation: .., ..., ...., ....., ~ and -
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ~="cd ~" # `cd` is probably faster to type though
-alias -- -="cd -"
+# Easier navigation: .., ..., ...., and .....
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 
 # Shortcuts
-alias d="cd ~/Dropbox"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias p="cd ~/Sites"
+alias d='cd ~/Dropbox'
+alias dl='cd ~/Downloads'
+alias dt='cd ~/Desktop'
+alias p='cd ~/Sites'
 alias hosts="sudo ${EDITOR} /etc/hosts"
 
 # Typos
-alias gut="git"
-alias brwe="brew"
-alias where="which"
+alias gut='git'
+alias brwe='brew'
+alias where='which'
 
 # Git
-alias gd="git d" # see `.gitconfig` for `d`
+alias gd='git d' # see `.gitconfig` for `d`
 alias gcd='cd "`git rev-parse --show-toplevel`"'
-alias gl="git l" # see `.gitconfig` for `l`
-alias gpo="git push origin"
+alias gl='git l' # see `.gitconfig` for `l`
+alias gpo='git push origin'
 alias gpom='git push origin `git symbolic-ref --short HEAD`'
-alias gpt="git push --tags"
+alias gpt='git push --tags'
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias brew_update="brew update; brew upgrade; brew cleanup; brew doctor"
-alias npm_update="npm install npm -g; npx npm-check -gu; npm doctor"
-alias gem_update="sudo gem update --system; sudo gem update; sudo gem cleanup"
-alias update="sudo softwareupdate -i -a; brew_update; npm_update; gem_update"
+alias brew_update='brew update; brew upgrade; brew cleanup; brew doctor'
+alias npm_update='npm install npm -g; npx npm-check -gu; npm doctor'
+alias gem_update='sudo gem update --system; sudo gem update; sudo gem cleanup'
+alias update='sudo softwareupdate -i -a; brew_update; npm_update; gem_update'
 
 # Use coreutils `ls` if possible…
-hash gls >/dev/null 2>&1 || alias gls="ls"
+hash gls >/dev/null 2>&1 || alias gls='ls'
 
 # Always use color, even when piping (to awk, grep, etc)
-if gls --color > /dev/null 2>&1; then colorflag="--color"; else colorflag="-G"; fi;
+if gls --color > /dev/null 2>&1; then colorflag='--color'; else colorflag='-G'; fi;
 export CLICOLOR_FORCE=1
 
 # ls options: A = include hidden (but not . or ..), F = put `/` after folders, h = byte unit suffixes
@@ -61,43 +59,36 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # Clear the screen like good ol’ Commodore 64
-alias cls="clear"
+alias cls='clear'
 
 # Enable aliases to be sudo’ed
-alias sudo="sudo "
+alias sudo='sudo '
 
 # Get week number
-alias week="date +%V"
+alias week='date +%V'
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en0"
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias localip='ipconfig getifaddr en0'
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-
-# Enhanced WHOIS lookups
-alias whois="whois -h whois-servers.net"
 
 # Show active network interfaces
 alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
 
 # Flush Directory Service cache
-alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
+alias flush='dscacheutil -flushcache && killall -HUP mDNSResponder'
 
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
-alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
-
-# View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias lscleanup='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder'
 
 # Canonical hex dump; some systems have this symlinked
-command -v hd > /dev/null || alias hd="hexdump -C"
+command -v hd > /dev/null || alias hd='hexdump -C'
 
 # macOS has no `md5sum`, so use `md5` as a fallback
-command -v md5sum > /dev/null || alias md5sum="md5"
+command -v md5sum > /dev/null || alias md5sum='md5'
 
 # macOS has no `sha1sum`, so use `shasum` as a fallback
-command -v sha1sum > /dev/null || alias sha1sum="shasum"
+command -v sha1sum > /dev/null || alias sha1sum='shasum'
 
 # Trim new lines and copy to clipboard
 alias c="tr -d '\n' | pbcopy"
@@ -106,7 +97,7 @@ alias c="tr -d '\n' | pbcopy"
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 # ROT13-encode text. Works for decoding, too! ;)
-alias rot13="tr a-zA-Z n-za-mN-ZA-M"
+alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 
 # Empty the Trash on all mounted volumes and the main HDD.
 # Also, clear Apple’s System Logs to improve shell startup speed.
@@ -114,28 +105,28 @@ alias rot13="tr a-zA-Z n-za-mN-ZA-M"
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
 # Show/hide hidden files in Finder
-alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+alias show='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
+alias hide='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 
 # Show/hide all desktop icons (useful when presenting)
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop='defaults write com.apple.finder CreateDesktop -bool true && killall Finder'
+alias hidedesktop='defaults write com.apple.finder CreateDesktop -bool false && killall Finder'
 
 # Merge PDF files
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
-alias mergepdf="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py"
+alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
 
 # Enable/disable Spotlight
-alias spoton="sudo mdutil -a -i on"
-alias spotoff="sudo mdutil -a -i off"
+alias spoton='sudo mdutil -a -i on'
+alias spotoff='sudo mdutil -a -i off'
 
 # PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
-alias plistbuddy="/usr/libexec/PlistBuddy"
+alias plistbuddy='/usr/libexec/PlistBuddy'
 
 # Intuitive map function
 # For example, to list all directories that contain a certain file:
 # find . -name .gitattributes | map dirname
-alias map="xargs -n1"
+alias map='xargs -n1'
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
@@ -151,7 +142,7 @@ alias pumpitup="osascript -e 'set volume output volume 100'"
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
 # Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec ${SHELL} -l"
@@ -161,12 +152,12 @@ alias path="echo -e ${PATH//:/\\n}"
 
 # List global Node modules without their dependencies
 # See https://ilee.co.uk/list-node-packages-wo-dependencies/
-alias npmls="npm list -g --depth=0"
+alias npmls='npm list -g --depth=0'
 
 # Remove local Node modules and clear NPM cache for an upcoming fresh install,
 # thanks to @stefanpenner for this one
-alias nom="rm -rf node_modules && npm cache clear && npm install"
+alias nom='rm -rf node_modules && npm cache clear && npm install'
 
 # Nuke all Docker volumes from orbit,
 # thanks to @ebarbeito for this one
-alias docker-nuke="docker system prune -f --all --volumes"
+alias docker-nuke='docker system prune -f --all --volumes'
