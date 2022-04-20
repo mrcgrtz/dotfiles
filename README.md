@@ -43,7 +43,7 @@ If `~/.path` exists, it will be sourced along with the other files, before any f
 Here is an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
 
 ```bash
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 export PATH="/usr/local/bin:$PATH";
 ```
@@ -55,15 +55,13 @@ If `~/.extra` exists, it will be sourced along with the other files. You can use
 My `~/.extra` looks something like this:
 
 ```bash
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 # Git/GitHub credentials
 # https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables#_committing
-# Not in the repository, to prevent people from accidentally committing under my name
+# Not in the repository, to prevent people from accidentally committing under my name.
 GIT_AUTHOR_NAME="Marc Görtz";
-GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME";
 GIT_AUTHOR_EMAIL="mail@marcgoertz.de";
-GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL";
 GITHUB_USER_NAME="mrcgrtz";
 git config --global user.name "$GIT_AUTHOR_NAME";
 git config --global user.email "$GIT_AUTHOR_EMAIL";
