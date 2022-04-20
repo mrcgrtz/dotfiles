@@ -43,6 +43,8 @@ If `~/.path` exists, it will be sourced along with the other files, before any f
 Here is an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
 
 ```bash
+#!/usr/bin/env bash
+
 export PATH="/usr/local/bin:$PATH";
 ```
 
@@ -53,7 +55,10 @@ If `~/.extra` exists, it will be sourced along with the other files. You can use
 My `~/.extra` looks something like this:
 
 ```bash
+#!/usr/bin/env bash
+
 # Git/GitHub credentials
+# https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables#_committing
 # Not in the repository, to prevent people from accidentally committing under my name
 GIT_AUTHOR_NAME="Marc Görtz";
 GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME";
@@ -72,7 +77,7 @@ You could also use `~/.extra` to override settings, functions and aliases from m
 When setting up a new Mac, you may want to install some common [Homebrew](https://brew.sh/) formulae:
 
 ```bash
-source ./init/brew/brew.sh
+source ./init/brew/install-brew-formulae.sh
 ```
 
 This also installs Homebrew if it is not yet installed.
@@ -82,6 +87,7 @@ This also installs Homebrew if it is not yet installed.
 * GNU core utilities
 * [git](https://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/master/Commands.md)
 * [The Silver Searcher](https://geoff.greer.fm/ag/)
+* [fig](https://fig.io/), an IDE-style autocomplete for the terminal
 * [curlie](https://curlie.io/), an awesome frontend for `curl`
 * [tree](http://mama.indstate.edu/users/ice/tree/)
 * [up](https://github.com/akavel/up) for instant live preview when piping stuff
