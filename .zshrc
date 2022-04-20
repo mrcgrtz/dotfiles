@@ -57,7 +57,7 @@ plugins=(
   gpg-agent
   nvm
   thefuck
-  z
+  zoxide
   zsh-autosuggestions
   zsh-completions
   zsh-nvm
