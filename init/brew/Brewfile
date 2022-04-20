@@ -22,6 +22,7 @@ brew 'screen'
 brew 'pure'
 
 # Install CLI magic.
+brew 'fig'
 brew 'zoxide'
 brew 'up'
 brew 'thefuck'
