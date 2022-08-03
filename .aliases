@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 # Easier navigation: .., ..., ...., and .....
 alias ..='cd ..'
@@ -145,10 +145,10 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 
 # Reload the shell (i.e. invoke as a login shell)
-alias reload="exec ${SHELL} -l"
+alias reload='exec ${SHELL} -l'
 
 # Print each PATH entry on a separate line
-alias path="echo -e ${PATH//:/\\n}"
+alias path='echo -e ${PATH//:/\\n}'
 
 # List global Node modules without their dependencies
 # See https://ilee.co.uk/list-node-packages-wo-dependencies/
