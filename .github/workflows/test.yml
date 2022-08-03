@@ -21,3 +21,4 @@ jobs:
       with:
         severity: error
         check_together: 'yes'
+        additional_files: '.aliases .exports .functions'
