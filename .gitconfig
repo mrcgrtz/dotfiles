@@ -37,7 +37,7 @@
   retag = "!f() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; f"
 
   # Undo the last commit (see https://twitter.com/codingchaos/status/1567956920983781377)
-  oops = reset --soft HEAD~
+  oops = "!f() { git reset --soft HEAD~$1; }; f"
 
   # Undo a `git push` of current branch.
   undopush = "!f() { git push -f origin HEAD^:$1; }; f"
