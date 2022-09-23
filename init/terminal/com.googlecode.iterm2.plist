@@ -1199,6 +1199,13 @@
 	<integer>15</integer>
 	<key>TerminalVMargin</key>
 	<integer>15</integer>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Command History</string>
+		<string>Jobs</string>
+		<string>Snippets</string>
+		<string>Recent Directories</string>
+	</array>
 	<key>UseBorder</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>
