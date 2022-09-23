@@ -1,20 +1,20 @@
 root = true
 
 [*]
-# indent using 2 spaces
+# Indent using 2 spaces.
 indent_style = space
 indent_size = 2
 tab_width = 2
-# Unix-style newlines with a newline ending every file
+# Use Unix-style newlines with a newline ending every file.
 end_of_line = lf
 insert_final_newline = true
-# use UTF-8 without BOM
+# Use UTF-8 without BOM.
 charset = utf-8
-# remove any trailing whitespace
+# Remove any trailing whitespace.
 trim_trailing_whitespace = true
-# restrict line length to 80 characters
+# Restrict line length to 80 characters.
 max_line_length = 80
 
 [*.md]
-# do not remove trailing spaces for line-breaks
+# Do not remove trailing spaces for line-breaks.
 trim_trailing_whitespace = false
