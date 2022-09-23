@@ -27,16 +27,16 @@ alias gpom='git push origin `git symbolic-ref --short HEAD`'
 alias gpt='git push --tags'
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 
-# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages.
 alias brew_update='brew update; brew upgrade; brew cleanup; brew doctor'
 alias npm_update='npm install npm -g; npx npm-check -gu; npm doctor'
 alias gem_update='sudo gem update --system; sudo gem update; sudo gem cleanup'
 alias update='sudo softwareupdate -i -a; brew_update; npm_update; gem_update'
 
-# Use coreutils `ls` if possible…
+# Use coreutils `ls` if possible.
 hash gls >/dev/null 2>&1 || alias gls='ls'
 
-# Always use color, even when piping (to awk, grep, etc)
+# Always use color, even when piping (to awk, grep, etc).
 if gls --color > /dev/null 2>&1; then colorflag='--color'; else colorflag='-G'; fi;
 export CLICOLOR_FORCE=1
 
@@ -44,56 +44,56 @@ export CLICOLOR_FORCE=1
 alias ls="gls -AFh ${colorflag} --group-directories-first"
 # List all files colorized in long format, excluding . and ..
 alias la="gls -lAF ${colorflag}"
-# List only directories
+# List only directories.
 alias lsd="gls -l ${colorflag} | grep ^d"
 
-# here's LS_COLORS
-# github.com/trapd00r/LS_COLORS
+# Here's LS_COLORS!
+# See github.com/trapd00r/LS_COLORS.
 command -v gdircolors >/dev/null 2>&1 || alias gdircolors="dircolors"
 eval "$(gdircolors -b ~/.dircolors)"
 
-# Always enable colored `grep` output
+# Always enable colored `grep` output.
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# Clear the screen like good ol’ Commodore 64
+# Clear the screen like good ol’ Commodore 64.
 alias cls='clear'
 
-# Enable aliases to be sudo’ed
+# Enable aliases to be sudo’ed.
 alias sudo='sudo '
 
-# Get week number
+# Get week number.
 alias week='date +%V'
 
-# IP addresses
+# Get IP addresses.
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias localip='ipconfig getifaddr en0'
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
-# Show active network interfaces
+# Show active network interfaces.
 alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
 
-# Flush Directory Service cache
+# Flush Directory Service cache.
 alias flush='dscacheutil -flushcache && killall -HUP mDNSResponder'
 
-# Clean up LaunchServices to remove duplicates in the “Open With” menu
+# Clean up LaunchServices to remove duplicates in the “Open With” menu.
 alias lscleanup='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder'
 
-# Canonical hex dump; some systems have this symlinked
+# Canonical hex dump; some systems have this symlinked.
 command -v hd > /dev/null || alias hd='hexdump -C'
 
-# macOS has no `md5sum`, so use `md5` as a fallback
+# macOS has no `md5sum`, so use `md5` as a fallback.
 command -v md5sum > /dev/null || alias md5sum='md5'
 
-# macOS has no `sha1sum`, so use `shasum` as a fallback
+# macOS has no `sha1sum`, so use `shasum` as a fallback.
 command -v sha1sum > /dev/null || alias sha1sum='shasum'
 
-# Trim new lines and copy to clipboard
+# Trim new lines and copy to clipboard.
 alias c="tr -d '\n' | pbcopy"
 
-# Recursively delete `.DS_Store` files
+# Recursively delete `.DS_Store` files.
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 # ROT13-encode text. Works for decoding, too! ;)
@@ -104,60 +104,60 @@ alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 # Finally, clear download history from quarantine. https://mths.be/bum
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
-# Show/hide hidden files in Finder
+# Show/hide hidden files in Finder.
 alias show='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hide='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 
-# Show/hide all desktop icons (useful when presenting)
+# Show/hide all desktop icons (useful when presenting).
 alias showdesktop='defaults write com.apple.finder CreateDesktop -bool true && killall Finder'
 alias hidedesktop='defaults write com.apple.finder CreateDesktop -bool false && killall Finder'
 
-# Merge PDF files
+# Merge PDF files.
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
 alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
 
-# Enable/disable Spotlight
+# Enable/disable Spotlight.
 alias spoton='sudo mdutil -a -i on'
 alias spotoff='sudo mdutil -a -i off'
 
-# PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
+# PlistBuddy alias, because sometimes `defaults` just doesn’t cut it.
 alias plistbuddy='/usr/libexec/PlistBuddy'
 
-# Intuitive map function
+# Intuitive map function.
 # For example, to list all directories that contain a certain file:
 # find . -name .gitattributes | map dirname
 alias map='xargs -n1'
 
-# One of @janmoesen’s ProTip™s
+# One of @janmoesen’s ProTip™s.
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
   alias "${method}"="lwp-request -m '${method}'"
 done
 
-# Stuff I never really use but cannot delete either because of https://xkcd.com/530/
+# Stuff I never really use but cannot delete either because of https://xkcd.com/530/.
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume output volume 100'"
 
-# Kill all the tabs in Chrome to free up memory
+# Kill all the tabs in Chrome to free up memory.
 # [C] explained: https://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
-# Lock the screen (when going AFK)
+# Lock the screen (when going AFK).
 alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 
-# Reload the shell (i.e. invoke as a login shell)
+# Reload the shell (i.e. invoke as a login shell).
 alias reload='exec ${SHELL} -l'
 
-# Print each PATH entry on a separate line
+# Print each PATH entry on a separate line.
 alias path='echo -e ${PATH//:/\\n}'
 
-# List global Node modules without their dependencies
-# See https://ilee.co.uk/list-node-packages-wo-dependencies/
+# List global Node modules without their dependencies,
+# see https://ilee.co.uk/list-node-packages-wo-dependencies/.
 alias npmls='npm list -g --depth=0'
 
 # Remove local Node modules and clear NPM cache for an upcoming fresh install,
-# thanks to @stefanpenner for this one
+# thanks to @stefanpenner for this one.
 alias nom='rm -rf node_modules && npm cache clear && npm install'
 
 # Nuke all Docker volumes from orbit,
-# thanks to @ebarbeito for this one
+# thanks to @ebarbeito for this one.
 alias docker-nuke='docker system prune -f --all --volumes'

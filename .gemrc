@@ -1,2 +1,2 @@
-# disable documentation generation, suggest alternates when Gems are not found
+# Disable documentation generation, suggest alternates when Gems are not found.
 gem: --no-document --suggestions
