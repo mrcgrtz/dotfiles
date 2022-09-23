@@ -168,4 +168,4 @@ Inspiration and code was taken from many sources, including:
 
 ## License
 
-MIT © [Marc Görtz](https://marcgoertz.de/)
+My dotfiles are released into public domain under the Unlicense so you can do whatever you want with it. Fork! Copy! Adapt!
