@@ -143,7 +143,7 @@ I use [Pure](https://github.com/sindresorhus/pure) for my zsh prompt with a [Dra
 
 * Terminal emulator: [iTerm2](https://iterm2.com/) (its settings are [synced](https://github.com/mrcgrtz/dotfiles/blob/main/init/terminal/com.googlecode.iterm2.plist))
 * Font: [Dank Mono](https://dank.sh/)
-* Wallpaper: [Tre Cime di Lavaredo](https://unsplash.com/photos/iplwfXCe8a4)
+* Wallpaper: [Golden forest pathway](https://unsplash.com/photos/hvrpOmuMrAI)
 
 ## Feedback
 
