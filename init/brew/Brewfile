@@ -30,7 +30,6 @@ brew 'thefuck'
 # Install Git tools.
 brew 'git'
 brew 'git-extras'
-brew 'git-flow'
 brew 'git-delta'
 
 # Install everything else.
