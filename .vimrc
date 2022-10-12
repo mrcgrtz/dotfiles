@@ -26,6 +26,10 @@ Plug 'gabrielelana/vim-markdown'
 
 call plug#end()
 
+" Set theme and enable syntax highlighting.
+colorscheme dracula
+syntax on
+
 " Theme adjustments: Enable italics for comments.
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
