@@ -172,7 +172,7 @@ let g:ackhighlight=1
 let g:jsx_ext_required = 1
 
 " Configure Airline.
-let g:airline_theme='hybridline' " dracula is currently broken
+let g:airline_theme='hybridline'
 let g:airline_powerline_fonts=1
 let g:airline_statusline_ontop=1
 let g:airline#extensions#tabline#enabled = 1
