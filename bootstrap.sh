@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")" || exit;
+cd "$(dirname "${BASH_SOURCE[0]}")" || exit;
 
 function doIt() {
   git pull origin main;
@@ -31,7 +31,8 @@ else
   # zsh
   read -r -p "🙃  Install ohmyzsh and some plugins? (y/N) " runswitch
   case "$runswitch" in
-    y|yes ) source init/terminal/install-zsh.sh;;
+    y|yes )
+      source init/terminal/install-zsh.sh;;
     * ) echo "Skipping ohmyzsh.";;
   esac
 
