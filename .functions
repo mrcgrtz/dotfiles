@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
 # Create a new directory and enter it.
-function mkd() {
+mkd() {
   mkdir -p "$@" && cd "$_" || exit;
 }
 
 # Change working directory to the top-most Finder window location.
-function cdf() { # short for `cdfinder`
+cdf() { # short for `cdfinder`
   cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')" || exit;
 }
 
 # Get an xterm compatible color from its hex value.
-function fromhex(){
+fromhex(){
   hex=${1#"#"}
   r=$(printf '0x%0.2s' "$hex")
   g=$(printf '0x%0.2s' "${hex#??}")
@@ -22,7 +22,7 @@ function fromhex(){
 }
 
 # Create a .tar.gz archive, using `zopfli`, `pigz` or `gzip` for compression.
-function targz() {
+targz() {
   local tmpFile="${*%/}.tar";
   tar -cvf "${tmpFile}" --exclude=".DS_Store" "${@}" || return 1;
 
@@ -32,7 +32,7 @@ function targz() {
   );
 
   local cmd="";
-  if (( size < 52428800 )) && hash zopfli 2> /dev/null; then
+  if [ "${size}" -lt 52428800 ] && hash zopfli 2> /dev/null; then
     # the .tar file is smaller than 50 MB and Zopfli is available; use it
     cmd="zopfli";
   else
@@ -56,7 +56,7 @@ function targz() {
 }
 
 # Determine size of a file or total size of a directory.
-function fs() {
+fs() {
   if du -b /dev/null > /dev/null 2>&1; then
     local arg=-sbh;
   else
@@ -73,12 +73,12 @@ function fs() {
 # the `.git` directory, listing directories first. The output gets piped into
 # `less` with options to preserve color and line numbers, unless the output is
 # small enough for one screen.
-function tre() {
+tre() {
   tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
 
 # Compare original and gzipped file size.
-function gz() {
+gz() {
   origsize=$(wc -c < "$1");
   gzipsize=$(gzip -c "$1" | wc -c);
   ratio=$(echo "$gzipsize * 100 / $origsize" | bc -l);
@@ -87,7 +87,7 @@ function gz() {
 }
 
 # Create a data URL from a file.
-function dataurl() {
+dataurl() {
   mimeType=$(file -b --mime-type "$1");
   if [[ $mimeType == text/* ]]; then
     mimeType="${mimeType};charset=utf-8";
@@ -97,7 +97,7 @@ function dataurl() {
 
 # Start a PHP server from a directory, optionally specifying the port.
 # (Requires PHP 5.4.0+.)
-function server() {
+server() {
   port="${1:-8000}";
   ip=$(ipconfig getifaddr en1);
   sleep 1 && open "http://${ip}:${port}/" &
@@ -105,13 +105,13 @@ function server() {
 }
 
 # Run `dig` and display the most useful DNS info.
-function digga() {
+digga() {
   dig +nocmd "$1" any +multiline +noall +answer;
 }
 
 # `s` with no arguments opens the current directory in Sublime Text, otherwise
 # opens the given location.
-function s() {
+s() {
   if [ $# -eq 0 ]; then
     subl .;
   else
@@ -121,7 +121,7 @@ function s() {
 
 # `o` with no arguments opens the current directory, otherwise opens the given
 # location,
-function o() {
+o() {
   if [ $# -eq 0 ]; then
     open .;
   else
