@@ -90,5 +90,8 @@ prompt pure
 zstyle :prompt:pure:path color 'cyan'
 zstyle :prompt:pure:git:stash show yes
 
+# Enable iTerm2 shell integration.
+[[ -f "$HOME/.item2_shell_integration.zsh" ]] && builtin source "$HOME/.item2_shell_integration.zsh"
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
