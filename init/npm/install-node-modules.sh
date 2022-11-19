@@ -16,3 +16,6 @@ npm install -g grunt-cli
 # Install performance analysis tools.
 npm install -g speed-test
 npm install -g psi
+
+# Install other useful utilities.
+npm install -g npm-check
