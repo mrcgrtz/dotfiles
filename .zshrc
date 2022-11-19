@@ -59,6 +59,7 @@ plugins=(
   fnm
   git
   gpg-agent
+  rvm
   thefuck
   zoxide
   zsh-autosuggestions
@@ -78,6 +79,9 @@ unset file;
 
 # Enable fnm.
 eval "$(fnm env --use-on-cd)"
+
+# Enable rvm.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && builtin source "$HOME/.rvm/scripts/rvm"
 
 # Enable the Pure prompt.
 fpath+="$HOME/.zsh/pure"
