@@ -32,6 +32,9 @@ brew 'git'
 brew 'git-extras'
 brew 'git-delta'
 
+# Install a Node version manager.
+brew 'fnm'
+
 # Install everything else.
 brew 'the_silver_searcher'
 brew 'rs/tap/curlie'

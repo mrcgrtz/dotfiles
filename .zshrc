@@ -56,14 +56,13 @@ plugins=(
   alias-tips
   autoupdate
   colored-man-pages
+  fnm
   git
   gpg-agent
-  nvm
   thefuck
   zoxide
   zsh-autosuggestions
   zsh-completions
-  zsh-nvm
   zsh-syntax-highlighting
 )
 
@@ -76,6 +75,9 @@ for file in ~/.{path,exports,aliases,functions,extra}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
+
+# Enable fnm.
+eval "$(fnm env --use-on-cd)"
 
 # Enable the Pure prompt.
 fpath+="$HOME/.zsh/pure"
