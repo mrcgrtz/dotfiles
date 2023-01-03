@@ -61,7 +61,7 @@ My `~/.extra` looks something like this:
 # https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables#_committing
 # Not in the repository, to prevent people from accidentally committing under my name.
 GIT_AUTHOR_NAME="Marc Görtz";
-GIT_AUTHOR_EMAIL="mail@example.com";
+GIT_AUTHOR_EMAIL="my@email.address";
 GITHUB_USER_NAME="mrcgrtz";
 git config --global user.name "$GIT_AUTHOR_NAME";
 git config --global user.email "$GIT_AUTHOR_EMAIL";
