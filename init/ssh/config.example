@@ -29,3 +29,7 @@ Host *
 Host github.com
   ControlMaster auto
   ControlPersist 120
+
+# Fig SSH integration. Keep at the bottom of this file.
+Match all
+  Include ~/.fig/ssh
