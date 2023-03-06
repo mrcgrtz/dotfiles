@@ -171,6 +171,17 @@
   # Use `hexdump` to diff binary files.
   textconv = hexdump -v -C
 
+[gpg]
+
+  # Use SSH instead of GPG format.
+  format = ssh
+
+[gpg "ssh"]
+
+  # Use 1Password as SSH client.
+  # https://developer.1password.com/docs/ssh/git-commit-signing/
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
 [help]
 
   # Automatically correct and execute mistyped commands.
@@ -255,3 +266,8 @@
 [url "git://gist.github.com/"]
 
   insteadOf = "gist:"
+
+
+
+[commit]
+  gpgsign = true
