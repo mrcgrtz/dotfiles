@@ -10,7 +10,7 @@ endif
 
 call plug#begin('~/.vim/bundle')
 
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
@@ -27,7 +27,7 @@ Plug 'gabrielelana/vim-markdown'
 call plug#end()
 
 " Set theme and enable syntax highlighting.
-colorscheme dracula
+colorscheme catppuccin_mocha
 syntax on
 
 " Theme adjustments: Enable italics for comments.
@@ -176,7 +176,7 @@ let g:ackhighlight=1
 let g:jsx_ext_required = 1
 
 " Configure Airline.
-let g:airline_theme='hybridline'
+let g:airline_theme = 'catppuccin_mocha'
 let g:airline_powerline_fonts=1
 let g:airline_statusline_ontop=1
 let g:airline#extensions#tabline#enabled = 1
