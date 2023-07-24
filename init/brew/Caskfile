@@ -59,7 +59,7 @@ cask 'the-unarchiver'
 cask 'timemachineeditor'
 cask 'appcleaner'
 cask 'lastfm'
-mas 'Tweetbot', id: 1384080005
+mas 'Ivory', id: 6444602274
 mas 'Reeder', id: 880001334
 mas 'Things', id: 904280696
 mas 'Moom', id: 419330170
