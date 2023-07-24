@@ -30,7 +30,7 @@ cask 'telegram'
 cask 'zoomus'
 
 # Install security apps.
-cask 1password
+cask '1password'
 mas '1Blocker', id: 1365531024
 cask 'gpg-suite'
 cask 'little-snitch'
@@ -40,7 +40,7 @@ cask 'micro-snitch'
 mas 'Pages', id: 409201541
 mas 'Numbers', id: 409203825
 mas 'Keynote', id: 409183694
-cask musescore
+cask 'musescore'
 
 # Install design and image processing apps.
 mas 'Affinity Designer', id: 824171161
