@@ -30,7 +30,7 @@ cask 'zoomus'
 
 # Install security apps.
 cask 1password
-mas 'Better', id: 1121192229
+mas '1Blocker', id: 1365531024
 cask 'gpg-suite'
 cask 'little-snitch'
 cask 'micro-snitch'
