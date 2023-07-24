@@ -75,6 +75,7 @@ cask 'qlmarkdown' # Preview Markdown files
 cask 'qlstephen' # Preview plain text files without or with unknown file extension. Example: CHANGELOG, index.styl, etc.
 cask 'quicklook-json' # Preview JSON files
 cask 'webpquicklook' # Preview WebP images
+cask 'avifquicklook' # Preview AVIF images
 cask 'quicklookase' # Preview Adobe ASE Color Swatches generated with Adobe Photoshop and many others
 
 # Install screensavers.
