@@ -58,7 +58,6 @@ cask 'kap'
 cask 'the-unarchiver'
 cask 'timemachineeditor'
 cask 'appcleaner'
-cask 'lastfm'
 mas 'Ivory', id: 6444602274
 mas 'Reeder', id: 880001334
 mas 'Things', id: 904280696
