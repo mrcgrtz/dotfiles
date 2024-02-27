@@ -78,6 +78,11 @@
   # Detect whitespace errors when applying a patch.
   whitespace = fix
 
+[branch]
+
+  # Sort branches by commit date.
+  sort = -committerdate
+
 [column]
 
   # Automatically use a column UI.
