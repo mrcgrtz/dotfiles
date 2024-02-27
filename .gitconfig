@@ -219,6 +219,11 @@
   # Make `git push` push relevant annotated tags when pushing branches out.
   followTags = true
 
+[rerere]
+
+  # Reuse recorded resolution.
+  enabled = true
+
 [stash]
 
   # `git stash show <x>` should show the patch.
