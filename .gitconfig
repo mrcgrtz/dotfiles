@@ -60,7 +60,7 @@
 
   # Show verbose output about tags, branches, remotes or aliases.
   tags = tag -l
-  branches = branch -a
+  branches = branch -a --no-column
   remotes = remote -v
   aliases = !"git config -l | grep alias | cut -c 7-"
 
@@ -77,6 +77,11 @@
 
   # Detect whitespace errors when applying a patch.
   whitespace = fix
+
+[column]
+
+  # Automatically use a column UI.
+  ui = auto
 
 [core]
 
