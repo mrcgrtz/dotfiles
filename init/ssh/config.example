@@ -7,6 +7,9 @@ Host *
   # Disable SSH agent forwarding per default, enable it where needed.
   ForwardAgent no
 
+  # Use 1Password as SSH agent
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
   # Use a shared channel for all sessions to the same host,
   # instead of always opening a new one. This leads to much
   # quicker connection times.
@@ -29,7 +32,3 @@ Host *
 Host github.com
   ControlMaster auto
   ControlPersist 120
-
-# Fig SSH integration. Keep at the bottom of this file.
-Match all
-  Include ~/.fig/ssh
