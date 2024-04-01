@@ -43,10 +43,12 @@ mas 'Keynote', id: 409183694
 cask 'musescore'
 
 # Install design and image processing apps.
-mas 'Affinity Designer', id: 824171161
 mas 'Pixelmator Pro', id: 1289583905
 cask 'xscope'
 cask 'imageoptim'
+cask 'affinity-designer'
+cask 'affinity-photo'
+cask 'affinity-publisher'
 
 # Install misc. apps.
 cask 'alfred'
