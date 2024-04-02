@@ -55,6 +55,7 @@ cask 'alfred'
 cask 'flux'
 cask 'bartender'
 cask 'istat-menus'
+cask 'maestral'
 cask 'keyboard-maestro'
 cask 'a-better-finder-rename'
 cask 'kap'
@@ -82,7 +83,6 @@ cask 'quicklookase' # Preview Adobe ASE Color Swatches generated with Adobe Phot
 
 # Install screensavers.
 cask 'boinc'
-cask 'aerial'
 cask 'pongsaver'
 
 # Install fonts.
