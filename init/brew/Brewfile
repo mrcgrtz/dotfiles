@@ -25,7 +25,6 @@ brew 'pure'
 brew 'codewhisperer'
 brew 'zoxide'
 brew 'up'
-brew 'thefuck'
 
 # Install Git tools.
 brew 'git'

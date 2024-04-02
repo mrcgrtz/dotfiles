@@ -89,7 +89,6 @@ This also installs Homebrew if it is not yet installed.
 * [curlie](https://curlie.io/), an awesome frontend for `curl`
 * [tree](http://mama.indstate.edu/users/ice/tree/)
 * [up](https://github.com/akavel/up) for instant live preview when piping stuff
-* [The Fuck](https://github.com/nvbn/thefuck)
 * [lynx](http://lynx.invisible-island.net/) because I ♥ lynx
 * Some more stuff, especially more recent versions of some macOS tools.
 

@@ -60,7 +60,6 @@ plugins=(
   git
   gpg-agent
   rvm
-  thefuck
   zoxide
   zsh-autosuggestions
   zsh-completions
