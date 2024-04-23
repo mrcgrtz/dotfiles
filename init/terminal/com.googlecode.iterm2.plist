@@ -1424,5 +1424,9 @@
 	<false/>
 	<key>WindowNumber</key>
 	<false/>
+	<key>kCPKSelectionViewPreferredModeKey</key>
+	<integer>0</integer>
+	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
+	<false/>
 </dict>
 </plist>
