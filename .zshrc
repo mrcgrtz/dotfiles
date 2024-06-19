@@ -57,6 +57,7 @@ plugins=(
   autoupdate
   colored-man-pages
   fnm
+  fzf-zsh-plugin
   git
   gpg-agent
   rvm
