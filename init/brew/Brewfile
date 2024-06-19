@@ -22,7 +22,6 @@ brew 'screen'
 brew 'pure'
 
 # Install CLI magic.
-brew 'codewhisperer'
 brew 'zoxide'
 brew 'up'
 
