@@ -11,7 +11,6 @@ corepack enable
 
 # Install build tools.
 npm install -g gulp-cli     # https://www.npmjs.com/package/gulp-cli
-npm install -g grunt-cli    # https://www.npmjs.com/package/grunt-cli
 
 # Install performance analysis tools.
 npm install -g speed-test   # https://www.npmjs.com/package/speed-test
