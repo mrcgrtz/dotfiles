@@ -4,7 +4,8 @@ My homegrown dotfiles repository which in the meantime is VERY much inspired by 
 
 ## Installation
 
-**Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you do not want or need. Do not blindly use my settings unless you know what that entails. Use at your own risk!
+> [!WARNING]  
+> If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you do not want or need. Do not blindly use my settings unless you know what that entails. Use at your own risk!
 
 ### Using Git and the bootstrap script
 
