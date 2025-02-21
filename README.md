@@ -86,10 +86,10 @@ This also installs Homebrew if it is not yet installed.
 * GNU core utilities
 * [git](https://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/master/Commands.md)
 * [The Silver Searcher](https://geoff.greer.fm/ag/)
-* [curlie](https://curlie.io/), an awesome frontend for `curl`
-* [tree](http://mama.indstate.edu/users/ice/tree/)
+* [curlie](https://rs.github.io/curlie/), an awesome frontend for `curl`
+* [tree](https://oldmanprogrammer.net/source.php?dir=projects/tree)
 * [up](https://github.com/akavel/up) for instant live preview when piping stuff
-* [lynx](http://lynx.invisible-island.net/) because I ♥ lynx
+* [lynx](https://lynx.invisible-island.net/) because I ♥ lynx
 * Some more stuff, especially more recent versions of some macOS tools.
 
 If you want to install some native macOS apps, the script will ask you
@@ -141,7 +141,7 @@ I use [Pure](https://github.com/sindresorhus/pure) for my zsh prompt with a [Cat
 #### The nerdy details
 
 * Terminal emulator: [iTerm2](https://iterm2.com/) (its settings are [synced](https://github.com/mrcgrtz/dotfiles/blob/main/init/terminal/com.googlecode.iterm2.plist))
-* Font: [Dank Mono](https://dank.sh/)
+* Font: [Dank Mono](https://philpl.gumroad.com/l/dank-mono)
 * Wallpaper: [Balloons in the Mountains](https://www.reddit.com/r/wallpapers/comments/470cur/balloons_in_the_mountains/)
 
 ## Feedback
