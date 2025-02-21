@@ -60,8 +60,8 @@
 
   # Show verbose output about tags, branches, remotes or aliases.
   tags = tag -l
-  branches = branch -a --no-column
-  remotes = remote -v
+  branches = branch --all --no-column
+  remotes = remote --verbose
   aliases = !"git config -l | grep alias | cut -c 7-"
 
   # Show files ignored by Git.
@@ -80,7 +80,7 @@
 
 [branch]
 
-  # Sort branches by commit date.
+  # Show most recently changed branches first.
   sort = -committerdate
 
 [column]
