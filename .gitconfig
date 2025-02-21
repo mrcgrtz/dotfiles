@@ -65,7 +65,7 @@
   tags = tag -l
   branches = branch --all --no-column
   remotes = remote --verbose
-  aliases = !"git config -l | grep alias | cut -c 7-"
+  aliases = !"git config --get-regexp alias | cut -c 7-"
 
   # Show files ignored by Git.
   ignores = ls-files -o -i --exclude-standard
