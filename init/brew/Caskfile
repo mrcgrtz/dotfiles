@@ -12,7 +12,6 @@ cask 'sublime-text'
 cask 'iterm2'
 cask 'transmit'
 cask 'sequel-ace'
-cask 'mamp'
 cask 'amazon-q'
 mas 'Xcode', id: 497799835
 mas 'Integrity Pro', id: 1361976004
