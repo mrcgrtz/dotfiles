@@ -12,6 +12,7 @@ alias dl='cd ~/Downloads'
 alias dt='cd ~/Desktop'
 alias p='cd ~/Sites'
 alias hosts="sudo ${EDITOR} /etc/hosts"
+alias code='codium'
 
 # Typos
 alias gut='git'

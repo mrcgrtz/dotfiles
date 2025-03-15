@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-# Make VS Code the default editor, nobody needs vim or emacs
-export EDITOR="/usr/local/bin/code -w";
+# Make VSCodium the default editor, nobody needs vim or emacs
+export EDITOR="/usr/local/bin/codium -w";
 
 # Use standard ISO 8601 timestamp
 # %F equivalent to %Y-%m-%d
