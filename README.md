@@ -4,26 +4,26 @@ My homegrown dotfiles repository which in the meantime is VERY much inspired by 
 
 ## Installation
 
-> [!WARNING]  
+> [!WARNING]
 > If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you do not want or need. Do not blindly use my settings unless you know what that entails. Use at your own risk!
 
 ### Using Git and the bootstrap script
 
 You can clone the repository wherever you want. (I like to keep it in `~/dotfiles`.) The bootstrap script will pull in the latest version and copy the files to your home folder.
 
-```bash
+```sh
 git clone https://github.com/mrcgrtz/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
 
-```bash
+```sh
 source bootstrap.sh
 ```
 
 Alternatively, to update while avoiding the confirmation prompt:
 
-```bash
+```sh
 set -- -f; source bootstrap.sh
 ```
 
@@ -31,7 +31,7 @@ set -- -f; source bootstrap.sh
 
 To install these dotfiles without Git:
 
-```bash
+```sh
 cd; curl -#L https://github.com/mrcgrtz/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude={README.md,LICENSE.md,init}
 ```
 
@@ -43,7 +43,7 @@ If `~/.path` exists, it will be sourced along with the other files, before any f
 
 Here is an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
 
-```bash
+```sh
 #!/usr/bin/env sh
 
 export PATH="/usr/local/bin:$PATH";
@@ -55,7 +55,7 @@ If `~/.extra` exists, it will be sourced along with the other files. You can use
 
 My `~/.extra` looks something like this:
 
-```bash
+```sh
 #!/usr/bin/env sh
 
 # Git/GitHub credentials
@@ -75,7 +75,7 @@ You could also use `~/.extra` to override settings, functions and aliases from m
 
 When setting up a new Mac, you may want to install some common [Homebrew](https://brew.sh/) formulae:
 
-```bash
+```sh
 source ./init/brew/install-brew-formulae.sh
 ```
 
