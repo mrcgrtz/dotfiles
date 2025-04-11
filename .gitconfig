@@ -190,6 +190,9 @@
   prune = true
   pruneTags = true
 
+  # Fetch all submodules.
+  recurseSubmodules = on-demand
+
 [gpg]
 
   # Use SSH instead of GPG format.
