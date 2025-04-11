@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 # Install Homebrew (you need the Xcode CLI tools!)
-if ! command -v brew > /dev/null 2>&1; then
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi;
+if ! command -v brew >/dev/null 2>&1; then
+  /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
 
 # Make sure we are using the latest Homebrew.
 brew update
@@ -16,19 +16,21 @@ brew bundle install --file=Brewfile
 
 # Use GNU tools like sha256sum.
 echo "⚠️  Do not forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
-ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+ln -sf "$(brew --prefix coreutils)/bin/gsha256sum" /usr/local/bin/sha256sum
 
 # Switch to using Brew-installed Zsh as default shell.
-if ! grep -F -q '/usr/local/bin/zsh' /etc/shells; then
-  echo '/usr/local/bin/zsh' | sudo tee -a /etc/shells;
-  chsh -s /usr/local/bin/zsh;
-fi;
+zsh_path="$(brew --prefix)/bin/zsh"
+if ! grep -F "$zsh_path" /etc/shells >/dev/null 2>&1; then
+  echo "$zsh_path" | sudo tee -a /etc/shells
+  chsh -s "$zsh_path"
+fi
 
 # Maybe install formulae from Caskfile, too.
-read -rp "📡  Also install native apps using Homebrew Casks and the Mac App Store? (y/N) " docask
+printf "📡  Also install native apps using Homebrew Casks and the Mac App Store? (y/N) "
+read -r docask
 case "$docask" in
-  y|yes ) brew bundle install --file=Caskfile;;
-  * ) echo "Skipping Caskfile.";;
+  y|Y|yes|YES) brew bundle install --file=Caskfile ;;
+  *) echo "Skipping Caskfile." ;;
 esac
 
 # Remove outdated versions from the Cellar.
