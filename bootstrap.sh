@@ -1,46 +1,50 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-cd "$(dirname "${BASH_SOURCE[0]}")" || exit;
+cd "$(dirname "$0")" || exit 1
 
-function doIt() {
-  git pull origin main;
+doIt() {
+  git pull origin main
   rsync --exclude ".git/" --exclude ".github/" --exclude "init/" --exclude "bin/" \
     --exclude ".DS_Store" --exclude ".editorconfig" \
     --exclude ".gitignore" --exclude "bootstrap.sh" \
-    --exclude "README.md" --exclude "LICENSE.md" -avh --no-perms . ~;
-  #source "$HOME/.zshrc";
+    --exclude "README.md" --exclude "LICENSE.md" -avh --no-perms . ~
+  # . "$HOME/.zshrc"
 }
 
-if [ "$1" == "--force" ] || [ "$1" == "-f" ]; then
-  doIt;
+if [ "$1" = "--force" ] || [ "$1" = "-f" ]; then
+  doIt
 else
   # Homebrew
-  read -r -p "🍺  Install Homebrew and its formulae? (y/N) " runswitch
+  printf "🍺  Install Homebrew and its formulae? (y/N) "
+  read -r runswitch
   case "$runswitch" in
-    y|yes ) source init/brew/install-brew-formulae.sh;;
-    * ) echo "Skipping Homebrew.";;
+    y|Y|yes|YES) . init/brew/install-brew-formulae.sh ;;
+    *) echo "Skipping Homebrew." ;;
   esac
 
   # dotfiles
-  read -r -p "🚨  Installing dotfiles. This will overwrite existing files in your home directory. Are you sure? (y/N) " runswitch
+  printf "🚨  Installing dotfiles. This will overwrite existing files in your home directory. Are you sure? (y/N) "
+  read -r runswitch
   case "$runswitch" in
-    y|yes ) doIt;;
-    * ) echo "Skipping installation.";;
+    y|Y|yes|YES) doIt ;;
+    *) echo "Skipping installation." ;;
   esac
 
   # zsh
-  read -r -p "🙃  Install ohmyzsh and some plugins? (y/N) " runswitch
+  printf "🙃  Install ohmyzsh and some plugins? (y/N) "
+  read -r runswitch
   case "$runswitch" in
-    y|yes )
-      source init/terminal/install-zsh.sh;;
-    * ) echo "Skipping ohmyzsh.";;
+    y|Y|yes|YES) . init/terminal/install-zsh.sh ;;
+    *) echo "Skipping ohmyzsh." ;;
   esac
 
   # Node modules
-  read -r -p "🟨  Install Node modules? (y/N) " runswitch
+  printf "🟨  Install Node modules? (y/N) "
+  read -r runswitch
   case "$runswitch" in
-    y|yes ) source init/npm/install-node-modules.sh;;
-    * ) echo "Skipping Node modules.";;
+    y|Y|yes|YES) . init/npm/install-node-modules.sh ;;
+    *) echo "Skipping Node modules." ;;
   esac
-fi;
-unset doIt;
+fi
+
+unset doIt
