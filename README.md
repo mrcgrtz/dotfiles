@@ -39,7 +39,7 @@ To update later on, just run that command again.
 
 ### Specify the `$PATH`
 
-If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/mathiasbynens/dotfiles/blob/aff769fd75225d8f2e481185a71d5e05b76002dc/.aliases#L21-26)) takes place.
+If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/mrcgrtz/dotfiles/blob/9f5de4c3fd87101c7a406f1570697b43a183388a/.aliases#L41)) takes place.
 
 Here is an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
 
