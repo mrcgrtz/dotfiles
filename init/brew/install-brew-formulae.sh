@@ -18,10 +18,10 @@ brew bundle install --file=Brewfile
 echo "⚠️  Do not forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
 ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
-# Switch to using Brew-installed Bash as default shell.
-if ! grep -F -q '/usr/local/bin/bash' /etc/shells; then
-  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
-  chsh -s /usr/local/bin/bash;
+# Switch to using Brew-installed Zsh as default shell.
+if ! grep -F -q '/usr/local/bin/zsh' /etc/shells; then
+  echo '/usr/local/bin/zsh' | sudo tee -a /etc/shells;
+  chsh -s /usr/local/bin/zsh;
 fi;
 
 # Maybe install formulae from Caskfile, too.
