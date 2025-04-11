@@ -184,6 +184,12 @@
   # Use `hexdump` to diff binary files.
   textconv = hexdump -v -C
 
+[fetch]
+
+  # Prune all branches and tags.
+  prune = true
+  pruneTags = true
+
 [gpg]
 
   # Use SSH instead of GPG format.
