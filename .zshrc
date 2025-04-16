@@ -49,7 +49,7 @@ ZSH_THEME=""
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  ag
+  1password
   alias-tips
   autoupdate
   colored-man-pages
@@ -61,6 +61,7 @@ plugins=(
   zoxide
   zsh-autosuggestions
   zsh-completions
+  zsh-interactive-cd
   zsh-syntax-highlighting
 )
 
@@ -68,7 +69,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
+# * ~/.extra can be used for any other setting you do not want to commit.
 for file in ~/.{path,exports,aliases,functions,extra}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
