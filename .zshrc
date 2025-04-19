@@ -76,8 +76,10 @@ for file in ~/.{path,exports,aliases,functions,extra}; do
 done;
 unset file;
 
-# Enable fnm.
-eval "$(fnm env --use-on-cd)"
+# Enable `fnm` (Fast Node Manager) if available.
+if command -v fnm >/dev/null 2>&1; then
+  eval "$(fnm env --use-on-cd --shell zsh)"
+fi
 
 # Enable rvm.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && builtin source "$HOME/.rvm/scripts/rvm"
