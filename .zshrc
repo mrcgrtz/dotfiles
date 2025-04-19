@@ -65,13 +65,14 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
+# Load Oh My Zsh.
+builtin source $ZSH/oh-my-zsh.sh
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for any other setting you do not want to commit.
 for file in ~/.{path,exports,aliases,functions,extra}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+  [ -r "$file" ] && builtin source "$file"
 done;
 unset file;
 
@@ -82,8 +83,8 @@ eval "$(fnm env --use-on-cd)"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && builtin source "$HOME/.rvm/scripts/rvm"
 
 # Enable the Pure prompt.
-fpath+="$HOME/.zsh/pure"
-autoload -U promptinit; promptinit
+fpath+=("$HOME/.zsh/pure")
+autoload -U promptinit && promptinit
 prompt pure
 zstyle :prompt:pure:path color 'cyan'
 zstyle :prompt:pure:git:stash show yes
