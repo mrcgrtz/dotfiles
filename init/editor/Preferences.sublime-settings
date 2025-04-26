@@ -18,8 +18,7 @@
 	],
 	"folder_exclude_patterns": [
 		".git",
-		"node_modules",
-		"bower-components"
+		"node_modules"
 	],
 	"font_face": "Dank Mono",
 	"font_size": 16,
