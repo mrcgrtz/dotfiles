@@ -203,6 +203,7 @@
   # Use 1Password as SSH client.
   # https://developer.1password.com/docs/ssh/git-commit-signing/
   program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+  allowedSignersFile = "~/.ssh/allowed_signers"
 
 [help]
 
