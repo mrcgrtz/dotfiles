@@ -65,6 +65,9 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+# Enable agent forwarding (required for Docker for Mac)
+# zstyle :omz:plugins:ssh-agent agent-forwarding on
+
 # Load Oh My Zsh.
 builtin source $ZSH/oh-my-zsh.sh
 
@@ -93,3 +96,10 @@ zstyle :prompt:pure:git:stash show yes
 
 # Enable iTerm2 shell integration.
 [[ -f "$HOME/.item2_shell_integration.zsh" ]] && builtin source "$HOME/.item2_shell_integration.zsh"
+
+# Enable Docker CLI completions.
+if [[ -d "$HOME/.docker/completions" ]]; then
+  fpath=($HOME/.docker/completions $fpath)
+  autoload -Uz compinit
+  compinit
+fi
