@@ -5,6 +5,9 @@ if ! command -v brew >/dev/null 2>&1; then
   /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
+# Disable analytics.
+brew analytics off
+
 # Make sure we are using the latest Homebrew.
 brew update
 
