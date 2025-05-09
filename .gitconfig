@@ -168,6 +168,10 @@
   # Use n and N to move between diff sections.
   navigate = true
 
+  # Enable hyperlinks in diffs.
+  hyperlinks = true
+  hyperlinks-file-link-format = "vscodium://file/{path}:{line}"
+
   # Re-use ANSI colors from terminal theme.
   syntax-theme = ansi
 
