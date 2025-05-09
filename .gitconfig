@@ -175,6 +175,10 @@
   # Re-use ANSI colors from terminal theme.
   syntax-theme = ansi
 
+  # Use the Catppuccin theme for syntax highlighting.
+  # https://github.com/catppuccin/delta
+  features = catppuccin-mocha
+
 [diff]
 
   # Detect copies as well as renames.
