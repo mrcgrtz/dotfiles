@@ -23,7 +23,6 @@ brew 'pure'
 
 # Install CLI magic.
 brew 'zoxide'
-brew 'up'
 
 # Install Git tools.
 brew 'git'
