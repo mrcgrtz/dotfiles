@@ -14,7 +14,7 @@ npm install -g gulp-cli     # https://www.npmjs.com/package/gulp-cli
 
 # Install performance analysis tools.
 npm install -g speed-test   # https://www.npmjs.com/package/speed-test
-npm install -g psi          # https://www.npmjs.com/package/psi
+npm install -g lighthouse   # https://www.npmjs.com/package/lighthouse
 
 # Install other useful utilities.
 npm install -g npm-check    # https://www.npmjs.com/package/npm-check
