@@ -51,7 +51,7 @@ cask 'affinity-publisher'
 # Install misc. apps.
 cask 'alfred'
 cask 'moom'
-cask 'flux'
+cask 'flux-app'
 cask 'bartender'
 cask 'istat-menus'
 cask 'maestral'
