@@ -28,6 +28,7 @@ brew 'zoxide'
 brew 'git'
 brew 'git-extras'
 brew 'git-delta'
+brew 'git-recent'
 
 # Install a Node version manager.
 brew 'fnm'
