@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 
-# Make VSCodium the default editor, nobody needs vim or emacs
+# Make VSCodium the default editor.
 export EDITOR="/usr/local/bin/codium -w";
 
-# Use standard ISO 8601 timestamp
+# Use standard ISO 8601 timestamp:
 # %F equivalent to %Y-%m-%d
 # %T equivalent to %H:%M:%S (24-hours format)
 export HISTTIMEFORMAT="%F %T ";
