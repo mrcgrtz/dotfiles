@@ -170,7 +170,7 @@
 
   # Enable hyperlinks in diffs.
   hyperlinks = true
-  hyperlinks-file-link-format = "vscodium://file/{path}:{line}"
+  hyperlinks-file-link-format = "vscode://file/{path}:{line}"
 
   # Re-use ANSI colors from terminal theme.
   syntax-theme = ansi
