@@ -88,6 +88,7 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && builtin source "$HOME/.rvm/scripts/rvm"
 
 # Enable the Pure prompt.
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 fpath+=("$HOME/.zsh/pure")
 autoload -U promptinit && promptinit
 prompt pure
