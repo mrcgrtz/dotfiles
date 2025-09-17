@@ -1,5 +1,3 @@
-tap 'homebrew/cask-versions'
-
 # Install Cask apps to the system wide Application directory.
 cask_args appdir: '/Applications'
 
