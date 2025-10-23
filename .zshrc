@@ -98,6 +98,9 @@ zstyle :prompt:pure:git:stash show yes
 # Enable iTerm2 shell integration.
 [[ -f "$HOME/.item2_shell_integration.zsh" ]] && builtin source "$HOME/.item2_shell_integration.zsh"
 
+# Enable VS Code shell intergration.
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
 # Enable Docker CLI completions.
 if [[ -d "$HOME/.docker/completions" ]]; then
   fpath=($HOME/.docker/completions $fpath)
