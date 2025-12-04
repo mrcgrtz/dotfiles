@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 # Install Homebrew (you need the Xcode CLI tools!)
 if ! command -v brew >/dev/null 2>&1; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -15,7 +17,7 @@ brew update
 brew upgrade
 
 # Install formulae from Brewfile.
-brew bundle install --file=Brewfile
+brew bundle install --file="$SCRIPT_DIR/Brewfile"
 
 # Use GNU tools like sha256sum.
 echo "⚠️  Do not forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
@@ -32,7 +34,7 @@ fi
 printf "📡  Also install native apps using Homebrew Casks and the Mac App Store? (y/N) "
 read -r docask
 case "$docask" in
-  y|Y|yes|YES) brew bundle install --file=Caskfile ;;
+  y|Y|yes|YES) brew bundle install --file="$SCRIPT_DIR/Caskfile" ;;
   *) echo "Skipping Caskfile." ;;
 esac
 
