@@ -2,7 +2,7 @@
 
 # Install Homebrew (you need the Xcode CLI tools!)
 if ! command -v brew >/dev/null 2>&1; then
-  /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Disable analytics.
