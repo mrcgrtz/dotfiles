@@ -1,10 +1,12 @@
 #!/usr/bin/env sh
 
-# Get the directory where this script is located.
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-
-# Navigate to the repository root (two levels up from init/brew/).
-REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+# Get the directory where this script is located
+# Use BASH_SOURCE for when script is sourced, fall back to $0
+if [ -n "$BASH_SOURCE" ]; then
+  SCRIPT_DIR="$(cd "$(dirname "$BASH_SOURCE")" && pwd)"
+else
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+fi
 
 # Install Homebrew (you need the Xcode CLI tools!)
 if ! command -v brew >/dev/null 2>&1; then
@@ -21,7 +23,7 @@ brew update
 brew upgrade
 
 # Install formulae from Brewfile.
-brew bundle install --file="$REPO_ROOT/init/brew/Brewfile"
+brew bundle install --file="$SCRIPT_DIR/Brewfile"
 
 # Use GNU tools like sha256sum.
 echo "⚠️  Do not forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
@@ -38,7 +40,7 @@ fi
 printf "📡  Also install native apps using Homebrew Casks and the Mac App Store? (y/N) "
 read -r docask
 case "$docask" in
-  y|Y|yes|YES) brew bundle install --file="$REPO_ROOT/init/brew/Caskfile" ;;
+  y|Y|yes|YES) brew bundle install --file="$SCRIPT_DIR/Caskfile" ;;
   *) echo "Skipping Caskfile." ;;
 esac
 
