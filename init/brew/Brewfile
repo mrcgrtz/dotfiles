@@ -32,7 +32,7 @@ brew 'fnm'
 
 # Install everything else.
 brew 'the_silver_searcher'
-brew 'rs/tap/curlie'
+brew 'curlie'
 brew 'lynx'
 brew 'nvim'
 brew 'tree'
