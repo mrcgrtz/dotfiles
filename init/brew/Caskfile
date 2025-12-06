@@ -39,9 +39,7 @@ cask 'musescore'
 mas 'Pixelmator Pro', id: 1289583905
 cask 'xscope'
 cask 'imageoptim'
-cask 'affinity-designer'
-cask 'affinity-photo'
-cask 'affinity-publisher'
+cask 'affinity'
 
 # Install misc. apps.
 cask 'alfred'
