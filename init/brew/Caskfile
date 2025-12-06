@@ -21,8 +21,6 @@ cask 'choosy'
 
 # Install chat apps.
 cask 'slack'
-cask 'whatsapp'
-cask 'telegram'
 
 # Install security apps.
 cask '1password'
