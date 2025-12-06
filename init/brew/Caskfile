@@ -10,7 +10,6 @@ cask 'sublime-text'
 cask 'ghostty'
 cask 'transmit'
 cask 'sequel-ace'
-mas 'Xcode', id: 497799835
 mas 'Integrity Pro', id: 1361976004
 
 # Install browsers.
