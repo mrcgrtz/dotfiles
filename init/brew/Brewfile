@@ -26,6 +26,7 @@ brew 'git'
 brew 'git-extras'
 brew 'git-delta'
 brew 'git-recent'
+brew 'gh'
 
 # Install a Node version manager.
 brew 'fnm'
