@@ -101,7 +101,7 @@ zstyle :prompt:pure:git:stash show yes
 # Enable iTerm2 shell integration.
 [[ -f "$HOME/.iterm2_shell_integration.zsh" ]] && builtin source "$HOME/.iterm2_shell_integration.zsh"
 
-# Enable VS Code shell intergration.
+# Enable VS Code shell integration.
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
 # Enable 1Password CLI completions.
