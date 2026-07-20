@@ -1,0 +1,14 @@
+[
+  // Open Claude Code in a TerminalView panel, scoped to the current project
+  // folder (falls back to the current file's folder). Uses a login shell so
+  // the shell stays open after Claude exits.
+  {
+    "keys": ["super+shift+c"],
+    "command": "terminal_view_open",
+    "args": {
+      "cmd": "/bin/zsh -l -c 'claude; exec /bin/zsh -l'",
+      "title": "Claude",
+      "cwd": "${project_path:${file_path:${folder}}}"
+    }
+  }
+]

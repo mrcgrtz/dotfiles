@@ -3,6 +3,9 @@
   "color_scheme": "auto",
   "light_color_scheme": "Catppuccin Latte.sublime-color-scheme",
   "dark_color_scheme": "Catppuccin Mocha.sublime-color-scheme",
+  "caret_style": "phase",
+  "caret_extra_top": 2,
+  "caret_extra_bottom": 2,
   "create_window_at_startup": false,
   "dictionary": "Packages/User/Language - German/de_DE_frami.dic",
   "draw_white_space": "all",
@@ -66,6 +69,15 @@
   "index_files": true,
   "line_padding_bottom": 2,
   "line_padding_top": 2,
+  // Run ESLint/Stylelint autofix on save (LSP). Prettier runs through ESLint
+  // in these projects, so no separate formatter is needed. No-ops for buffers
+  // without an eslint/stylelint language server attached.
+  "lsp_code_actions_on_save": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true,
+  },
+  // Don't let a language server's own formatter also run on save.
+  "lsp_format_on_save": false,
   "match_brackets_angle": true,
   "rulers": [
     72,
