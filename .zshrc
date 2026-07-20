@@ -68,6 +68,9 @@ plugins=(
 # Enable agent forwarding (required for Docker for Mac)
 # zstyle :omz:plugins:ssh-agent agent-forwarding on
 
+# Add Docker CLI completions to `fpath` before Oh My Zsh runs `compinit`.
+[[ -d "$HOME/.docker/completions" ]] && fpath=($HOME/.docker/completions $fpath)
+
 # Load Oh My Zsh.
 builtin source $ZSH/oh-my-zsh.sh
 
@@ -100,13 +103,6 @@ zstyle :prompt:pure:git:stash show yes
 
 # Enable VS Code shell intergration.
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
-
-# Enable Docker CLI completions.
-if [[ -d "$HOME/.docker/completions" ]]; then
-  fpath=($HOME/.docker/completions $fpath)
-  autoload -Uz compinit
-  compinit
-fi
 
 # Enable 1Password CLI completions.
 if command -v op >/dev/null 2>&1; then
