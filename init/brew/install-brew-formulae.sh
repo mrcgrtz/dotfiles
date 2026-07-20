@@ -27,7 +27,7 @@ brew bundle install --file="$SCRIPT_DIR/Brewfile"
 
 # Use GNU tools like sha256sum.
 echo "⚠️  Do not forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
-ln -sf "$(brew --prefix coreutils)/bin/gsha256sum" /usr/local/bin/sha256sum
+ln -sf "$(brew --prefix coreutils)/bin/gsha256sum" "$(brew --prefix)/bin/sha256sum"
 
 # Switch to using Brew-installed Zsh as default shell.
 zsh_path="$(brew --prefix)/bin/zsh"
