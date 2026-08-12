@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-# Make Visual Studio Code the default editor.
-export EDITOR="code -w";
+# Make Sublime Text the default editor.
+export EDITOR="subl -w";
 
 # Use standard ISO 8601 timestamp:
 # %F equivalent to %Y-%m-%d

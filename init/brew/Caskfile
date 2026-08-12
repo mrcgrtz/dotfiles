@@ -5,7 +5,6 @@ cask_args appdir: '/Applications'
 brew 'mas'
 
 # Install IDEs and dev-related tools.
-cask 'visual-studio-code'
 cask 'sublime-text'
 cask 'ghostty'
 cask 'transmit'
