@@ -88,7 +88,6 @@ This also installs Homebrew if it is not yet installed.
 * [The Silver Searcher](https://geoff.greer.fm/ag/)
 * [curlie](https://rs.github.io/curlie/), an awesome frontend for `curl`
 * [tree](https://oldmanprogrammer.net/source.php?dir=projects/tree)
-* [up](https://github.com/akavel/up) for instant live preview when piping stuff
 * [lynx](https://lynx.invisible-island.net/) because I ♥ lynx
 * Some more stuff, especially more recent versions of some macOS tools.
 
@@ -140,7 +139,8 @@ I use [Pure](https://github.com/sindresorhus/pure) for my zsh prompt with a [Cat
 
 #### The nerdy details
 
-* Terminal emulator: [iTerm2](https://iterm2.com/) (its settings are [synced](https://github.com/mrcgrtz/dotfiles/blob/main/init/terminal/com.googlecode.iterm2.plist))
+* Terminal emulator: [Ghostty](https://ghostty.org/) (its settings are [synced](https://github.com/mrcgrtz/dotfiles/blob/main/init/terminal/ghostty.config))
+* Theme: [Catppuccin Mocha](https://github.com/catppuccin/ghostty)
 * Font: [Dank Mono](https://philpl.gumroad.com/l/dank-mono)
 * Wallpaper: [Balloons in the Mountains](https://www.reddit.com/r/wallpapers/comments/470cur/balloons_in_the_mountains/)
 

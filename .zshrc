@@ -98,9 +98,6 @@ prompt pure
 zstyle :prompt:pure:path color 'cyan'
 zstyle :prompt:pure:git:stash show yes
 
-# Enable iTerm2 shell integration.
-[[ -f "$HOME/.iterm2_shell_integration.zsh" ]] && builtin source "$HOME/.iterm2_shell_integration.zsh"
-
 # Enable 1Password CLI completions.
 if command -v op >/dev/null 2>&1; then
   eval "$(op completion zsh)"; compdef _op op
