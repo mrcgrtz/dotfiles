@@ -1,47 +1,82 @@
 {
   "bootstrapped": true,
-  "in_process_packages":
-  [
-  ],
-  "installed_packages":
-  [
+  "in_process_packages": [],
+  "installed_packages": [
+    // https://github.com/wbond/sublime_alignment
     "Alignment",
+    // https://github.com/facelessuser/BracketHighlighter
     "BracketHighlighter",
+    // https://github.com/catppuccin/sublime-text
     "Catppuccin color schemes",
+    // https://github.com/sabhiram/sublime-clipboard-diff
     "Clipboard Diff",
+    // https://github.com/Monnoroch/ColorHighlighter
     "Color Highlighter",
+    // https://github.com/yaroslavyaroslav/Diffable
     "Diffable",
+    // https://github.com/mattbanks/dotfiles-syntax-highlighting-st2
     "Dotfiles Syntax Highlighting",
+    // https://github.com/sindresorhus/editorconfig-sublime
     "EditorConfig",
+    // https://github.com/braver/FileIcons (mono branch)
     "FileIcons Mono",
+    // https://github.com/kemayo/sublime-text-git
     "Git",
-		"Gulp",
+    // https://github.com/NicoSantangelo/sublime-gulp
+    "Gulp",
+    // https://github.com/hayaku/hayaku
     "Hayaku - tools for writing CSS faster",
+    // https://github.com/alek-sys/sublimetext_indentxml
     "Indent XML",
+    // https://github.com/SublimeText/jQuery
     "jQuery",
+    // https://github.com/nir0s/sublime-logstash-syntax-highlighter
     "Logstash Syntax Highlighting",
+    // https://github.com/sublimelsp/LSP
     "LSP",
+    // https://github.com/sublimelsp/LSP-copilot
     "LSP-copilot",
+    // https://github.com/sublimelsp/LSP-css
     "LSP-css",
+    // https://github.com/sublimelsp/LSP-dockerfile
     "LSP-dockerfile",
+    // https://github.com/sublimelsp/LSP-eslint
     "LSP-eslint",
+    // https://github.com/sublimelsp/LSP-html
     "LSP-html",
+    // https://github.com/sublimelsp/LSP-intelephense
     "LSP-intelephense",
+    // https://github.com/sublimelsp/LSP-json
     "LSP-json",
+    // https://github.com/sublimelsp/LSP-lemminx
     "LSP-lemminx",
+    // https://github.com/sublimelsp/LSP-stylelint
     "LSP-stylelint",
+    // https://github.com/sublimelsp/LSP-typescript
     "LSP-typescript",
+    // https://github.com/sublimelsp/LSP-yaml
     "LSP-yaml",
+    // https://github.com/PixnBits/sublime-text-npm
     "npm",
+    // https://github.com/sublimehq/package_control
     "Package Control",
+    // https://github.com/hudochenkov/Syntax-highlighting-for-PostCSS
     "PostCSS",
+    // https://github.com/titoBouzout/SideBarEnhancements
     "SideBarEnhancements",
+    // https://github.com/SublimeLinter/SublimeLinter
     "SublimeLinter",
+    // https://github.com/SublimeLinter/SublimeLinter-annotations
     "SublimeLinter-annotations",
+    // https://github.com/xojs/SublimeLinter-contrib-xo
     "SublimeLinter-contrib-xo",
+    // https://github.com/SublimeLinter/SublimeLinter-shellcheck
     "SublimeLinter-shellcheck",
+    // https://github.com/Wramberg/TerminalView
     "TerminalView",
+    // https://github.com/SublimeText/TrailingSpaces
     "TrailingSpaces",
+    // https://github.com/bradsokol/VcsGutter
     "VCS Gutter",
   ],
 }
