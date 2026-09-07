@@ -49,20 +49,20 @@ ZSH_THEME=""
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  1password
-  alias-tips
-  autoupdate
-  colored-man-pages
-  fnm
-  fzf-zsh-plugin
-  git
-  gpg-agent
-  rvm
-  zoxide
-  zsh-autosuggestions
-  zsh-completions
-  zsh-interactive-cd
-  zsh-syntax-highlighting
+	1password
+	alias-tips
+	autoupdate
+	colored-man-pages
+	fnm
+	fzf-zsh-plugin
+	git
+	gpg-agent
+	rvm
+	zoxide
+	zsh-autosuggestions
+	zsh-completions
+	zsh-interactive-cd
+	zsh-syntax-highlighting
 )
 
 # Enable agent forwarding (required for Docker for Mac)
@@ -78,13 +78,13 @@ builtin source $ZSH/oh-my-zsh.sh
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for any other setting you do not want to commit.
 for file in ~/.{path,exports,aliases,functions,extra}; do
-  [ -r "$file" ] && builtin source "$file"
+	[ -r "$file" ] && builtin source "$file"
 done;
 unset file;
 
 # Enable `fnm` (Fast Node Manager) if available.
 if command -v fnm >/dev/null 2>&1; then
-  eval "$(fnm env --use-on-cd --shell zsh)"
+	eval "$(fnm env --use-on-cd --shell zsh)"
 fi
 
 # Enable rvm.
@@ -100,6 +100,5 @@ zstyle :prompt:pure:git:stash show yes
 
 # Enable 1Password CLI completions.
 if command -v op >/dev/null 2>&1; then
-  eval "$(op completion zsh)"; compdef _op op
+	eval "$(op completion zsh)"; compdef _op op
 fi
-
