@@ -1,304 +1,304 @@
 [alias]
 
-  # View abbreviated SHA, description, and history graph of the latest 20 commits.
-  l = log --pretty="format:%Cgreen%h%Creset\\ %an\\ -\\ %s" -n 20 --graph --abbrev-commit
+	# View abbreviated SHA, description, and history graph of the latest 20 commits.
+	l = log --pretty="format:%Cgreen%h%Creset\\ %an\\ -\\ %s" -n 20 --graph --abbrev-commit
 
-  # List commits showing changed files
-  ll = log --pretty="format:%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	# List commits showing changed files
+	ll = log --pretty="format:%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 
-  # View the current working tree status using the short format.
-  st = status -s
+	# View the current working tree status using the short format.
+	st = status -s
 
-  # Show the diff between the latest commit and the current state.
-  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+	# Show the diff between the latest commit and the current state.
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
-  # `git di $number` shows the diff between the state `$number` revisions ago and the current state.
-  di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+	# `git di $number` shows the diff between the state `$number` revisions ago and the current state.
+	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
-  # Pull in remote changes for the current repository and all its submodules.
-  p = pull --recurse-submodules
+	# Pull in remote changes for the current repository and all its submodules.
+	p = pull --recurse-submodules
 
-  # Clone a repository including all submodules.
-  c = clone --recursive
+	# Clone a repository including all submodules.
+	c = clone --recursive
 
-  # Commit all changes.
-  ca = !git add ':(exclude,attr:builtin_objectmode=160000)' && git commit -av
+	# Commit all changes.
+	ca = !git add ':(exclude,attr:builtin_objectmode=160000)' && git commit -av
 
-  # Switch to a branch, creating it if necessary.
-  co = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+	# Switch to a branch, creating it if necessary.
+	co = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
-  # Amend the currently staged files to the latest commit.
-  amend = commit --amend --reuse-message=HEAD
+	# Amend the currently staged files to the latest commit.
+	amend = commit --amend --reuse-message=HEAD
 
-  # Credit an author on the latest commit.
-  credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
+	# Credit an author on the latest commit.
+	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
 
-  # Interactive rebase with the given number of latest commits.
-  reb = "!r() { git rebase -i HEAD~$1; }; r"
+	# Interactive rebase with the given number of latest commits.
+	reb = "!r() { git rebase -i HEAD~$1; }; r"
 
-  # Remove the old tag with this name and tag the latest commit with it.
-  retag = "!f() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; f"
+	# Remove the old tag with this name and tag the latest commit with it.
+	retag = "!f() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; f"
 
-  # Undo the last commit (see https://twitter.com/codingchaos/status/1567956920983781377)
-  oops = "!f() { git reset --soft HEAD~$1; }; f"
+	# Undo the last commit (see https://twitter.com/codingchaos/status/1567956920983781377)
+	oops = "!f() { git reset --soft HEAD~$1; }; f"
 
-  # Undo a `git push` of current branch.
-  undopush = "!f() { git push -f origin HEAD^:$1; }; f"
+	# Undo a `git push` of current branch.
+	undopush = "!f() { git push -f origin HEAD^:$1; }; f"
 
-  # Find branches containing commit.
-  fb = "!f() { git branch -a --contains $1; }; f"
+	# Find branches containing commit.
+	fb = "!f() { git branch -a --contains $1; }; f"
 
-  # Find tags containing commit.
-  ft = "!f() { git describe --always --contains $1; }; f"
+	# Find tags containing commit.
+	ft = "!f() { git describe --always --contains $1; }; f"
 
-  # Find commits by source code.
-  fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+	# Find commits by source code.
+	fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
 
-  # Find commits by commit message.
-  fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+	# Find commits by commit message.
+	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
-  # Remove branches that have already been merged with the default branch.
-  # a.k.a. ‘delete merged’
-  dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	# Remove branches that have already been merged with the default branch.
+	# a.k.a. ‘delete merged’
+	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
-  # Show verbose output about tags, branches, remotes or aliases.
-  tags = tag -l
-  branches = branch --all --no-column
-  remotes = remote --verbose
-  aliases = !"git config --get-regexp alias | cut -c 7-"
+	# Show verbose output about tags, branches, remotes or aliases.
+	tags = tag -l
+	branches = branch --all --no-column
+	remotes = remote --verbose
+	aliases = !"git config --get-regexp alias | cut -c 7-"
 
-  # Show files ignored by Git.
-  ignores = ls-files -o -i --exclude-standard
+	# Show files ignored by Git.
+	ignores = ls-files -o -i --exclude-standard
 
-  # List contributors with number of commits.
-  contributors = shortlog --summary --numbered
+	# List contributors with number of commits.
+	contributors = shortlog --summary --numbered
 
-  # What the heck was I just doing? (see https://carolynvanslyck.com/blog/2020/12/git-wip/)
-  wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+	# What the heck was I just doing? (see https://carolynvanslyck.com/blog/2020/12/git-wip/)
+	wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
 
 [apply]
 
-  # Detect whitespace errors when applying a patch.
-  whitespace = fix
+	# Detect whitespace errors when applying a patch.
+	whitespace = fix
 
 [branch]
 
-  # Show most recently changed branches first.
-  sort = -committerdate
+	# Show most recently changed branches first.
+	sort = -committerdate
 
 [column]
 
-  # Automatically use a column UI.
-  ui = auto
+	# Automatically use a column UI.
+	ui = auto
 
 [core]
 
-  # Use custom `.gitignore` and `.gitattributes`.
-  excludesfile = ~/.gitignore
-  attributesfile = ~/.gitattributes
+	# Use custom `.gitignore` and `.gitattributes`.
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
 
-  # Treat spaces before tabs and all kinds of trailing whitespace as an error.
-  # [default] trailing-space: looks for spaces at the end of a line
-  # [default] space-before-tab: looks for spaces before tabs at the beginning of a line
-  whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+	# Treat spaces before tabs and all kinds of trailing whitespace as an error.
+	# [default] trailing-space: looks for spaces at the end of a line
+	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
-  # Make `git rebase` safer on macOS.
-  # More info: https://www.git-tower.com/blog/make-git-rebase-safe-on-osx/
-  trustctime = false
+	# Make `git rebase` safer on macOS.
+	# More info: https://www.git-tower.com/blog/make-git-rebase-safe-on-osx/
+	trustctime = false
 
-  # Prevent showing files whose names contain non-ASCII symbols as unversioned.
-  # https://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
-  precomposeunicode = false
+	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
+	# https://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+	precomposeunicode = false
 
-  # `git-delta` upgrades your diffs' appearances.
-  # https://github.com/dandavison/delta
-  pager = "delta"
+	# `git-delta` upgrades your diffs' appearances.
+	# https://github.com/dandavison/delta
+	pager = "delta"
 
-  # Speed up commands involving untracked files such as `git status`.
-  # https://git-scm.com/docs/git-update-index#_untracked_cache
-  untrackedCache = true
+	# Speed up commands involving untracked files such as `git status`.
+	# https://git-scm.com/docs/git-update-index#_untracked_cache
+	untrackedCache = true
 
 [color]
 
-  # Use colors in Git commands that are capable of colored output when
-  # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
-  ui = auto
+	# Use colors in Git commands that are capable of colored output when
+	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+	ui = auto
 
 [color "branch"]
 
-  current = yellow reverse
-  local = yellow
-  remote = green
+	current = yellow reverse
+	local = yellow
+	remote = green
 
 [color "diff"]
 
-  meta = 11
-  frag = magenta bold # line info
-  func = 146 bold
-  commit = yellow bold
-  old = red bold # deletions
-  new = green bold # additions
-  whitespace = red reverse
+	meta = 11
+	frag = magenta bold # line info
+	func = 146 bold
+	commit = yellow bold
+	old = red bold # deletions
+	new = green bold # additions
+	whitespace = red reverse
 
 [color "diff-highlight"]
 
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 22
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
 
 [color "status"]
 
-  added = green
-  changed = yellow
-  untracked = cyan
+	added = green
+	changed = yellow
+	untracked = cyan
 
 [commit]
 
-  # https://help.github.com/articles/signing-commits-using-gpg/
-  gpgsign = true
+	# https://help.github.com/articles/signing-commits-using-gpg/
+	gpgsign = true
 
 [credential]
 
-  # Use the macOS Keychain for credentials.
-  helper = osxkeychain
+	# Use the macOS Keychain for credentials.
+	helper = osxkeychain
 
 [delta]
 
-  # Use n and N to move between diff sections.
-  navigate = true
+	# Use n and N to move between diff sections.
+	navigate = true
 
-  # Enable hyperlinks in diffs.
-  hyperlinks = true
-  hyperlinks-file-link-format = "subl://open?url=file://{path}&line={line}"
+	# Enable hyperlinks in diffs.
+	hyperlinks = true
+	hyperlinks-file-link-format = "subl://open?url=file://{path}&line={line}"
 
-  # Re-use ANSI colors from terminal theme.
-  syntax-theme = ansi
+	# Re-use ANSI colors from terminal theme.
+	syntax-theme = ansi
 
-  # Use the Catppuccin theme for syntax highlighting.
-  # https://github.com/catppuccin/delta
-  features = catppuccin-mocha
+	# Use the Catppuccin theme for syntax highlighting.
+	# https://github.com/catppuccin/delta
+	features = catppuccin-mocha
 
 [diff]
 
-  # Detect copies as well as renames.
-  renames = copies
+	# Detect copies as well as renames.
+	renames = copies
 
-  # Handle moved code (requires Git >= v2.17).
-  colorMoved = default
+	# Handle moved code (requires Git >= v2.17).
+	colorMoved = default
 
 [diff "bin"]
 
-  # Use `hexdump` to diff binary files.
-  textconv = hexdump -v -C
+	# Use `hexdump` to diff binary files.
+	textconv = hexdump -v -C
 
 [fetch]
 
-  # Prune all branches and tags.
-  prune = true
-  pruneTags = true
+	# Prune all branches and tags.
+	prune = true
+	pruneTags = true
 
-  # Fetch all submodules.
-  recurseSubmodules = on-demand
+	# Fetch all submodules.
+	recurseSubmodules = on-demand
 
 [gpg]
 
-  # Use SSH instead of GPG format.
-  format = ssh
+	# Use SSH instead of GPG format.
+	format = ssh
 
 [gpg "ssh"]
 
-  # Use 1Password as SSH client.
-  # https://developer.1password.com/docs/ssh/git-commit-signing/
-  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
-  allowedSignersFile = "~/.ssh/allowed_signers"
+	# Use 1Password as SSH client.
+	# https://developer.1password.com/docs/ssh/git-commit-signing/
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+	allowedSignersFile = "~/.ssh/allowed_signers"
 
 [help]
 
-  # Automatically correct and execute mistyped commands.
-  autocorrect = 1
+	# Automatically correct and execute mistyped commands.
+	autocorrect = 1
 
 [init]
 
-  # Use `main`, not `master` as default branch. (Requires Git ≥ 2.28.)
-  defaultBranch = main
+	# Use `main`, not `master` as default branch. (Requires Git ≥ 2.28.)
+	defaultBranch = main
 
 [interactive]
 
-  # Use `git-delta` for all diff output.
-  diffFilter = delta --color-only
+	# Use `git-delta` for all diff output.
+	diffFilter = delta --color-only
 
 [merge]
 
-  # Include summaries of merged commits in newly created merge commit messages
-  log = true
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
 
-  # Improve conflict highlighting.
-  conflictstyle = diff3
+	# Improve conflict highlighting.
+	conflictstyle = diff3
 
 [pull]
 
-  # Merge by default
-  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-pullrebase
-  rebase = false
+	# Merge by default
+	# https://git-scm.com/docs/git-config#Documentation/git-config.txt-pullrebase
+	rebase = false
 
 [push]
 
-  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault
-  default = simple
+	# https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault
+	default = simple
 
-  # Make `git push` push relevant annotated tags when pushing branches out.
-  followTags = true
+	# Make `git push` push relevant annotated tags when pushing branches out.
+	followTags = true
 
 [rerere]
 
-  # Reuse recorded resolution.
-  enabled = true
+	# Reuse recorded resolution.
+	enabled = true
 
 [stash]
 
-  # `git stash show <x>` should show the patch.
-  showPatch = true
+	# `git stash show <x>` should show the patch.
+	showPatch = true
 
 # Filters
 
 [filter "media"]
 
-  clean = git-media-clean %f
-  smudge = git-media-smudge %f
-  required = true
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+	required = true
 
 [filter "hawser"]
 
-  clean = git hawser clean %f
-  smudge = git hawser smudge %f
-  required = true
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
 
 [filter "lfs"]
 
-  clean = git lfs clean %f
-  smudge = git lfs smudge %f
-  required = true
-  process = git-lfs filter-process
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+	process = git-lfs filter-process
 
 # URL shorthands
 
 [url "git@github.com:"]
 
-  insteadOf = "gh:"
-  pushInsteadOf = "github:"
-  pushInsteadOf = "git://github.com/"
+	insteadOf = "gh:"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
 
 [url "git://github.com/"]
 
-  insteadOf = "github:"
+	insteadOf = "github:"
 
 [url "git@gist.github.com:"]
 
-  insteadOf = "gst:"
-  pushInsteadOf = "gist:"
-  pushInsteadOf = "git://gist.github.com/"
+	insteadOf = "gst:"
+	pushInsteadOf = "gist:"
+	pushInsteadOf = "git://gist.github.com/"
 
 [url "git://gist.github.com/"]
 
-  insteadOf = "gist:"
+	insteadOf = "gist:"

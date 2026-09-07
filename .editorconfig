@@ -1,10 +1,10 @@
 root = true
 
 [*]
-# Indent using 2 spaces.
-indent_style = space
-indent_size = 2
-tab_width = 2
+# Indent using tabs, rendered 4 columns wide.
+indent_style = tab
+indent_size = tab
+tab_width = 4
 # Use Unix-style newlines with a newline ending every file.
 end_of_line = lf
 insert_final_newline = true
@@ -18,3 +18,7 @@ max_line_length = 80
 [*.md]
 # Do not remove trailing spaces for line-breaks.
 trim_trailing_whitespace = false
+
+[*.{yml,yaml}]
+# YAML forbids tabs as indentation; these files must stay on spaces.
+indent_style = space

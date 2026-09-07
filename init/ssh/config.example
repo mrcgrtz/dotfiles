@@ -1,32 +1,32 @@
 Host *
-  # Always use SSH2.
-  Protocol 2
+	# Always use SSH2.
+	Protocol 2
 
-  # Disable SSH agent forwarding per default, enable it where needed.
-  ForwardAgent no
+	# Disable SSH agent forwarding per default, enable it where needed.
+	ForwardAgent no
 
-  # Use 1Password as SSH agent
-  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+	# Use 1Password as SSH agent
+	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 
-  # Use a shared channel for all sessions to the same host, instead of
-  # always opening a new one. This leads to much quicker connection times.
-  ControlMaster auto
-  ControlPath ~/.ssh/control/%r@%h:%p
-  ControlPersist 1800
+	# Use a shared channel for all sessions to the same host, instead of
+	# always opening a new one. This leads to much quicker connection times.
+	ControlMaster auto
+	ControlPath ~/.ssh/control/%r@%h:%p
+	ControlPersist 1800
 
-  # This prevent disconnects due to timeouts.
-  TCPKeepAlive yes
-  ServerAliveInterval 60
-  ServerAliveCountMax 6
+	# This prevent disconnects due to timeouts.
+	TCPKeepAlive yes
+	ServerAliveInterval 60
+	ServerAliveCountMax 6
 
-  # Use a keychain management software.
-  IgnoreUnknown AddKeysToAgent,UseKeychain
-  UseKeychain yes
-  AddKeysToAgent yes
+	# Use a keychain management software.
+	IgnoreUnknown AddKeysToAgent,UseKeychain
+	UseKeychain yes
+	AddKeysToAgent yes
 
-  # Compress tranferred data and speed up things.
-  Compression yes
+	# Compress tranferred data and speed up things.
+	Compression yes
 
 Host github.com
-  ControlMaster auto
-  ControlPersist 120
+	ControlMaster auto
+	ControlPersist 120

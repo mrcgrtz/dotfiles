@@ -5,7 +5,7 @@ npm update -g npm
 
 # Enable corepack (thus yarn).
 if ! command -v corepack > /dev/null 2>&1; then
-  npm install -g corepack
+	npm install -g corepack
 fi;
 corepack enable
 

@@ -1,92 +1,92 @@
 {
-  "always_show_minimap_viewport": true,
-  "color_scheme": "auto",
-  "light_color_scheme": "Catppuccin Latte.sublime-color-scheme",
-  "dark_color_scheme": "Catppuccin Mocha.sublime-color-scheme",
-  "caret_style": "phase",
-  "caret_extra_top": 2,
-  "caret_extra_bottom": 2,
-  "create_window_at_startup": false,
-  "dictionary": "Packages/User/Language - German/de_DE_frami.dic",
-  "draw_white_space": "all",
-  "ensure_newline_at_eof_on_save": true,
-  "file_exclude_patterns": [
-    ".DS_Store",
-    "Desktop.ini",
-    "*.pyc",
-    "*.pyo",
-    "._*",
-    "Thumbs.db",
-    ".Spotlight-V100",
-    ".Trashes"
-  ],
-  "folder_exclude_patterns": [
-    ".git",
-    "node_modules",
-    "vendor"
-  ],
-  "font_face": "Dank Mono",
-  "font_size": 19,
-  "font_options": [
-    "dlig",
-    "ss01"
-  ],
-  "hayaku_CSS_colors_case": "lowercase",
-  "highlight_line": true,
-  "highlight_modified_tabs": true,
-  "hot_exit": false,
-  "ignored_packages": [
-    "ActionScript",
-    "ASP",
-    "Batch File",
-    "C#",
-    "C++",
-    "Clojure",
-    "D",
-    "Erlang",
-    "Graphviz",
-    "Groovy",
-    "Haskell",
-    "LaTeX",
-    "Lisp",
-    "Lua",
-    "Matlab",
-    "Objective-C",
-    "OCaml",
-    "Pascal",
-    "R",
-    "Rails",
-    "RestructuredText",
-    "Rust",
-    "Scala",
-    "TCL",
-    "Textile",
-    "Vintage",
-  ],
-  "indent_guide_options": [
-    "draw_normal",
-    "draw_active"
-  ],
-  "index_files": true,
-  "line_padding_bottom": 2,
-  "line_padding_top": 2,
-  // Run ESLint/Stylelint autofix on save (LSP). Prettier runs through ESLint
-  // in these projects, so no separate formatter is needed. No-ops for buffers
-  // without an eslint/stylelint language server attached.
-  "lsp_code_actions_on_save": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true,
-  },
-  // Don't let a language server's own formatter also run on save.
-  "lsp_format_on_save": false,
-  "match_brackets_angle": true,
-  "rulers": [
-    72,
-    79,
-    120
-  ],
-  "show_encoding": true,
-  "show_line_endings": true,
-  "theme": "Adaptive.sublime-theme",
-  "trim_trailing_white_space_on_save": "all"
+	"always_show_minimap_viewport": true,
+	"color_scheme": "auto",
+	"light_color_scheme": "Catppuccin Latte.sublime-color-scheme",
+	"dark_color_scheme": "Catppuccin Mocha.sublime-color-scheme",
+	"caret_style": "phase",
+	"caret_extra_top": 2,
+	"caret_extra_bottom": 2,
+	"create_window_at_startup": false,
+	"dictionary": "Packages/User/Language - German/de_DE_frami.dic",
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns": [
+		".DS_Store",
+		"Desktop.ini",
+		"*.pyc",
+		"*.pyo",
+		"._*",
+		"Thumbs.db",
+		".Spotlight-V100",
+		".Trashes"
+	],
+	"folder_exclude_patterns": [
+		".git",
+		"node_modules",
+		"vendor"
+	],
+	"font_face": "Dank Mono",
+	"font_size": 19,
+	"font_options": [
+		"dlig",
+		"ss01"
+	],
+	"hayaku_CSS_colors_case": "lowercase",
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"hot_exit": false,
+	"ignored_packages": [
+		"ActionScript",
+		"ASP",
+		"Batch File",
+		"C#",
+		"C++",
+		"Clojure",
+		"D",
+		"Erlang",
+		"Graphviz",
+		"Groovy",
+		"Haskell",
+		"LaTeX",
+		"Lisp",
+		"Lua",
+		"Matlab",
+		"Objective-C",
+		"OCaml",
+		"Pascal",
+		"R",
+		"Rails",
+		"RestructuredText",
+		"Rust",
+		"Scala",
+		"TCL",
+		"Textile",
+		"Vintage",
+	],
+	"indent_guide_options": [
+		"draw_normal",
+		"draw_active"
+	],
+	"index_files": true,
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
+	// Run ESLint/Stylelint autofix on save (LSP). Prettier runs through ESLint
+	// in these projects, so no separate formatter is needed. No-ops for buffers
+	// without an eslint/stylelint language server attached.
+	"lsp_code_actions_on_save": {
+		"source.fixAll.eslint": true,
+		"source.fixAll.stylelint": true,
+	},
+	// Don't let a language server's own formatter also run on save.
+	"lsp_format_on_save": false,
+	"match_brackets_angle": true,
+	"rulers": [
+		72,
+		79,
+		120
+	],
+	"show_encoding": true,
+	"show_line_endings": true,
+	"theme": "Adaptive.sublime-theme",
+	"trim_trailing_white_space_on_save": "all"
 }

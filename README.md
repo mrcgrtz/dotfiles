@@ -153,17 +153,17 @@ You are quite [welcome](https://github.com/mrcgrtz/dotfiles/issues) to make sugg
 Inspiration and code was taken from many sources, including:
 
 * [@mathiasbynens](https://github.com/mathiasbynens) (Mathias Bynens)
-  [https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
+	[https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
 * [@paulirish](https://github.com/paulirish) (Paul Irish)
-  [https://github.com/paulirish/dotfiles](https://github.com/paulirish/dotfiles)
+	[https://github.com/paulirish/dotfiles](https://github.com/paulirish/dotfiles)
 * [@necolas](https://github.com/necolas) (Nicolas Gallagher)
-  [https://github.com/necolas/dotfiles](https://github.com/necolas/dotfiles)
+	[https://github.com/necolas/dotfiles](https://github.com/necolas/dotfiles)
 * [@gf3](https://github.com/gf3) (Gianni Chiappetta)
-  [https://github.com/gf3/dotfiles](https://github.com/gf3/dotfiles)
+	[https://github.com/gf3/dotfiles](https://github.com/gf3/dotfiles)
 * [@cowboy](https://github.com/cowboy) (Ben Alman)
-  [https://github.com/cowboy/dotfiles](https://github.com/cowboy/dotfiles)
+	[https://github.com/cowboy/dotfiles](https://github.com/cowboy/dotfiles)
 * [@alrra](https://github.com/alrra) (Cãtãlin Mariş)
-  [https://github.com/alrra/dotfiles](https://github.com/alrra/dotfiles)
+	[https://github.com/alrra/dotfiles](https://github.com/alrra/dotfiles)
 
 ## License
 
