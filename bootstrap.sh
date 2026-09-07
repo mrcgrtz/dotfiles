@@ -6,8 +6,9 @@ doIt() {
 	git pull origin main
 	rsync --exclude ".git/" --exclude ".github/" --exclude "init/" --exclude "bin/" \
 		--exclude ".DS_Store" --exclude ".editorconfig" \
-		--exclude ".gitignore" --exclude "bootstrap.sh" \
-		--exclude "README.md" --exclude "LICENSE.md" -avh --no-perms . ~
+		--exclude ".gitignore" --exclude ".git-blame-ignore-revs" \
+		--exclude "bootstrap.sh" --exclude "README.md" \
+		--exclude "LICENSE.md" -avh --no-perms . ~
 }
 
 if [ "$1" = "--force" ] || [ "$1" = "-f" ]; then
