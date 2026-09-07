@@ -14,6 +14,7 @@
     ".DS_Store",
     "Desktop.ini",
     "*.pyc",
+    "*.pyo",
     "._*",
     "Thumbs.db",
     ".Spotlight-V100",
@@ -21,10 +22,11 @@
   ],
   "folder_exclude_patterns": [
     ".git",
-    "node_modules"
+    "node_modules",
+    "vendor"
   ],
   "font_face": "Dank Mono",
-  "font_size": 16,
+  "font_size": 19,
   "font_options": [
     "dlig",
     "ss01"
@@ -42,7 +44,6 @@
     "Clojure",
     "D",
     "Erlang",
-    "Go",
     "Graphviz",
     "Groovy",
     "Haskell",
@@ -87,5 +88,5 @@
   "show_encoding": true,
   "show_line_endings": true,
   "theme": "Adaptive.sublime-theme",
-  "trim_trailing_white_space_on_save": true,
+  "trim_trailing_white_space_on_save": "all"
 }
