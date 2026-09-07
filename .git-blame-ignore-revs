@@ -1,0 +1,6 @@
+# Bulk reformatting commits, skipped by `git blame`.
+# Enable locally with:
+#   git config blame.ignoreRevsFile .git-blame-ignore-revs
+
+# Reindent with tabs.
+4321e430310f4dcdef9b1f2589fffba6a13e3602
