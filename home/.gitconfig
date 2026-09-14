@@ -235,8 +235,9 @@
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
-	# Improve conflict highlighting.
-	conflictstyle = diff3
+	# Improve conflict highlighting. `zdiff3` is `diff3` but with the lines
+	# common to both sides hoisted out of the conflict region.
+	conflictstyle = zdiff3
 
 [pull]
 
