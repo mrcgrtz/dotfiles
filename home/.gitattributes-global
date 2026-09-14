@@ -1,0 +1,10 @@
+# Global attributes, applied to every repository on this machine.
+
+# Diff opaque binaries as a hex dump instead of “Binary files differ”.
+# See the [diff "bin"] section in .gitconfig.
+*.bin diff=bin
+*.dat diff=bin
+*.dylib diff=bin
+*.exe diff=bin
+*.o diff=bin
+*.so diff=bin

@@ -93,9 +93,11 @@
 
 [core]
 
-	# Use custom `.gitignore` and `.gitattributes`.
-	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
+	# Use custom global `.gitignore` and `.gitattributes`. They are suffixed so
+	# that Git does not read them as rules for the `home/` directory of the
+	# dotfiles repository they are symlinked from.
+	excludesfile = ~/.gitignore-global
+	attributesfile = ~/.gitattributes-global
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error.
 	# [default] trailing-space: looks for spaces at the end of a line
