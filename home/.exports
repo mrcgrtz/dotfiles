@@ -3,17 +3,22 @@
 # Make Sublime Text the default editor.
 export EDITOR="subl -w";
 
-# Use standard ISO 8601 timestamp:
-# %F equivalent to %Y-%m-%d
-# %T equivalent to %H:%M:%S (24-hours format)
-export HISTTIMEFORMAT="%F %T ";
-# Increase Bash history size. Allow 32³ entries; the default is 500.
+# History. These used to be the Bash variables HISTTIMEFORMAT, HISTFILESIZE,
+# HISTCONTROL and HISTIGNORE, none of which zsh reads.
+export HISTFILE="$HOME/.zsh_history";
+# Allow 32³ entries in memory and on disk; the defaults are far smaller.
 export HISTSIZE="32768";
-export HISTFILESIZE="${HISTSIZE}"
-# Omit duplicates and commands that begin with a space from history.
-export HISTCONTROL="erasedups:ignoreboth";
-# Make some commands not show up in history
-export HISTIGNORE="ls:cd:cd -:pwd:bg:fg:history:clear:exit:date:* --help";
+export SAVEHIST="${HISTSIZE}";
+
+if [ -n "$ZSH_VERSION" ]; then
+	setopt EXTENDED_HISTORY       # Record a timestamp for every command.
+	setopt HIST_EXPIRE_DUPS_FIRST # Drop duplicates first once the file is full.
+	setopt HIST_IGNORE_ALL_DUPS   # Keep only the most recent copy of a command.
+	setopt HIST_IGNORE_SPACE      # Omit commands that begin with a space.
+	setopt HIST_REDUCE_BLANKS     # Strip redundant whitespace before storing.
+	setopt HIST_VERIFY            # Show a history expansion before running it.
+	setopt INC_APPEND_HISTORY     # Append as you go, not only on exit.
+fi
 
 # Prefer German and use UTF-8.
 export LANG="de_DE.UTF-8";

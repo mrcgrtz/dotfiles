@@ -9,7 +9,9 @@ My homegrown dotfiles repository which in the meantime is VERY much inspired by 
 
 ### Using Git and the bootstrap script
 
-You can clone the repository wherever you want. (I like to keep it in `~/dotfiles`.) The bootstrap script will pull in the latest version and copy the files to your home folder.
+You can clone the repository wherever you want. (I like to keep it in `~/dotfiles`.) The bootstrap script will pull in the latest version and symlink everything in [`home/`](https://github.com/mrcgrtz/dotfiles/tree/main/home) into your home folder, so the repository stays the single source of truth. Keep the clone where it is — the symlinks point back at it.
+
+Anything already present in your home folder is moved to `~/.dotfiles-backup/<timestamp>/` rather than overwritten.
 
 ```sh
 git clone https://github.com/mrcgrtz/dotfiles.git && cd dotfiles && source bootstrap.sh
@@ -27,19 +29,9 @@ Alternatively, to update while avoiding the confirmation prompt:
 set -- -f; source bootstrap.sh
 ```
 
-### Git-free install
-
-To install these dotfiles without Git:
-
-```sh
-cd; curl -#L https://github.com/mrcgrtz/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude={README.md,LICENSE.md,init}
-```
-
-To update later on, just run that command again.
-
 ### Specify the `$PATH`
 
-If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/mrcgrtz/dotfiles/blob/9f5de4c3fd87101c7a406f1570697b43a183388a/.aliases#L41)) takes place.
+If `.path` exists, it gets symlinked to `~/.path` and is sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/mrcgrtz/dotfiles/blob/9f5de4c3fd87101c7a406f1570697b43a183388a/.aliases#L41)) takes place.
 
 Here is an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
 
@@ -51,7 +43,7 @@ export PATH="/usr/local/bin:$PATH";
 
 ### Add custom commands without creating a new fork
 
-If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you do not want to commit to a public repository.
+If `.extra` exists, it gets symlinked to `~/.extra` and is sourced along with the other files. Both files are ignored by Git, so they never leave your machine. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you do not want to commit to a public repository.
 
 My `~/.extra` looks something like this:
 
@@ -64,10 +56,16 @@ My `~/.extra` looks something like this:
 GIT_AUTHOR_NAME="Marc Görtz";
 GIT_AUTHOR_EMAIL="my@email.address";
 GITHUB_USER_NAME="mrcgrtz";
-git config --global user.name "$GIT_AUTHOR_NAME";
-git config --global user.email "$GIT_AUTHOR_EMAIL";
-git config --global github.user "$GITHUB_USER_NAME";
+
+# Write to ~/.gitconfig.local, not ~/.gitconfig: the latter is a symlink into
+# this repository, and Git writes straight through symlinks.
+GIT_LOCAL_CONFIG="$HOME/.gitconfig.local";
+git config --file "$GIT_LOCAL_CONFIG" user.name "$GIT_AUTHOR_NAME";
+git config --file "$GIT_LOCAL_CONFIG" user.email "$GIT_AUTHOR_EMAIL";
+git config --file "$GIT_LOCAL_CONFIG" github.user "$GITHUB_USER_NAME";
 ```
+
+`.gitconfig` includes `.gitconfig.local` at the end, so those settings always win.
 
 You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It is probably better to [fork this repository](https://github.com/mrcgrtz/dotfiles/fork) instead, though.
 
@@ -85,7 +83,7 @@ This also installs Homebrew if it is not yet installed.
 
 * GNU core utilities
 * [git](https://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/master/Commands.md)
-* [The Silver Searcher](https://geoff.greer.fm/ag/)
+* [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [curlie](https://rs.github.io/curlie/), an awesome frontend for `curl`
 * [tree](https://oldmanprogrammer.net/source.php?dir=projects/tree)
 * [lynx](https://lynx.invisible-island.net/) because I ♥ lynx
@@ -99,7 +97,7 @@ myself, so just say no if you do not trust my guts.
 
 ## My favorite parts
 
-### [`.aliases`](https://github.com/mrcgrtz/dotfiles/blob/main/.aliases) and [`.functions`](https://github.com/mrcgrtz/dotfiles/blob/main/.functions)
+### [`.aliases`](https://github.com/mrcgrtz/dotfiles/blob/main/home/.aliases) and [`.functions`](https://github.com/mrcgrtz/dotfiles/blob/main/home/.functions)
 
 There are so many goodies!
 

@@ -93,10 +93,6 @@
 
 [core]
 
-	# Use custom `.gitignore` and `.gitattributes`.
-	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
-
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error.
 	# [default] trailing-space: looks for spaces at the end of a line
 	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
@@ -233,8 +229,9 @@
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
-	# Improve conflict highlighting.
-	conflictstyle = diff3
+	# Improve conflict highlighting. `zdiff3` is `diff3` but with the lines
+	# common to both sides hoisted out of the conflict region.
+	conflictstyle = zdiff3
 
 [pull]
 
@@ -262,18 +259,6 @@
 
 # Filters
 
-[filter "media"]
-
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
-	required = true
-
-[filter "hawser"]
-
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
-
 [filter "lfs"]
 
 	clean = git lfs clean %f
@@ -286,19 +271,21 @@
 [url "git@github.com:"]
 
 	insteadOf = "gh:"
-	pushInsteadOf = "github:"
-	pushInsteadOf = "git://github.com/"
-
-[url "git://github.com/"]
-
 	insteadOf = "github:"
+	pushInsteadOf = "github:"
 
 [url "git@gist.github.com:"]
 
 	insteadOf = "gst:"
-	pushInsteadOf = "gist:"
-	pushInsteadOf = "git://gist.github.com/"
-
-[url "git://gist.github.com/"]
-
 	insteadOf = "gist:"
+	pushInsteadOf = "gist:"
+
+# Machine-local settings
+
+[include]
+
+	# ~/.gitconfig is a symlink into the dotfiles repository and Git writes
+	# through symlinks, so anything `git config --global` produces — identity,
+	# signing key, `git maintenance register`, theme includes — would land in
+	# the repository. Keep it out of version control by putting it here.
+	path = ~/.gitconfig.local

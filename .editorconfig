@@ -22,3 +22,7 @@ trim_trailing_whitespace = false
 [*.{yml,yaml}]
 # YAML forbids tabs as indentation; these files must stay on spaces.
 indent_style = space
+
+[.dircolors]
+# Vendored from https://github.com/trapd00r/LS_COLORS; keep upstream formatting.
+indent_style = unset

@@ -14,14 +14,9 @@ ZSH_THEME=""
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# Update Oh My Zsh and its plugins in the background, without prompting.
+zstyle ':omz:update' mode auto
+zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -51,7 +46,6 @@ ZSH_THEME=""
 plugins=(
 	1password
 	alias-tips
-	autoupdate
 	colored-man-pages
 	fnm
 	fzf-zsh-plugin
@@ -68,8 +62,19 @@ plugins=(
 # Enable agent forwarding (required for Docker for Mac)
 # zstyle :omz:plugins:ssh-agent agent-forwarding on
 
-# Add Docker CLI completions to `fpath` before Oh My Zsh runs `compinit`.
+# Resolve the Homebrew prefix without shelling out to `brew` on every start.
+if [[ -z "$HOMEBREW_PREFIX" ]]; then
+	if [[ -x /opt/homebrew/bin/brew ]]; then
+		export HOMEBREW_PREFIX="/opt/homebrew"
+	else
+		export HOMEBREW_PREFIX="/usr/local"
+	fi
+fi
+
+# Everything that extends `fpath` has to run before Oh My Zsh calls `compinit`,
+# or the completions in it are never picked up.
 [[ -d "$HOME/.docker/completions" ]] && fpath=($HOME/.docker/completions $fpath)
+fpath+=("$HOMEBREW_PREFIX/share/zsh/site-functions")
 
 # Load Oh My Zsh.
 builtin source $ZSH/oh-my-zsh.sh
@@ -91,14 +96,19 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && builtin source "$HOME/.rvm/scripts/rvm"
 
 # Enable the Pure prompt.
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
 fpath+=("$HOME/.zsh/pure")
 autoload -U promptinit && promptinit
 prompt pure
 zstyle :prompt:pure:path color 'cyan'
 zstyle :prompt:pure:git:stash show yes
 
-# Enable 1Password CLI completions.
+# Enable 1Password CLI completions. Generating them spawns `op` on every start,
+# so cache the result; delete the file to regenerate it after an `op` upgrade.
 if command -v op >/dev/null 2>&1; then
-	eval "$(op completion zsh)"; compdef _op op
+	op_completion="$HOME/.zsh/cache/op.zsh"
+	if [[ ! -s "$op_completion" ]]; then
+		mkdir -p "${op_completion:h}" && op completion zsh >"$op_completion"
+	fi
+	builtin source "$op_completion"; compdef _op op
+	unset op_completion
 fi

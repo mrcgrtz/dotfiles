@@ -30,7 +30,7 @@ alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages.
 alias brew_update='brew update; brew upgrade; brew cleanup; brew doctor'
 alias npm_update='npm install npm -g; npx npm-check -gu; npm doctor'
-alias gem_update='sudo gem update --system; sudo gem update; sudo gem cleanup'
+alias gem_update='sudo gem update; sudo gem cleanup'
 alias update='sudo softwareupdate -i -a; brew_update; npm_update; gem_update'
 
 # Use coreutils `ls` if possible.
@@ -38,7 +38,6 @@ hash gls >/dev/null 2>&1 || alias gls='ls'
 
 # Always use color, even when piping (to awk, grep, etc).
 if gls --color > /dev/null 2>&1; then colorflag='--color'; else colorflag='-G'; fi;
-export CLICOLOR_FORCE=1
 
 # ls options: A = include hidden (but not . or ..), F = put `/` after folders, h = byte unit suffixes
 alias ls="gls -AFh ${colorflag} --group-directories-first"
@@ -72,8 +71,13 @@ alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias localip='ipconfig getifaddr en0'
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
-# Show active network interfaces.
-alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
+# Show active network interfaces. The multiline match needs PCRE, which plain
+# `grep` cannot do, so only define this when one of the two is installed.
+if command -v pcre2grep >/dev/null 2>&1; then
+	alias ifactive="ifconfig | pcre2grep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
+elif command -v pcregrep >/dev/null 2>&1; then
+	alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
+fi
 
 # Flush Directory Service cache.
 alias flush='dscacheutil -flushcache && killall -HUP mDNSResponder'
@@ -156,7 +160,7 @@ alias npmls='npm list -g --depth=0'
 
 # Remove local Node modules and clear NPM cache for an upcoming fresh install,
 # thanks to @stefanpenner for this one.
-alias nom='rm -rf node_modules && npm cache clear && npm install'
+alias nom='rm -rf node_modules && npm cache clean --force && npm install'
 
 # Nuke all Docker volumes from orbit,
 # thanks to @ebarbeito for this one.

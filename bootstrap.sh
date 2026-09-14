@@ -1,18 +1,54 @@
 #!/usr/bin/env sh
 
-cd "$(dirname "$0")" || exit 1
+# Locate the repository, whether this script is executed or sourced.
+script_dir="$(dirname "$0")"
+if [ -d "$script_dir/home" ]; then
+	cd "$script_dir" || exit 1
+fi
 
-doIt() {
+if [ ! -d "./home" ]; then
+	echo "❌  Could not find the home/ directory. Run this from your dotfiles clone." >&2
+	return 1 2>/dev/null || exit 1
+fi
+
+# Symlink everything in `home/` into the home directory, so that the repository
+# stays the single source of truth and local edits cannot silently drift.
+linkIt() {
 	git pull origin main
-	rsync --exclude ".git/" --exclude ".github/" --exclude "init/" --exclude "bin/" \
-		--exclude ".DS_Store" --exclude ".editorconfig" \
-		--exclude ".gitignore" --exclude ".git-blame-ignore-revs" \
-		--exclude "bootstrap.sh" --exclude "README.md" \
-		--exclude "LICENSE.md" -avh --no-perms . ~
+
+	src_dir="$(pwd)/home"
+	backup_dir="$HOME/.dotfiles-backup/$(date +%Y%m%dT%H%M%S)"
+
+	for src in "$src_dir"/.[!.]*; do
+		# Guard against the glob not matching anything.
+		[ -e "$src" ] || continue
+
+		name="${src##*/}"
+		dest="$HOME/$name"
+
+		# Nothing to do when the symlink already points at the repository.
+		if [ -L "$dest" ] && [ "$(readlink "$dest")" = "$src" ]; then
+			continue
+		fi
+
+		# Keep whatever is there already; those files may hold local edits.
+		if [ -e "$dest" ] || [ -L "$dest" ]; then
+			mkdir -p "$backup_dir"
+			mv "$dest" "$backup_dir/$name"
+			echo "📦  Backed up ~/$name"
+		fi
+
+		ln -s "$src" "$dest"
+		echo "🔗  Linked ~/$name"
+	done
+
+	if [ -d "$backup_dir" ]; then
+		echo "💾  Replaced files were moved to $backup_dir."
+	fi
 }
 
 if [ "$1" = "--force" ] || [ "$1" = "-f" ]; then
-	doIt
+	linkIt
 else
 	# Homebrew
 	printf "🍺  Install Homebrew and its formulae? (y/N) "
@@ -23,10 +59,10 @@ else
 	esac
 
 	# dotfiles
-	printf "🚨  Installing dotfiles. This will overwrite existing files in your home directory. Are you sure? (y/N) "
+	printf "🚨  Installing dotfiles. This will replace matching files in your home directory with symlinks. Are you sure? (y/N) "
 	read -r runswitch
 	case "$runswitch" in
-		y|Y|yes|YES) doIt ;;
+		y|Y|yes|YES) linkIt ;;
 		*) echo "Skipping installation." ;;
 	esac
 
@@ -47,4 +83,4 @@ else
 	esac
 fi
 
-unset doIt
+unset -f linkIt
