@@ -9,7 +9,9 @@ My homegrown dotfiles repository which in the meantime is VERY much inspired by 
 
 ### Using Git and the bootstrap script
 
-You can clone the repository wherever you want. (I like to keep it in `~/dotfiles`.) The bootstrap script will pull in the latest version and copy the files to your home folder.
+You can clone the repository wherever you want. (I like to keep it in `~/dotfiles`.) The bootstrap script will pull in the latest version and symlink everything in [`home/`](https://github.com/mrcgrtz/dotfiles/tree/main/home) into your home folder, so the repository stays the single source of truth. Keep the clone where it is — the symlinks point back at it.
+
+Anything already present in your home folder is moved to `~/.dotfiles-backup/<timestamp>/` rather than overwritten.
 
 ```sh
 git clone https://github.com/mrcgrtz/dotfiles.git && cd dotfiles && source bootstrap.sh
@@ -27,19 +29,9 @@ Alternatively, to update while avoiding the confirmation prompt:
 set -- -f; source bootstrap.sh
 ```
 
-### Git-free install
-
-To install these dotfiles without Git:
-
-```sh
-cd; curl -#L https://github.com/mrcgrtz/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude={README.md,LICENSE.md,init}
-```
-
-To update later on, just run that command again.
-
 ### Specify the `$PATH`
 
-If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/mrcgrtz/dotfiles/blob/9f5de4c3fd87101c7a406f1570697b43a183388a/.aliases#L41)) takes place.
+If `.path` exists, it gets symlinked to `~/.path` and is sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/mrcgrtz/dotfiles/blob/9f5de4c3fd87101c7a406f1570697b43a183388a/.aliases#L41)) takes place.
 
 Here is an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
 
@@ -51,7 +43,7 @@ export PATH="/usr/local/bin:$PATH";
 
 ### Add custom commands without creating a new fork
 
-If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you do not want to commit to a public repository.
+If `.extra` exists, it gets symlinked to `~/.extra` and is sourced along with the other files. Both files are ignored by Git, so they never leave your machine. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you do not want to commit to a public repository.
 
 My `~/.extra` looks something like this:
 
@@ -99,7 +91,7 @@ myself, so just say no if you do not trust my guts.
 
 ## My favorite parts
 
-### [`.aliases`](https://github.com/mrcgrtz/dotfiles/blob/main/.aliases) and [`.functions`](https://github.com/mrcgrtz/dotfiles/blob/main/.functions)
+### [`.aliases`](https://github.com/mrcgrtz/dotfiles/blob/main/home/.aliases) and [`.functions`](https://github.com/mrcgrtz/dotfiles/blob/main/home/.functions)
 
 There are so many goodies!
 

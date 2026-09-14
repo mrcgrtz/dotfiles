@@ -11,5 +11,5 @@ Thumbs.db
 .Trashes
 
 # Aliases, functions, paths etc. that are different on each machine
-.extra
-.path
+home/.extra
+home/.path
