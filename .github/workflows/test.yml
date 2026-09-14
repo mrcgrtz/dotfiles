@@ -6,19 +6,126 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: read
+
 jobs:
-  test:
-
+  shellcheck:
+    name: ShellCheck
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout
-      uses: actions/checkout@v7
-    - name: ShellCheck
-      uses: ludeeus/action-shellcheck@2.0.0
-      env:
-        SHELLCHECK_OPTS: -e SC1071
-      with:
-        severity: error
-        check_together: 'yes'
-        additional_files: '.aliases .exports .functions'
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: ShellCheck
+        uses: ludeeus/action-shellcheck@2.0.0
+        env:
+          # SC1071: zsh is not a shell ShellCheck knows how to parse.
+          # SC2139: aliases here deliberately bake in values at definition time.
+          SHELLCHECK_OPTS: -e SC1071 -e SC2139
+        with:
+          severity: warning
+          check_together: 'yes'
+          additional_files: '.aliases .exports .functions'
+
+  zsh:
+    name: zsh syntax
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      # ShellCheck cannot parse zsh, so let zsh itself do it.
+      - name: Parse everything zsh sources at startup
+        run: |
+          for file in home/.zshrc home/.aliases home/.exports home/.functions
+          do
+            echo "Checking ${file}…"
+            zsh -n "${file}"
+          done
+
+  editorconfig:
+    name: EditorConfig
+    runs-on: ubuntu-latest
+    env:
+      EC_VERSION: v4.0.1
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Install editorconfig-checker
+        run: |
+          curl -fsSL "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/${EC_VERSION}/editorconfig-checker-linux-amd64.tar.gz" \
+            | tar -xz editorconfig-checker
+          sudo install editorconfig-checker /usr/local/bin/
+      - name: Check formatting
+        run: editorconfig-checker
+
+  actionlint:
+    name: Actionlint
+    runs-on: ubuntu-latest
+    env:
+      ACTIONLINT_VERSION: 1.7.12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Install actionlint
+        run: |
+          curl -fsSL "https://github.com/rhysd/actionlint/releases/download/v${ACTIONLINT_VERSION}/actionlint_${ACTIONLINT_VERSION}_linux_amd64.tar.gz" \
+            | tar -xz actionlint
+          sudo install actionlint /usr/local/bin/
+      - name: Lint workflows
+        run: actionlint -color
+
+  brewfile:
+    name: Brewfile
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      # Homebrew refuses to load anything from an untrusted third-party tap.
+      - name: Add and trust third-party taps
+        run: |
+          sed -n "s/^tap '\([^']*\)'.*/\1/p" init/brew/Brewfile init/brew/Caskfile \
+            | while read -r tap
+          do
+            brew tap "${tap}"
+            brew trust --tap "${tap}"
+          done
+      - name: Collect the entries
+        run: |
+          sed -n "s/^brew '\([^']*\)'.*/\1/p" \
+            init/brew/Brewfile init/brew/Caskfile > formulae.txt
+          sed -n "s/^cask '\([^']*\)'.*/\1/p" init/brew/Caskfile > casks.txt
+      # `brew info` exits non-zero on a name it does not know, so these two
+      # steps are the check: an entry that no longer exists fails the build.
+      - name: Check that every formula still exists
+        run: |
+          tr '\n' '\0' < formulae.txt \
+            | xargs -0 brew info --json=v2 --formula > formulae.json
+      - name: Check that every cask still exists
+        run: |
+          tr '\n' '\0' < casks.txt \
+            | xargs -0 brew info --json=v2 --cask > casks.json
+      - name: Report renamed and deprecated entries
+        run: |
+          python3 - <<'PY'
+          import json
+
+
+          def report(listing, names, key, name_field):
+              with open(listing) as handle:
+                  found = json.load(handle)[key]
+              with open(names) as handle:
+                  wanted = handle.read().split()
+              for want, entry in zip(wanted, found):
+                  name = entry[name_field]
+                  if want != name:
+                      print(f"::warning::'{want}' is an old name for '{name}'")
+                  if entry.get("disabled"):
+                      print(f"::warning::'{name}' is disabled upstream")
+                  elif entry.get("deprecated"):
+                      why = entry.get("deprecation_reason") or "no reason given"
+                      print(f"::warning::'{name}' is deprecated ({why})")
+
+
+          report("formulae.json", "formulae.txt", "formulae", "name")
+          report("casks.json", "casks.txt", "casks", "token")
+          PY
