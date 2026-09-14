@@ -108,7 +108,13 @@ prompt pure
 zstyle :prompt:pure:path color 'cyan'
 zstyle :prompt:pure:git:stash show yes
 
-# Enable 1Password CLI completions.
+# Enable 1Password CLI completions. Generating them spawns `op` on every start,
+# so cache the result; delete the file to regenerate it after an `op` upgrade.
 if command -v op >/dev/null 2>&1; then
-	eval "$(op completion zsh)"; compdef _op op
+	op_completion="$HOME/.zsh/cache/op.zsh"
+	if [[ ! -s "$op_completion" ]]; then
+		mkdir -p "${op_completion:h}" && op completion zsh >"$op_completion"
+	fi
+	builtin source "$op_completion"; compdef _op op
+	unset op_completion
 fi
