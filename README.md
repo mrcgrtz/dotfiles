@@ -56,10 +56,16 @@ My `~/.extra` looks something like this:
 GIT_AUTHOR_NAME="Marc Görtz";
 GIT_AUTHOR_EMAIL="my@email.address";
 GITHUB_USER_NAME="mrcgrtz";
-git config --global user.name "$GIT_AUTHOR_NAME";
-git config --global user.email "$GIT_AUTHOR_EMAIL";
-git config --global github.user "$GITHUB_USER_NAME";
+
+# Write to ~/.gitconfig.local, not ~/.gitconfig: the latter is a symlink into
+# this repository, and Git writes straight through symlinks.
+GIT_LOCAL_CONFIG="$HOME/.gitconfig.local";
+git config --file "$GIT_LOCAL_CONFIG" user.name "$GIT_AUTHOR_NAME";
+git config --file "$GIT_LOCAL_CONFIG" user.email "$GIT_AUTHOR_EMAIL";
+git config --file "$GIT_LOCAL_CONFIG" github.user "$GITHUB_USER_NAME";
 ```
+
+`.gitconfig` includes `.gitconfig.local` at the end, so those settings always win.
 
 You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It is probably better to [fork this repository](https://github.com/mrcgrtz/dotfiles/fork) instead, though.
 

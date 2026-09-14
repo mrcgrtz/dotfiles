@@ -302,3 +302,13 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+# Machine-local settings
+
+[include]
+
+	# ~/.gitconfig is a symlink into the dotfiles repository and Git writes
+	# through symlinks, so anything `git config --global` produces — identity,
+	# signing key, `git maintenance register`, theme includes — would land in
+	# the repository. Keep it out of version control by putting it here.
+	path = ~/.gitconfig.local
