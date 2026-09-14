@@ -32,7 +32,7 @@ brew 'gh'
 brew 'fnm'
 
 # Install everything else.
-brew 'the_silver_searcher'
+brew 'ripgrep'
 brew 'curlie'
 brew 'lynx'
 brew 'nvim'

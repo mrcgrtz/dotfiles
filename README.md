@@ -83,7 +83,7 @@ This also installs Homebrew if it is not yet installed.
 
 * GNU core utilities
 * [git](https://git-scm.com/) and [git-extras](https://github.com/tj/git-extras/blob/master/Commands.md)
-* [The Silver Searcher](https://geoff.greer.fm/ag/)
+* [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [curlie](https://rs.github.io/curlie/), an awesome frontend for `curl`
 * [tree](https://oldmanprogrammer.net/source.php?dir=projects/tree)
 * [lynx](https://lynx.invisible-island.net/) because I ♥ lynx
