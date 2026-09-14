@@ -72,8 +72,13 @@ alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias localip='ipconfig getifaddr en0'
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
-# Show active network interfaces.
-alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
+# Show active network interfaces. The multiline match needs PCRE, which plain
+# `grep` cannot do, so only define this when one of the two is installed.
+if command -v pcre2grep >/dev/null 2>&1; then
+	alias ifactive="ifconfig | pcre2grep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
+elif command -v pcregrep >/dev/null 2>&1; then
+	alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
+fi
 
 # Flush Directory Service cache.
 alias flush='dscacheutil -flushcache && killall -HUP mDNSResponder'
