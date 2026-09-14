@@ -16,9 +16,11 @@ fromhex() {
 	r=$((16#${hex:0:2}))
 	g=$((16#${hex:2:2}))
 	b=$((16#${hex:4:2}))
-	printf '%03d\n' "$(( (r<75?0:(r-35)/40)*6*6 +
-                         (g<75?0:(g-35)/40)*6   +
-                         (b<75?0:(b-35)/40)     + 16 ))"
+	printf '%03d\n' "$((
+		(r<75?0:(r-35)/40)*6*6 +
+		(g<75?0:(g-35)/40)*6 +
+		(b<75?0:(b-35)/40) + 16
+	))"
 }
 
 # Create a .tar.gz archive, using `zopfli`, `pigz` or `gzip` for compression.
