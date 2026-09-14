@@ -23,7 +23,6 @@ install_plugin() {
 }
 
 install_plugin https://github.com/djui/alias-tips.git alias-tips
-install_plugin https://github.com/TamCore/autoupdate-oh-my-zsh-plugins autoupdate
 install_plugin https://github.com/zsh-users/zsh-autosuggestions.git zsh-autosuggestions
 install_plugin https://github.com/zsh-users/zsh-completions zsh-completions
 install_plugin https://github.com/zsh-users/zsh-syntax-highlighting.git zsh-syntax-highlighting
