@@ -68,8 +68,10 @@ plugins=(
 # Enable agent forwarding (required for Docker for Mac)
 # zstyle :omz:plugins:ssh-agent agent-forwarding on
 
-# Add Docker CLI completions to `fpath` before Oh My Zsh runs `compinit`.
+# Everything that extends `fpath` has to run before Oh My Zsh calls `compinit`,
+# or the completions in it are never picked up.
 [[ -d "$HOME/.docker/completions" ]] && fpath=($HOME/.docker/completions $fpath)
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 
 # Load Oh My Zsh.
 builtin source $ZSH/oh-my-zsh.sh
@@ -91,7 +93,6 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && builtin source "$HOME/.rvm/scripts/rvm"
 
 # Enable the Pure prompt.
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
 fpath+=("$HOME/.zsh/pure")
 autoload -U promptinit && promptinit
 prompt pure
