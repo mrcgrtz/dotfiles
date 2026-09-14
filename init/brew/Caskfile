@@ -76,7 +76,6 @@ cask 'boinc'
 cask 'pongsaver'
 
 # Install fonts.
-tap 'homebrew/cask-fonts'
 cask 'font-fira-code'
 cask 'font-fira-sans'
 cask 'font-hack'
