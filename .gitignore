@@ -13,3 +13,6 @@ Thumbs.db
 # Aliases, functions, paths etc. that are different on each machine
 home/.extra
 home/.path
+
+# Local agent settings
+**/.claude/settings.local.json
