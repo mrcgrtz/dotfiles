@@ -68,10 +68,19 @@ plugins=(
 # Enable agent forwarding (required for Docker for Mac)
 # zstyle :omz:plugins:ssh-agent agent-forwarding on
 
+# Resolve the Homebrew prefix without shelling out to `brew` on every start.
+if [[ -z "$HOMEBREW_PREFIX" ]]; then
+	if [[ -x /opt/homebrew/bin/brew ]]; then
+		export HOMEBREW_PREFIX="/opt/homebrew"
+	else
+		export HOMEBREW_PREFIX="/usr/local"
+	fi
+fi
+
 # Everything that extends `fpath` has to run before Oh My Zsh calls `compinit`,
 # or the completions in it are never picked up.
 [[ -d "$HOME/.docker/completions" ]] && fpath=($HOME/.docker/completions $fpath)
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
+fpath+=("$HOMEBREW_PREFIX/share/zsh/site-functions")
 
 # Load Oh My Zsh.
 builtin source $ZSH/oh-my-zsh.sh
