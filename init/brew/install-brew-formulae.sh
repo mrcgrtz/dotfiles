@@ -1,12 +1,17 @@
 #!/usr/bin/env sh
 
-# Get the directory where this script is located
-# Use BASH_SOURCE for when script is sourced, fall back to $0
-if [ -n "$BASH_SOURCE" ]; then
-	SCRIPT_DIR="$(cd "$(dirname "$BASH_SOURCE")" && pwd)"
-else
-	SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+# Get the directory holding the Brewfile. $0 points at this script when it is
+# executed, but at the calling shell when it is sourced, so fall back to the
+# path relative to the repository root that bootstrap.sh runs from.
+SCRIPT_DIR="$(dirname "$0")"
+if [ ! -f "$SCRIPT_DIR/Brewfile" ]; then
+	SCRIPT_DIR="init/brew"
 fi
+if [ ! -f "$SCRIPT_DIR/Brewfile" ]; then
+	echo "❌  Could not find the Brewfile. Run this from your dotfiles clone." >&2
+	return 1 2>/dev/null || exit 1
+fi
+SCRIPT_DIR="$(cd "$SCRIPT_DIR" && pwd)"
 
 # Install Homebrew (you need the Xcode CLI tools!)
 if ! command -v brew >/dev/null 2>&1; then
