@@ -102,8 +102,12 @@ dataurl() {
 # (Requires PHP 5.4.0+.)
 server() {
 	local port="${1:-8000}";
-	local ip;
-	ip=$(ipconfig getifaddr en1);
+	local interface ip;
+	# Serve on whichever interface carries the default route. This used to be
+	# hardcoded to en1, which is empty on most Macs.
+	interface=$(route -n get default 2>/dev/null | awk '/interface: / { print $2 }');
+	ip=$(ipconfig getifaddr "${interface:-en0}" 2>/dev/null);
+	ip="${ip:-127.0.0.1}";
 	sleep 1 && open "http://${ip}:${port}/" &
 	php -S "${ip}:${port}";
 }
