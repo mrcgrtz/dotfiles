@@ -78,5 +78,7 @@
 		"TrailingSpaces",
 		// https://github.com/bradsokol/VcsGutter
 		"VCS Gutter",
+		// https://github.com/mrcgrtz/visubezier
+		"VisuBezier",
 	],
 }
